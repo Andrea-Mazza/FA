@@ -1,0 +1,197 @@
+/*
+    TABLE OF CONTENTS
+    1. VARIABLES
+    2. TYPOGRAPHY
+    3. GLOBAL SETTINGS
+    4. BOTTOM NAV
+*/
+
+/*
+    1. VARIABLES
+*/
+
+:root {
+    --h1-font-size: 2.488rem;
+    --h2-font-size: 2.074rem;
+    --h3-font-size: 1.728rem;
+    --h4-font-size: 1.44rem;
+    --h5-font-size: 1.2rem;
+    --p-font-size: 1rem;
+
+    --light-font-weight: 300;
+    --regular-font-weight: 400;
+    --medium-font-weight: 500;
+    --bold-font-weight: 700;
+
+    --shadows-small: 0 5px 10px rgba(0, 0, 0, 0.12);
+    --shadows-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --shadows-large: 0 30px 60px rgba(0, 0, 0, 0.12);
+
+    // Settings for dark and light mode
+    // DARK MODE IS BY DEFAULT
+
+    --background-dark: #161616;
+    --background-light: #fcfcfc;
+
+    --heading-color-dark-mode: #ededed;
+    --haeding-color-light-mode: #171717;
+
+    --p-color-dark-mode: #a0a0a0;
+    --p-color-light-mode: #6f6f6f;
+
+    --dark-gradient-color-1: #1c1c1c;
+    --dark-gradient-color-2: #232323;
+
+    --light-gradient-color-1: #f8f8f8;
+    --light-gradient-color-2: #e8e8e8;
+
+    --border-color-dark-mode: #ffffff14;
+    --border-color-light-mode: #00000012;
+
+
+}
+
+/*
+    VARIABLES ENDS
+*/
+
+/*
+    2. TYPOGRAPHY
+*/
+h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--regular-font-weight);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--regular-font-weight);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    font-weight: var(--medium-font-weight);
+}
+
+h4 {
+    font-size: var(--h4-font-size);
+    font-weight: var(--medium-font-weight);
+}
+
+h5 {
+    font-size: var(--h5-font-size);
+    font-weight: var(--medium-font-weight);
+}
+
+h6 {
+    font-weight: var(--bold-font-weight);
+}
+
+p {
+    font-size: var(--p-font-size);
+    font-weight: var(--medium-font-weight);
+    color: var(--p-color-dark-mode);
+    line-height: 1.75;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: -0.031rem;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading-color-dark-mode);
+}
+
+/*
+    TYPOGRAPHY ENDS
+*/
+
+/*
+    3. GLOBAL SETTINGS
+*/
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--background-dark);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*
+    GLOBAL SETTINGS ENDS
+*/
+
+/*
+    4. BOTTOM NAV
+*/
+nav {
+    width: auto;
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+
+
+    .nav-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 8px;
+        background-color: var(--background-dark);
+        border: 1px solid var(--border-color-dark-mode);
+        box-shadow: var(--shadows-large);
+        border-radius: 20px;
+        backdrop-filter: blur(100px) saturate(400%) brightness(100%);
+        padding: 10px 10px;
+        z-index: 10;
+        transform: translate(-50%, -50%) translateY(94px);
+        animation: 500ms ease 200ms 1 normal forwards running popUpMenu;
+    }
+
+    @keyframes popUpMenu {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -50%) translateY(94px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%) translateY(0px);
+        }
+    }
+
+    .menu-btn {
+        width: 48px;
+        height: 48px;
+        cursor: poiter;
+        background-image: linear-gradient(45deg, var(--dark-gradient-color-1), var(--dark-gradient-color-2), var(--dark-gradient-color-1), var(--dark-gradient-color-2));
+        background-size: 200% 100%;
+        border-radius: 23%;
+        color: #7e7e7e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-divider {
+        width: 1px;
+        border: 1px solid var(--border-color-dark-mode);
+        height: 38px;
+    }
+}
+
+/*
+    BOTTOM NAV ENDS
+*/
