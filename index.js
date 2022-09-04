@@ -89,7 +89,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
-    if (window.matchMedia("(min-width: 769px)")) {
+    const tabletSize = window.matchMedia("(min-width: 769px)");
+
+    if (tabletSize.matches) {
         const menuBtnAnimation = [
             { transform: 'scale(1, 1) translateY(0)' },
             { transform: 'scale(1.5, 1.5) translateY(-16px)' }
