@@ -4,6 +4,7 @@
     2. TYPOGRAPHY
     3. GLOBAL SETTINGS
     4. BOTTOM NAV
+    5. HERO SECTION
 */
 
 /*
@@ -119,7 +120,6 @@ h6 {
 body {
     font-family: 'Raleway', sans-serif;
     background-color: var(--background-dark);
-    overflow: hidden;
 }
 
 * {
@@ -127,6 +127,17 @@ body {
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.slider-divider {
+    width: 1px;
+    border: 1px solid var(--border-color-dark-mode);
+    height: 60%;
 }
 
 /*
@@ -239,4 +250,120 @@ nav {
 
 /*
     BOTTOM NAV ENDS
+*/
+
+/*
+    5. HERO SECTION
+*/
+#hero-section {
+    width: 100%;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 20px;
+
+        .content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 35px;
+
+            h3 {
+                display: inline-block;
+                animation-name: fadeIn;
+                animation-duration: 0.7s;
+                animation-delay: 0.2s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                animation-timing-function: linear;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+
+                .slider-container {
+                    display: flex;
+                    flex-direction: row;
+                    column-gap: 30px;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    .slider-item {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        column-gap: 15px;
+
+                        .preview {
+                            width: 70%;
+
+                            img {
+                                width: 100%;
+                                border-radius: 23%;
+                            }
+                        }
+
+                        .caption {
+                            width: 30%;
+                            display: flex;
+                            flex-direction: column;
+
+                            .col {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+
+                                .icon-container {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 100%;
+
+                                    img {
+                                        width: 40%;
+                                    }
+
+                                    p {
+                                        width: 60%;
+                                    }
+                                }
+
+
+                                // img {
+                                //     width: 100%;
+                                // }
+
+                                // p {
+                                //     flex: 1;
+                                // }
+                            }
+
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+    HERO SECTION END
 */

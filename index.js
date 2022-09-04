@@ -130,9 +130,6 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (element == navButtons[2]) {
                 document.querySelector('.mode').style.display = 'block';
             }
-            // toolTips.forEach(element => {
-            //     element.style.display = 'block';
-            // });
         });
 
 
@@ -149,9 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const btnSelectionAnimation = [
                 { transform: 'scale(1.5, 1.5) translateY(-16px)' },
                 { transform: 'scale(1.5, 1.5) translateY(-20px)' },
-                { transform: 'scale(1.5, 1.5) translateY(-16px)' },
-                { transform: 'scale(1.5, 1.5) translateY(-20px)' },
-                { transform: 'scale(1.5, 1.5) translateY(0px)' }
+                { transform: 'scale(1.5, 1.5) translateY(-16px)' }
             ];
 
             const btnSelectionTiming = {
@@ -161,8 +156,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             element.animate(btnSelectionAnimation, btnSelectionTiming);
-            element.animate(menuBtnAnimation, menuBtnTiming).reverse();
-            nav.animate(navAnimation, navTiming).reverse();
+            // element.animate(menuBtnAnimation, menuBtnTiming).reverse();
+            // nav.animate(navAnimation, navTiming).reverse();
             if (element == navButtons[0]) {
                 document.querySelector('.marker-home').style.display = 'block';
                 document.querySelector('.marker-projects').style.display = 'none';

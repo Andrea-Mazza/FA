@@ -4,6 +4,7 @@
     2. TYPOGRAPHY
     3. GLOBAL SETTINGS
     4. BOTTOM NAV
+    5. HERO SECTION
 */
 /*
     1. VARIABLES
@@ -103,7 +104,6 @@ h6 {
 body {
   font-family: "Raleway", sans-serif;
   background-color: var(--background-dark);
-  overflow: hidden;
 }
 
 * {
@@ -111,6 +111,17 @@ body {
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.slider-divider {
+  width: 1px;
+  border: 1px solid var(--border-color-dark-mode);
+  height: 60%;
 }
 
 /*
@@ -209,6 +220,95 @@ nav .menu-divider {
 
 /*
     BOTTOM NAV ENDS
+*/
+/*
+    5. HERO SECTION
+*/
+#hero-section {
+  width: 100%;
+}
+#hero-section .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+#hero-section .container .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+}
+#hero-section .container .content h3 {
+  display: inline-block;
+  animation-name: fadeIn;
+  animation-duration: 0.7s;
+  animation-delay: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#hero-section .container .content .item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+#hero-section .container .content .item .slider-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#hero-section .container .content .item .slider-container .slider-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 15px;
+}
+#hero-section .container .content .item .slider-container .slider-item .preview {
+  width: 70%;
+}
+#hero-section .container .content .item .slider-container .slider-item .preview img {
+  width: 100%;
+  border-radius: 23%;
+}
+#hero-section .container .content .item .slider-container .slider-item .caption {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+#hero-section .container .content .item .slider-container .slider-item .caption .col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#hero-section .container .content .item .slider-container .slider-item .caption .col .icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#hero-section .container .content .item .slider-container .slider-item .caption .col .icon-container img {
+  width: 40%;
+}
+#hero-section .container .content .item .slider-container .slider-item .caption .col .icon-container p {
+  width: 60%;
+}
+
+/*
+    HERO SECTION END
 */
 
 /*# sourceMappingURL=style.css.map */
