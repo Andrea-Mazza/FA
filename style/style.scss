@@ -149,7 +149,7 @@ a {
 */
 nav {
     width: auto;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
@@ -185,7 +185,7 @@ nav {
 
         to {
             opacity: 1;
-            transform: translateY(-28px);
+            transform: translateY(-8px);
         }
     }
 

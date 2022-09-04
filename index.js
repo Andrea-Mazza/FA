@@ -89,84 +89,113 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
-    const menuBtnAnimation = [
-        { transform: 'scale(1, 1) translateY(0)' },
-        { transform: 'scale(1.5, 1.5) translateY(-16px)' }
-    ];
+    if (window.matchMedia("(min-width: 769px)")) {
+        const menuBtnAnimation = [
+            { transform: 'scale(1, 1) translateY(0)' },
+            { transform: 'scale(1.5, 1.5) translateY(-16px)' }
+        ];
 
-    const menuBtnTiming = {
-        duration: 100,
-        iteration: 1,
-        fill: 'both'
-    }
+        const menuBtnTiming = {
+            duration: 100,
+            iteration: 1,
+            fill: 'both'
+        }
 
-    const navAnimation = [
-        { transform: 'scale(1, 1) translateY(-28px)' },
-        { transform: 'scale(1.3, 1.3) translateY(-28px)' }
-    ];
+        const navAnimation = [
+            { transform: 'scale(1, 1) translateY(-8px)' },
+            { transform: 'scale(1.3, 1.3) translateY(-13px)' }
+        ];
 
-    const navTiming = {
-        duration: 300,
-        iteration: 1,
-        fill: 'both'
-    }
+        const navTiming = {
+            duration: 300,
+            iteration: 1,
+            fill: 'both'
+        }
 
-    nav.addEventListener('mouseenter', function () {
-        nav.animate(navAnimation, navTiming);
-    });
-    nav.addEventListener('mouseleave', function () {
-        nav.animate(navAnimation, navTiming).reverse();
-    });
-
-    navButtons.forEach(element => {
-        element.addEventListener("mouseenter", function increaseSize() {
-            element.animate(menuBtnAnimation, menuBtnTiming);
-            element.style.marginRight = '17px';
-            element.style.marginLeft = '17px';
-            if (element == navButtons[0]) {
-                document.querySelector('.home').style.display = 'block';
-            } else if (element == navButtons[1]) {
-                document.querySelector('.projects').style.display = 'block';
-            } else if (element == navButtons[2]) {
-                document.querySelector('.mode').style.display = 'block';
-            }
+        nav.addEventListener('mouseenter', function () {
+            nav.animate(navAnimation, navTiming);
+        });
+        nav.addEventListener('mouseleave', function () {
+            nav.animate(navAnimation, navTiming).reverse();
         });
 
+        navButtons.forEach(element => {
+            element.addEventListener("mouseenter", function increaseSize() {
+                element.animate(menuBtnAnimation, menuBtnTiming);
+                element.style.marginRight = '17px';
+                element.style.marginLeft = '17px';
+                if (element == navButtons[0]) {
+                    document.querySelector('.home').style.display = 'block';
+                } else if (element == navButtons[1]) {
+                    document.querySelector('.projects').style.display = 'block';
+                } else if (element == navButtons[2]) {
+                    document.querySelector('.mode').style.display = 'block';
+                }
+            });
 
-        element.addEventListener('mouseleave', function decreaseSize() {
-            element.animate(menuBtnAnimation, menuBtnTiming).reverse();
-            element.style.marginRight = '';
-            element.style.marginLeft = '';
-            toolTips.forEach(element => {
-                element.style.display = 'none';
+
+            element.addEventListener('mouseleave', function decreaseSize() {
+                element.animate(menuBtnAnimation, menuBtnTiming).reverse();
+                element.style.marginRight = '';
+                element.style.marginLeft = '';
+                toolTips.forEach(element => {
+                    element.style.display = 'none';
+                });
+            });
+
+            element.addEventListener('click', function () {
+                const btnSelectionAnimation = [
+                    { transform: 'scale(1.5, 1.5) translateY(-16px)' },
+                    { transform: 'scale(1.5, 1.5) translateY(-20px)' },
+                    { transform: 'scale(1.5, 1.5) translateY(-16px)' }
+                ];
+
+                const btnSelectionTiming = {
+                    duration: 800,
+                    iteration: 1,
+                    fill: 'both'
+                }
+
+                element.animate(btnSelectionAnimation, btnSelectionTiming);
+                // element.animate(menuBtnAnimation, menuBtnTiming).reverse();
+                // nav.animate(navAnimation, navTiming).reverse();
+                if (element == navButtons[0]) {
+                    document.querySelector('.marker-home').style.display = 'block';
+                    document.querySelector('.marker-projects').style.display = 'none';
+                    document.querySelector('.marker-mode').style.display = 'none';
+                } else if (element == navButtons[1]) {
+                    document.querySelector('.marker-projects').style.display = 'block';
+                    document.querySelector('.marker-home').style.display = 'none';
+                    document.querySelector('.marker-mode').style.display = 'none';
+                }
             });
         });
+    } else {
+        const btnSelectionAnimation = [
+            { transform: 'scale(1.5, 1.5) translateY(-16px)' },
+            { transform: 'scale(1.5, 1.5) translateY(-20px)' },
+            { transform: 'scale(1.5, 1.5) translateY(-16px)' }
+        ];
 
-        element.addEventListener('click', function () {
-            const btnSelectionAnimation = [
-                { transform: 'scale(1.5, 1.5) translateY(-16px)' },
-                { transform: 'scale(1.5, 1.5) translateY(-20px)' },
-                { transform: 'scale(1.5, 1.5) translateY(-16px)' }
-            ];
+        const btnSelectionTiming = {
+            duration: 800,
+            iteration: 1,
+            fill: 'both'
+        }
+        element.animate(btnSelectionAnimation, btnSelectionTiming);
+        if (element == navButtons[0]) {
+            document.querySelector('.marker-home').style.display = 'block';
+            document.querySelector('.marker-projects').style.display = 'none';
+            document.querySelector('.marker-mode').style.display = 'none';
+        } else if (element == navButtons[1]) {
+            document.querySelector('.marker-projects').style.display = 'block';
+            document.querySelector('.marker-home').style.display = 'none';
+            document.querySelector('.marker-mode').style.display = 'none';
+        }
+    }
 
-            const btnSelectionTiming = {
-                duration: 800,
-                iteration: 1,
-                fill: 'both'
-            }
 
-            element.animate(btnSelectionAnimation, btnSelectionTiming);
-            // element.animate(menuBtnAnimation, menuBtnTiming).reverse();
-            // nav.animate(navAnimation, navTiming).reverse();
-            if (element == navButtons[0]) {
-                document.querySelector('.marker-home').style.display = 'block';
-                document.querySelector('.marker-projects').style.display = 'none';
-                document.querySelector('.marker-mode').style.display = 'none';
-            } else if (element == navButtons[1]) {
-                document.querySelector('.marker-projects').style.display = 'block';
-                document.querySelector('.marker-home').style.display = 'none';
-                document.querySelector('.marker-mode').style.display = 'none';
-            }
-        });
-    });
+
+    // NAV BOTTOM animation for mobile devices
+
 })
