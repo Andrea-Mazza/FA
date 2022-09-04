@@ -48,7 +48,6 @@
     --border-color-dark-mode: #ffffff14;
     --border-color-light-mode: #00000012;
 
-
 }
 
 /*
@@ -120,6 +119,7 @@ h6 {
 body {
     font-family: 'Raleway', sans-serif;
     background-color: var(--background-dark);
+    overflow: hidden;
 }
 
 * {
@@ -138,13 +138,19 @@ body {
 */
 nav {
     width: auto;
-    position: fixed;
-    bottom: 28px;
-    left: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
 
     .nav-container {
-        width: 100%;
+        width: auto;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -156,19 +162,19 @@ nav {
         backdrop-filter: blur(100px) saturate(400%) brightness(100%);
         padding: 10px 10px;
         z-index: 10;
-        transform: translate(-50%, -50%) translateY(94px);
+        transform: translateY(94px);
         animation: 500ms ease 200ms 1 normal forwards running popUpMenu;
     }
 
     @keyframes popUpMenu {
         from {
             opacity: 0;
-            transform: translate(-50%, -50%) translateY(94px);
+            transform: translateY(94px);
         }
 
         to {
             opacity: 1;
-            transform: translate(-50%, -50%) translateY(0px);
+            transform: translateY(-28px);
         }
     }
 
@@ -181,9 +187,48 @@ nav {
         border-radius: 23%;
         color: #7e7e7e;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        transition: all linear 0.3s;
+
+        img {
+            width: 24px;
+            height: 24px;
+            border: transparent;
+        }
+
+        .tooltip {
+            position: absolute;
+            bottom: 50px;
+            display: flex;
+            justify-content: center;
+
+            p,
+            .tooltip-content {
+                display: inline;
+                font-size: 7px;
+            }
+        }
+
+        .home,
+        .projects,
+        .mode {
+            display: none;
+        }
+
+        .marker {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #dbdbdb;
+            position: absolute;
+            bottom: -8px;
+            display: none;
+        }
     }
+
+
 
     .menu-divider {
         width: 1px;

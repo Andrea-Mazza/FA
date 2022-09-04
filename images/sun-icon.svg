@@ -1,1 +1,7 @@
-<svg width="48" height="48" viewBox="0 0 24 24" color="var(--colors-gray10)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" data-projection-id="1" transform-origin="12px 12px" style="transform: rotate(90deg); transform-origin: 12px 12px;"><mask id="myMask2"><rect x="0" y="0" width="100%" height="100%" fill="white"></rect><circle r="9" fill="black" cx="100%" cy="0%" data-projection-id="2"></circle></mask><circle cx="12" cy="12" fill="var(--colors-gray10)" mask="url(#myMask2)" r="5" data-projection-id="3"></circle><g stroke="currentColor" opacity="1" data-projection-id="4"><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <g fill='#A0A0A0'>
+        <path d="M22 12l-3-1.9L20.7 7l-3.5-.1-.2-3.6L13.9 5 12 2l-1.9 3L7 3.3l-.1 3.6-3.6.1L5 10.1 2 12l3 1.9L3.3 17l3.5.1.2 3.6 3.1-1.7 1.9 3 1.9-3 3.1 1.7.1-3.5 3.5-.1-1.6-3.2 3-1.9zm-10 6c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z">
+        </path>
+        <circle cx="12" cy="12" r="5"></circle>
+    </g>
+</svg>
