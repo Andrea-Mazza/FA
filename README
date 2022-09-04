@@ -1,6 +1,10 @@
 Siti di ispirazione:
 1. https://rauno.me/?ref=godly
 
+Dove si è fermata la ricerca:
+1. stai vedendo come usare local sotrage per rendere persistente l'animazione di NAV BOTTOM. Su questa pagina hai adocchiato
+   sessionStorage: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+
 Cosa stavi facendo:
 1. Vedere animazione pallino sotto ogni voce di NAV BOTTOMS
 2. vedere come mantenere le animationi di NAV BOTTOM durante il cambio di pagina
