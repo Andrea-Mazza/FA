@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { transform: 'scale(1.5, 1.5) translateY(-20px)' },
                 { transform: 'scale(1.5, 1.5) translateY(-16px)' },
                 { transform: 'scale(1.5, 1.5) translateY(-20px)' },
-                { transform: 'scale(1.5, 1.5) translateY(-16px)' }
+                { transform: 'scale(1.5, 1.5) translateY(0px)' }
             ];
 
             const btnSelectionTiming = {
@@ -161,6 +161,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             element.animate(btnSelectionAnimation, btnSelectionTiming);
+            element.animate(menuBtnAnimation, menuBtnTiming).reverse();
+            nav.animate(navAnimation, navTiming).reverse();
             if (element == navButtons[0]) {
                 document.querySelector('.marker-home').style.display = 'block';
                 document.querySelector('.marker-projects').style.display = 'none';
