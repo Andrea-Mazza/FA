@@ -165,7 +165,7 @@ a {
   row-gap: 30px;
   width: 100%;
 }
-.card .card-body .preview svg {
+.card .card-body .preview img {
   border-radius: var(--border-radius-standard);
 }
 .card .card-body .preview .description {
@@ -300,7 +300,7 @@ nav .menu-divider {
   padding: 20px 150px;
 }
 #hero-section .container .col {
-  width: 50%;
+  width: 40%;
   padding: 0 40px;
 }
 

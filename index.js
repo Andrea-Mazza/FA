@@ -198,6 +198,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    // NAV BOTTOM animation for mobile devices
+    // NAV BOTTOM animation for mobile devices to do
+
+
+    // Code and animation about card preview in index.html
+
+    const preview = [
+        digimedia = {
+            h3: "Digimedia",
+            imgSrc: "./images/templates-preview/digimedia.svg",
+
+        },
+        firstPortfolio = {
+            h3: "First Portfolio",
+            imgSrc: "./images/templates-preview/First-portfolio.svg"
+        },
+        leadershipEvent = {
+            h3: "Leadership Event",
+            imgSrc: "./images/templates-preview/leadership-event.svg"
+        }
+    ];
+
+    const techIcon = {
+        html: "./images/html-5.svg",
+        css: "./images/css-3.svg",
+        sass: "./images/sass.svg",
+        js: "./images/javascript.svg"
+    };
+
+    const cardBody = document.getElementById('cardBody');
+
+    for (i = 0; i < preview.length; i++) {
+        const previewContainer = document.createElement('div');
+        previewContainer.classList.add('preview');
+
+        cardBody.appendChild(previewContainer);
+
+
+
+    }
 
 })
