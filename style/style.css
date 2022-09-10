@@ -106,6 +106,7 @@ h6 {
 body {
   font-family: "Raleway", sans-serif;
   background-color: var(--background-dark);
+  overflow-x: hidden;
 }
 
 * {
@@ -157,6 +158,7 @@ a {
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
+  overflow: hidden;
 }
 .card .card-body .preview {
   display: flex;
@@ -165,8 +167,38 @@ a {
   row-gap: 30px;
   width: 100%;
 }
-.card .card-body .preview img {
-  border-radius: var(--border-radius-standard);
+.card .card-body .preview .preview-images-container {
+  width: 290px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.card .card-body .preview .preview-images-container .carousel {
+  width: 290px;
+  display: flex;
+  flex-direction: row;
+  transform: translate3d(0px, 0, 0);
+  animation-name: prova;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+@keyframes prova {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-290px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.card .card-body .preview .preview-img {
+  border-radius: 20px;
+  padding: 0 10px;
 }
 .card .card-body .preview .description {
   text-align: center;
@@ -182,7 +214,7 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
 }
-.card .card-body .preview .description .tech-details svg {
+.card .card-body .preview .description .tech-details .tech-icon {
   width: 4.1666666667vw;
   height: 4.1666666667vw;
 }

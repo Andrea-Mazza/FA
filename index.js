@@ -20,29 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const headingsArray = [h1, h2, h3, h4, h5, h6];
 
-    // Creation of SVG sun icon
-    // const sunIconSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    // sunIconSvg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    // sunIconSvg.setAttribute("viewBox", "0 0 24 24");
-    // sunIconSvg.setAttribute("width", "24");
-    // sunIconSvg.setAttribute("height", "24");
-    // sunIconSvg.setAttribute("fill", "none");
-
-    // const sunIConG = document.createElement('g');
-    // sunIConG.setAttribute("fill", "#A0A0A0");
-
-    // const sunIconPath = document.createElement('path');
-    // sunIconPath.setAttribute("d", "M22 12l-3-1.9L20.7 7l-3.5-.1-.2-3.6L13.9 5 12 2l-1.9 3L7 3.3l-.1 3.6-3.6.1L5 10.1 2 12l3 1.9L3.3 17l3.5.1.2 3.6 3.1-1.7 1.9 3 1.9-3 3.1 1.7.1-3.5 3.5-.1-1.6-3.2 3-1.9zm-10 6c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z");
-    // sunIConG.appendChild(sunIconPath);
-
-    // const sunIconCircle = document.createElement('circle');
-    // sunIconCircle.setAttribute("cx", "12");
-    // sunIconCircle.setAttribute("cy", "12");
-    // sunIconCircle.setAttribute("r", "5");
-    // sunIConG.appendChild(sunIconCircle);
-
-    // sunIconSvg.appendChild(sunIConG);
-
 
     // This EventListener is about color changes between dark and light mode
     moonButton.addEventListener('click', function colorTranslation() {
@@ -89,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
+
+    // Code and animation relative to NAV BOTTOM
     const tabletSize = window.matchMedia("(min-width: 769px)");
 
     if (tabletSize.matches) {
@@ -201,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // NAV BOTTOM animation for mobile devices to do
 
 
-    // Code and animation about card preview in index.html
+    // Code and animation about template preview in index.html
 
     const preview = [
         digimedia = {
@@ -226,16 +205,148 @@ document.addEventListener('DOMContentLoaded', function () {
         js: "./images/javascript.svg"
     };
 
-    const cardBody = document.getElementById('cardBody');
+    // const cardBody = document.getElementById('cardBody');
 
-    for (i = 0; i < preview.length; i++) {
-        const previewContainer = document.createElement('div');
-        previewContainer.classList.add('preview');
+    // for (i = 0; i < preview.length; i++) {
+    //     const previewContainer = document.createElement('div');
+    //     previewContainer.classList.add('preview');
 
-        cardBody.appendChild(previewContainer);
+    //     cardBody.appendChild(previewContainer);
+
+    //     const h3 = document.createElement('h3');
+    //     h3.innerHTML = preview[i].h3
+
+    //     previewContainer.appendChild(h3);
+
+    //     const img = document.createElement('img');
+    //     img.src = preview[i].imgSrc;
+    //     img.classList.add('preview-img');
+
+    //     previewContainer.appendChild(img);
+
+    //     const description = document.createElement('div');
+    //     description.classList.add('description');
+
+    //     previewContainer.appendChild(description);
+
+    //     const p = document.createElement('p');
+    //     p.innerHTML = "Modello costruito con:";
+
+    //     description.appendChild(p);
+
+    //     const techDetails = document.createElement('div');
+    //     techDetails.classList.add('tech-details');
+
+    //     description.appendChild(techDetails);
+
+    //     const htmlDiv = document.createElement('div');
+    //     htmlDiv.title = "HTML 5";
+    //     htmlDiv.classList.add('item');
+
+    //     techDetails.appendChild(htmlDiv)
+
+    //     const htmlImg = document.createElement('img');
+    //     htmlImg.src = techIcon.html;
+    //     htmlImg.classList.add('tech-icon');
+
+    //     htmlDiv.appendChild(htmlImg);
+
+    //     const cssDiv = document.createElement('div');
+    //     cssDiv.title = "CSS 3";
+    //     cssDiv.classList.add('item');
+
+    //     techDetails.appendChild(cssDiv);
+
+    //     const cssImg = document.createElement('img');
+    //     cssImg.src = techIcon.css;
+    //     cssImg.classList.add('tech-icon');
+
+    //     cssDiv.appendChild(cssImg);
+
+    //     const sassDiv = document.createElement('div');
+    //     sassDiv.title = "Sass";
+    //     sassDiv.classList.add('item');
+
+    //     techDetails.appendChild(sassDiv);
+
+    //     const sassImg = document.createElement('img');
+    //     sassImg.src = techIcon.sass;
+    //     sassImg.classList.add('tech-icon')
+
+    //     sassDiv.appendChild(sassImg);
+
+    //     const jsDiv = document.createElement('div');
+    //     jsDiv.title = "Javascript";
+    //     jsDiv.classList.add('item');
+
+    //     techDetails.appendChild(jsDiv);
+
+    //     const jsImg = document.createElement('img');
+    //     jsImg.src = techIcon.js;
+    //     jsImg.classList.add('tech-icon');
 
 
+    //     jsDiv.appendChild(jsImg);
 
-    }
+    //     const previewImgAnimation = [
+    //         { opacity: 0 },
+    //         { opacity: 1 }
+    //     ];
+
+    //     const previewImgTiming = {
+    //         duration: 1000,
+    //         iteration: 1,
+    //         fill: 'both'
+    //     }
+
+    //     img.animate(previewImgAnimation, previewImgTiming);
+
+    //     const techIconAnimation = [
+    //         { opacity: 0 },
+    //         { opacity: 1 }
+    //     ];
+
+    //     const htmlTiming = {
+    //         duration: 250,
+    //         iteration: 1,
+    //         fill: 'both'
+    //     };
+
+    //     const cssTiming = {
+    //         duration: 250,
+    //         iteration: 1,
+    //         delay: 200,
+    //         fill: 'both'
+    //     };
+
+    //     const sassTiming = {
+    //         duration: 250,
+    //         iteration: 1,
+    //         delay: 400,
+    //         fill: 'both'
+    //     };
+
+    //     const jsTiming = {
+    //         duration: 250,
+    //         iteration: 1,
+    //         delay: 600,
+    //         fill: 'both'
+    //     };
+    //     htmlImg.animate(techIconAnimation, htmlTiming);
+    //     cssImg.animate(techIconAnimation, cssTiming);
+    //     sassImg.animate(techIconAnimation, sassTiming);
+    //     jsImg.animate(techIconAnimation, jsTiming);
+
+    //     setTimeout(function () {
+    //         img.animate(previewImgAnimation, previewImgTiming).reverse();
+    //         htmlImg.animate(techIconAnimation, htmlTiming).reverse();
+    //         cssImg.animate(techIconAnimation, cssTiming).reverse();
+    //         sassImg.animate(techIconAnimation, sassTiming).reverse();
+    //         jsImg.animate(techIconAnimation, jsTiming).reverse();
+
+    //         previewContainer.remove();
+    //     }, 3000);
+
+    // }
 
 })
