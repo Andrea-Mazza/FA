@@ -128,14 +128,15 @@ a {
 }
 
 .card {
-  padding: 32px;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
   border: 2px solid var(--border-color-dark-mode);
   border-radius: var(--border-radius-standard);
   background-color: transparent;
-  box-shadow: var(--shadows-large-dark-mode);
+  position: relative;
+  width: 400px;
+  height: 400px;
 }
 .card .card-heading {
   border-bottom: 2px solid var(--border-color-dark-mode);
@@ -153,52 +154,51 @@ a {
   height: 48px;
   border: transparent;
 }
+.card .heading-preview {
+  border: none;
+  margin: 0;
+  padding: 0 10px;
+  position: absolute;
+  top: 10px;
+  left: 158px;
+  background-color: var(--background-dark);
+  z-index: 100;
+  border-radius: 50px;
+}
+.card .heading-preview h2 {
+  font-size: 20px;
+}
 .card .card-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
   overflow: hidden;
+  width: 400px;
+  height: 400px;
 }
 .card .card-body .preview {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
-  width: 100%;
+  width: 400px;
+  height: 400px;
 }
-.card .card-body .preview .preview-images-container {
-  width: 290px;
+.card .card-body .preview .carousel-container {
+  width: 400px;
+  height: 400px;
   display: flex;
   justify-content: center;
   overflow: hidden;
+  border-radius: 20px;
 }
-.card .card-body .preview .preview-images-container .carousel {
-  width: 290px;
+.card .card-body .preview .carousel-container .carousel {
+  width: max-content;
   display: flex;
   flex-direction: row;
   transform: translate3d(0px, 0, 0);
-  animation-name: prova;
-  animation-duration: 4s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-  animation-play-state: paused;
-}
-@keyframes prova {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(-290px, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-.card .card-body .preview .preview-img {
   border-radius: 20px;
-  padding: 0 10px;
 }
 .card .card-body .preview .description {
   text-align: center;
@@ -217,6 +217,17 @@ a {
 .card .card-body .preview .description .tech-details .tech-icon {
   width: 4.1666666667vw;
   height: 4.1666666667vw;
+}
+.card .show-more-btn {
+  text-align: center;
+  border: none;
+  margin: 0;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 135px;
+  border-radius: 50px;
+  background-color: var(--background-dark);
 }
 
 /*

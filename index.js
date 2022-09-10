@@ -32,8 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
             navButtons.forEach(element => {
                 element.style.backgroundImage = 'linear-gradient(45deg, var(--light-gradient-color-1), var(--light-gradient-color-2), var(--light-gradient-color-1), var(--light-gradient-color-2))';
             });
-            iconContainer.src = './images/sun-icon.svg';
+            iconContainer.src = './assets/images/sun-icon.svg';
             document.querySelector('.tooltip-content').innerHTML = 'Dark mode';
+
             headingsArray.forEach(array => {
                 array.forEach(element => {
                     element.style.color = 'var(--heading-color-light-mode)';
@@ -52,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navButtons.forEach(element => {
                 element.style.backgroundImage = 'linear-gradient(45deg, var(--dark-gradient-color-1), var(--dark-gradient-color-2), var(--dark-gradient-color-1), var(--dark-gradient-color-2))';
             });
-            iconContainer.src = './images/moon-icon.svg';
+            iconContainer.src = './assets/images/moon-icon.svg';
             document.querySelector('.tooltip-content').innerHTML = 'Light mode';
             headingsArray.forEach(array => {
                 array.forEach(element => {
@@ -185,18 +186,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const preview = [
         digimedia = {
             h3: "Digimedia",
-            imgSrc: "./images/templates-preview/digimedia.svg",
+            imgSrc: "./assets/images/templates-preview/digimedia.svg",
 
         },
         firstPortfolio = {
             h3: "First Portfolio",
-            imgSrc: "./images/templates-preview/First-portfolio.svg"
+            imgSrc: "./assets/images/templates-preview/First-portfolio.svg"
         },
         leadershipEvent = {
             h3: "Leadership Event",
-            imgSrc: "./images/templates-preview/leadership-event.svg"
+            imgSrc: "./assets/images/templates-preview/leadership-event.svg"
         }
     ];
+
 
     const techIcon = {
         html: "./images/html-5.svg",
@@ -205,148 +207,47 @@ document.addEventListener('DOMContentLoaded', function () {
         js: "./images/javascript.svg"
     };
 
-    // const cardBody = document.getElementById('cardBody');
+    const cardBody = document.getElementById('cardBody');
 
-    // for (i = 0; i < preview.length; i++) {
-    //     const previewContainer = document.createElement('div');
-    //     previewContainer.classList.add('preview');
+    const previewDiv = document.createElement('div');
+    previewDiv.classList.add('preview');
 
-    //     cardBody.appendChild(previewContainer);
+    cardBody.appendChild(previewDiv);
 
-    //     const h3 = document.createElement('h3');
-    //     h3.innerHTML = preview[i].h3
+    const carouselContainer = document.createElement('div');
+    carouselContainer.classList.add('carousel-container');
 
-    //     previewContainer.appendChild(h3);
+    previewDiv.appendChild(carouselContainer);
 
-    //     const img = document.createElement('img');
-    //     img.src = preview[i].imgSrc;
-    //     img.classList.add('preview-img');
+    const carousel = document.createElement('div');
+    carousel.classList.add('carousel');
 
-    //     previewContainer.appendChild(img);
+    carouselContainer.appendChild(carousel);
 
-    //     const description = document.createElement('div');
-    //     description.classList.add('description');
+    for (i = 0; i < preview.length; i++) {
+        const imgPreview = document.createElement('img');
+        imgPreview.classList.add('preview-img');
+        imgPreview.src = preview[i].imgSrc;
 
-    //     previewContainer.appendChild(description);
+        carousel.appendChild(imgPreview);
+    }
 
-    //     const p = document.createElement('p');
-    //     p.innerHTML = "Modello costruito con:";
+    // When a new template previews is addedd, add here two line incrementing translate3d first value fo -290px (which is every coursel item's width)
+    const previewAnimation = [
+        { transform: `translate3d(400px, 0, 0)` },
+        { transform: `translate3d(400px, 0, 0)` },
+        { transform: `translate3d(0px, 0, 0)` },
+        { transform: `translate3d(0px, 0, 0)` },
+        { transform: `translate3d(-400px, 0, 0)` },
+        { transform: `translate3d(-400px, 0, 0)` },
+        { transform: `translate3d(400px, 0, 0)` }
+    ];
 
-    //     description.appendChild(p);
+    const previewTiming = {
+        duration: preview.length * 1000,
+        iterations: Infinity,
+    };
 
-    //     const techDetails = document.createElement('div');
-    //     techDetails.classList.add('tech-details');
-
-    //     description.appendChild(techDetails);
-
-    //     const htmlDiv = document.createElement('div');
-    //     htmlDiv.title = "HTML 5";
-    //     htmlDiv.classList.add('item');
-
-    //     techDetails.appendChild(htmlDiv)
-
-    //     const htmlImg = document.createElement('img');
-    //     htmlImg.src = techIcon.html;
-    //     htmlImg.classList.add('tech-icon');
-
-    //     htmlDiv.appendChild(htmlImg);
-
-    //     const cssDiv = document.createElement('div');
-    //     cssDiv.title = "CSS 3";
-    //     cssDiv.classList.add('item');
-
-    //     techDetails.appendChild(cssDiv);
-
-    //     const cssImg = document.createElement('img');
-    //     cssImg.src = techIcon.css;
-    //     cssImg.classList.add('tech-icon');
-
-    //     cssDiv.appendChild(cssImg);
-
-    //     const sassDiv = document.createElement('div');
-    //     sassDiv.title = "Sass";
-    //     sassDiv.classList.add('item');
-
-    //     techDetails.appendChild(sassDiv);
-
-    //     const sassImg = document.createElement('img');
-    //     sassImg.src = techIcon.sass;
-    //     sassImg.classList.add('tech-icon')
-
-    //     sassDiv.appendChild(sassImg);
-
-    //     const jsDiv = document.createElement('div');
-    //     jsDiv.title = "Javascript";
-    //     jsDiv.classList.add('item');
-
-    //     techDetails.appendChild(jsDiv);
-
-    //     const jsImg = document.createElement('img');
-    //     jsImg.src = techIcon.js;
-    //     jsImg.classList.add('tech-icon');
-
-
-    //     jsDiv.appendChild(jsImg);
-
-    //     const previewImgAnimation = [
-    //         { opacity: 0 },
-    //         { opacity: 1 }
-    //     ];
-
-    //     const previewImgTiming = {
-    //         duration: 1000,
-    //         iteration: 1,
-    //         fill: 'both'
-    //     }
-
-    //     img.animate(previewImgAnimation, previewImgTiming);
-
-    //     const techIconAnimation = [
-    //         { opacity: 0 },
-    //         { opacity: 1 }
-    //     ];
-
-    //     const htmlTiming = {
-    //         duration: 250,
-    //         iteration: 1,
-    //         fill: 'both'
-    //     };
-
-    //     const cssTiming = {
-    //         duration: 250,
-    //         iteration: 1,
-    //         delay: 200,
-    //         fill: 'both'
-    //     };
-
-    //     const sassTiming = {
-    //         duration: 250,
-    //         iteration: 1,
-    //         delay: 400,
-    //         fill: 'both'
-    //     };
-
-    //     const jsTiming = {
-    //         duration: 250,
-    //         iteration: 1,
-    //         delay: 600,
-    //         fill: 'both'
-    //     };
-    //     htmlImg.animate(techIconAnimation, htmlTiming);
-    //     cssImg.animate(techIconAnimation, cssTiming);
-    //     sassImg.animate(techIconAnimation, sassTiming);
-    //     jsImg.animate(techIconAnimation, jsTiming);
-
-    //     setTimeout(function () {
-    //         img.animate(previewImgAnimation, previewImgTiming).reverse();
-    //         htmlImg.animate(techIconAnimation, htmlTiming).reverse();
-    //         cssImg.animate(techIconAnimation, cssTiming).reverse();
-    //         sassImg.animate(techIconAnimation, sassTiming).reverse();
-    //         jsImg.animate(techIconAnimation, jsTiming).reverse();
-
-    //         previewContainer.remove();
-    //     }, 3000);
-
-    // }
+    carousel.animate(previewAnimation, previewTiming);
 
 })
