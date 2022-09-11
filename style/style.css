@@ -3,8 +3,8 @@
     1. VARIABLES
     2. TYPOGRAPHY
     3. GLOBAL SETTINGS
-    4. BOTTOM NAV
-    5. HERO SECTION
+    4. HEADER
+    5. THEME SWITCH BTN
 */
 /*
     1. VARIABLES
@@ -104,7 +104,7 @@ h6 {
     3. GLOBAL SETTINGS
 */
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: var(--background-dark);
   overflow-x: hidden;
 }
@@ -121,232 +121,73 @@ a {
   color: unset;
 }
 
-.slider-divider {
-  width: 1px;
-  border: 1px solid var(--border-color-dark-mode);
-  height: 60%;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-  border: 2px solid var(--border-color-dark-mode);
-  border-radius: var(--border-radius-standard);
-  background-color: transparent;
-  position: relative;
-  width: 400px;
-  height: 400px;
-}
-.card .card-heading {
-  border-bottom: 2px solid var(--border-color-dark-mode);
-  padding-bottom: 24px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.card .card-heading .card-icon {
-  color: #7e7e7e;
-}
-.card .card-heading .card-icon svg {
-  width: 48px;
-  height: 48px;
-  border: transparent;
-}
-.card .heading-preview {
-  border: none;
-  margin: 0;
-  padding: 0 10px;
-  position: absolute;
-  top: 10px;
-  left: 158px;
-  background-color: var(--background-dark);
-  z-index: 100;
-  border-radius: 50px;
-}
-.card .heading-preview h2 {
-  font-size: 20px;
-}
-.card .card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 30px;
-  overflow: hidden;
-  width: 400px;
-  height: 400px;
-}
-.card .card-body .preview {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 30px;
-  width: 400px;
-  height: 400px;
-}
-.card .card-body .preview .carousel-container {
-  width: 400px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 20px;
-}
-.card .card-body .preview .carousel-container .carousel {
-  width: max-content;
-  display: flex;
-  flex-direction: row;
-  transform: translate3d(0px, 0, 0);
-  border-radius: 20px;
-}
-.card .card-body .preview .description {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-  align-items: center;
-  width: 100%;
-}
-.card .card-body .preview .description .tech-details {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.card .card-body .preview .description .tech-details .tech-icon {
-  width: 4.1666666667vw;
-  height: 4.1666666667vw;
-}
-.card .show-more-btn {
-  text-align: center;
-  border: none;
-  margin: 0;
-  padding: 0 10px;
-  position: absolute;
-  bottom: 10px;
-  left: 135px;
-  border-radius: 50px;
-  background-color: var(--background-dark);
-}
-
 /*
     GLOBAL SETTINGS ENDS
 */
 /*
-    4. BOTTOM NAV
+    4. HEADER
 */
-nav {
-  width: auto;
+header {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding: 26px 27px;
   position: fixed;
-  bottom: 0;
+  top: 0;
   right: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
-nav .nav-container {
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 8px;
-  background-color: var(--background-dark);
-  border: 1px solid var(--border-color-dark-mode);
-  box-shadow: var(--shadows-large-dark-mode);
-  border-radius: 20px;
-  backdrop-filter: blur(100px) saturate(400%) brightness(100%);
-  padding: 10px 10px;
-  z-index: 10;
-  transform: translateY(94px);
-  animation: 500ms ease 200ms 1 normal forwards running popUpMenu;
+header .menu-icons {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
 }
-@keyframes popUpMenu {
-  from {
-    opacity: 0;
-    transform: translateY(94px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-8px);
-  }
-}
-nav .menu-btn {
-  width: 48px;
-  height: 48px;
-  cursor: poiter;
-  background-image: linear-gradient(45deg, var(--dark-gradient-color-1), var(--dark-gradient-color-2), var(--dark-gradient-color-1), var(--dark-gradient-color-2));
-  background-size: 200% 100%;
-  border-radius: 23%;
-  color: #7e7e7e;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: all linear 0.3s;
-}
-nav .menu-btn img {
-  width: 24px;
-  height: 24px;
-  border: transparent;
-}
-nav .menu-btn .tooltip {
+header .menu-icons .line {
+  width: 30px;
+  height: 2px;
+  background-color: var(--background-light);
   position: absolute;
-  bottom: 50px;
-  display: flex;
-  justify-content: center;
 }
-nav .menu-btn .tooltip p,
-nav .menu-btn .tooltip .tooltip-content {
-  display: inline;
-  font-size: 7px;
+header .menu-icons #firstLine {
+  top: 6px;
 }
-nav .menu-btn .home,
-nav .menu-btn .projects,
-nav .menu-btn .mode {
-  display: none;
+header .menu-icons #secondLine {
+  top: 14px;
 }
-nav .menu-btn .marker {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #dbdbdb;
-  position: absolute;
-  bottom: -8px;
-  display: none;
-}
-nav .menu-divider {
-  width: 1px;
-  border: 1px solid var(--border-color-dark-mode);
-  height: 38px;
+header .menu-icons #thirdLine {
+  top: 22px;
 }
 
+/*
+    HEADER END
+*/
+/*
+    5. THEME SWITCH BTN
+*/
+#themeSwitchBtn {
+  position: fixed;
+  bottom: 26px;
+  right: 27px;
+  cursor: pointer;
+}
+#themeSwitchBtn img {
+  width: 40px;
+  height: 40px;
+}
+
+/*
+    THEME SWITCH BTN END
+*/
+/*
+    4. BOTTOM NAV
+*/
 /*
     BOTTOM NAV ENDS
 */
 /*
     5. HERO SECTION
 */
-#hero-section {
-  width: 100vw;
-  height: 100vh;
-}
-#hero-section .container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 20px 150px;
-}
-#hero-section .container .col {
-  width: 40%;
-  padding: 0 40px;
-}
-
 /*
     HERO SECTION END
 */

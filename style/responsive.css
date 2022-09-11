@@ -16,7 +16,7 @@
     2. HERO SECTION
 */
 
-@media screen and (max-width: 1379px) {
+/* @media screen and (max-width: 1379px) {
     .slider-divider {
         display: none;
     }
@@ -90,7 +90,7 @@
         border: 1px solid var(--border-color-dark-mode);
         height: 1px;
     }
-}
+} */
 
 /*
     HERO SECTION ENDS
