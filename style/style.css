@@ -28,7 +28,7 @@
   --background-dark: #161616;
   --background-light: #fcfcfc;
   --heading-color-dark-mode: #ededed;
-  --haeding-color-light-mode: #171717;
+  --heading-color-light-mode: #171717;
   --p-color-dark-mode: #a0a0a0;
   --p-color-light-mode: #6f6f6f;
   --dark-gradient-color-1: #1c1c1c;
@@ -128,14 +128,48 @@ a {
     4. HEADER
 */
 header {
-  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+header .container {
   display: flex;
   flex-direction: row;
   justify-content: end;
   padding: 26px 27px;
-  position: fixed;
+  position: relative;
+}
+header .container .menu-icons {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+}
+header .container .menu-icons .line {
+  width: 30px;
+  height: 2px;
+  background-color: var(--background-light);
+  position: absolute;
+}
+header .container .menu-icons #firstLine {
+  top: 6px;
+}
+header .container .menu-icons #secondLine {
+  top: 14px;
+}
+header .container .menu-icons #thirdLine {
+  top: 22px;
+}
+header .container #menuContent {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 9;
   top: 0;
   right: 0;
+  transform: scale(1, 0);
 }
 header .menu-icons {
   width: 30px;
@@ -169,6 +203,7 @@ header .menu-icons #thirdLine {
   position: fixed;
   bottom: 26px;
   right: 27px;
+  z-index: 10;
   cursor: pointer;
 }
 #themeSwitchBtn img {
@@ -178,18 +213,6 @@ header .menu-icons #thirdLine {
 
 /*
     THEME SWITCH BTN END
-*/
-/*
-    4. BOTTOM NAV
-*/
-/*
-    BOTTOM NAV ENDS
-*/
-/*
-    5. HERO SECTION
-*/
-/*
-    HERO SECTION END
 */
 
 /*# sourceMappingURL=style.css.map */

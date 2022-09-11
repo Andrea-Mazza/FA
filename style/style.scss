@@ -38,7 +38,7 @@
     --background-light: #fcfcfc;
 
     --heading-color-dark-mode: #ededed;
-    --haeding-color-light-mode: #171717;
+    --heading-color-light-mode: #171717;
 
     --p-color-dark-mode: #a0a0a0;
     --p-color-light-mode: #6f6f6f;
@@ -138,130 +138,6 @@ a {
     color: unset;
 }
 
-// .slider-divider {
-//     width: 1px;
-//     border: 1px solid var(--border-color-dark-mode);
-//     height: 60%;
-// }
-
-// .card {
-//     display: flex;
-//     flex-direction: column;
-//     row-gap: 30px;
-//     border: 2px solid var(--border-color-dark-mode);
-//     border-radius: var(--border-radius-standard);
-//     background-color: transparent;
-//     position: relative;
-//     width: 400px;
-//     height: 400px;
-
-//     .card-heading {
-//         border-bottom: 2px solid var(--border-color-dark-mode);
-//         padding-bottom: 24px;
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: space-between;
-//         align-items: center;
-
-
-//         .card-icon {
-//             color: #7e7e7e;
-
-//             svg {
-//                 width: 48px;
-//                 height: 48px;
-//                 border: transparent;
-//             }
-//         }
-//     }
-
-//     .heading-preview {
-//         border: none;
-//         margin: 0;
-//         padding: 0 10px;
-//         position: absolute;
-//         top: 10px;
-//         left: 158px;
-//         background-color: var(--background-dark);
-//         z-index: 100;
-//         border-radius: 50px;
-
-//         h2 {
-//             font-size: 20px;
-//         }
-//     }
-
-//     .card-body {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         row-gap: 30px;
-//         overflow: hidden;
-//         width: 400px;
-//         height: 400px;
-
-//         .preview {
-//             display: flex;
-//             flex-direction: column;
-//             align-items: center;
-//             row-gap: 30px;
-//             width: 400px;
-//             height: 400px;
-
-//             .carousel-container {
-//                 width: 400px;
-//                 height: 400px;
-//                 display: flex;
-//                 justify-content: center;
-//                 overflow: hidden;
-//                 border-radius: 20px;
-
-//                 .carousel {
-//                     width: max-content;
-//                     display: flex;
-//                     flex-direction: row;
-//                     transform: translate3d(0px, 0, 0);
-//                     border-radius: 20px;
-//                 }
-//             }
-
-//             .description {
-//                 text-align: center;
-//                 display: flex;
-//                 flex-direction: column;
-//                 row-gap: 30px;
-//                 align-items: center;
-//                 width: 100%;
-
-//                 .tech-details {
-//                     width: 100%;
-//                     display: flex;
-//                     flex-direction: row;
-//                     justify-content: space-evenly;
-
-//                     .tech-icon {
-//                         width: 4.166666666666667vw;
-//                         height: 4.166666666666667vw;
-//                     }
-//                 }
-//             }
-
-//         }
-//     }
-
-//     .show-more-btn {
-//         text-align: center;
-//         border: none;
-//         margin: 0;
-//         padding: 0 10px;
-//         position: absolute;
-//         bottom: 10px;
-//         left: 135px;
-//         border-radius: 50px;
-//         background-color: var(--background-dark);
-//     }
-// }
-
 /*
     GLOBAL SETTINGS ENDS
 */
@@ -270,14 +146,56 @@ a {
     4. HEADER
 */
 header {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    padding: 26px 27px;
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 10;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        padding: 26px 27px;
+        position: relative;
+
+
+        .menu-icons {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            cursor: pointer;
+            z-index: 10;
+
+            .line {
+                width: 30px;
+                height: 2px;
+                background-color: var(--background-light);
+                position: absolute;
+            }
+
+            #firstLine {
+                top: 6px;
+            }
+
+            #secondLine {
+                top: 14px;
+            }
+
+            #thirdLine {
+                top: 22px;
+            }
+        }
+
+        #menuContent {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            z-index: 9;
+            top: 0;
+            right: 0;
+            transform: scale(1, 0);
+        }
+    }
 
     .menu-icons {
         width: 30px;
@@ -317,6 +235,7 @@ header {
     position: fixed;
     bottom: 26px;
     right: 27px;
+    z-index: 10;
     cursor: pointer;
 
     img {
@@ -327,242 +246,4 @@ header {
 
 /*
     THEME SWITCH BTN END
-*/
-
-/*
-    4. BOTTOM NAV
-*/
-// nav {
-//     width: auto;
-//     position: fixed;
-//     bottom: 0;
-//     right: 0;
-//     left: 0;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: center;
-
-
-//     .nav-container {
-//         width: auto;
-//         display: flex;
-//         flex-direction: row;
-//         align-items: center;
-//         column-gap: 8px;
-//         background-color: var(--background-dark);
-//         border: 1px solid var(--border-color-dark-mode);
-//         box-shadow: var(--shadows-large-dark-mode);
-//         border-radius: 20px;
-//         backdrop-filter: blur(100px) saturate(400%) brightness(100%);
-//         padding: 10px 10px;
-//         z-index: 10;
-//         transform: translateY(94px);
-//         animation: 500ms ease 200ms 1 normal forwards running popUpMenu;
-//     }
-
-//     @keyframes popUpMenu {
-//         from {
-//             opacity: 0;
-//             transform: translateY(94px);
-//         }
-
-//         to {
-//             opacity: 1;
-//             transform: translateY(-8px);
-//         }
-//     }
-
-//     .menu-btn {
-//         width: 48px;
-//         height: 48px;
-//         cursor: poiter;
-//         background-image: linear-gradient(45deg, var(--dark-gradient-color-1), var(--dark-gradient-color-2), var(--dark-gradient-color-1), var(--dark-gradient-color-2));
-//         background-size: 200% 100%;
-//         border-radius: 23%;
-//         color: #7e7e7e;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-//         transition: all linear 0.3s;
-
-//         img {
-//             width: 24px;
-//             height: 24px;
-//             border: transparent;
-//         }
-
-//         .tooltip {
-//             position: absolute;
-//             bottom: 50px;
-//             display: flex;
-//             justify-content: center;
-
-//             p,
-//             .tooltip-content {
-//                 display: inline;
-//                 font-size: 7px;
-//             }
-//         }
-
-//         .home,
-//         .projects,
-//         .mode {
-//             display: none;
-//         }
-
-//         .marker {
-//             width: 4px;
-//             height: 4px;
-//             border-radius: 50%;
-//             background-color: #dbdbdb;
-//             position: absolute;
-//             bottom: -8px;
-//             display: none;
-//         }
-//     }
-
-
-
-//     .menu-divider {
-//         width: 1px;
-//         border: 1px solid var(--border-color-dark-mode);
-//         height: 38px;
-//     }
-// }
-
-/*
-    BOTTOM NAV ENDS
-*/
-
-/*
-    5. HERO SECTION
-*/
-// #hero-section {
-//     width: 100vw;
-//     height: 100vh;
-
-//     // .container {
-//     //     width: 100%;
-//     //     height: 100%;
-//     //     display: flex;
-//     //     flex-direction: column;
-//     //     padding: 40px 20px;
-
-//     //     .content {
-//     //         width: 100%;
-//     //         display: flex;
-//     //         flex-direction: column;
-//     //         row-gap: 35px;
-
-//     //         h3 {
-//     //             display: inline-block;
-//     //             animation-name: fadeIn;
-//     //             animation-duration: 0.7s;
-//     //             animation-delay: 0.2s;
-//     //             animation-iteration-count: 1;
-//     //             animation-fill-mode: forwards;
-//     //             animation-timing-function: linear;
-//     //         }
-
-//     //         @keyframes fadeIn {
-//     //             from {
-//     //                 opacity: 0;
-//     //             }
-
-//     //             to {
-//     //                 opacity: 1;
-//     //             }
-//     //         }
-
-//     //         .item {
-//     //             display: flex;
-//     //             flex-direction: column;
-//     //             row-gap: 15px;
-
-//     //             .slider-container {
-//     //                 display: flex;
-//     //                 flex-direction: row;
-//     //                 column-gap: 30px;
-//     //                 align-items: center;
-//     //                 flex-wrap: wrap;
-
-//     //                 .slider-item {
-//     //                     display: flex;
-//     //                     flex-direction: row;
-//     //                     align-items: center;
-//     //                     column-gap: 15px;
-
-//     //                     .preview {
-//     //                         width: 70%;
-
-//     //                         img {
-//     //                             width: 100%;
-//     //                             border-radius: 23%;
-//     //                         }
-//     //                     }
-
-//     //                     .caption {
-//     //                         width: 30%;
-//     //                         display: flex;
-//     //                         flex-direction: column;
-
-//     //                         .col {
-//     //                             width: 100%;
-//     //                             display: flex;
-//     //                             flex-direction: column;
-//     //                             justify-content: center;
-
-//     //                             .icon-container {
-//     //                                 display: flex;
-//     //                                 flex-direction: row;
-//     //                                 align-items: center;
-//     //                                 justify-content: center;
-//     //                                 width: 100%;
-
-//     //                                 img {
-//     //                                     width: 40%;
-//     //                                 }
-
-//     //                                 p {
-//     //                                     width: 60%;
-//     //                                 }
-//     //                             }
-
-
-//     //                             // img {
-//     //                             //     width: 100%;
-//     //                             // }
-
-//     //                             // p {
-//     //                             //     flex: 1;
-//     //                             // }
-//     //                         }
-
-
-//     //                     }
-//     //                 }
-//     //             }
-//     //         }
-//     //     }
-//     // }
-//     .container {
-//         width: 100%;
-//         height: 100%;
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: space-evenly;
-//         padding: 20px 150px;
-
-//         .col {
-//             width: 40%;
-//             padding: 0 40px;
-//         }
-//     }
-// }
-
-/*
-    HERO SECTION END
 */

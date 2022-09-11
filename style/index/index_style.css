@@ -1,0 +1,68 @@
+/*
+    TABLE OF CONTENT
+    1. PROJECT SECTION
+*/
+/*
+    1. PROJECT SECTION
+*/
+#projectSection {
+  width: 100vw;
+  height: 80vh;
+  padding: 82px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+#projectSection .heading-section {
+  width: 20%;
+}
+#projectSection .heading-section h2 {
+  font-size: 80px;
+  width: 0;
+  overflow: hidden;
+  animation-name: typer;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes typer {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+#projectSection .preview-container {
+  width: 80%;
+  overflow-x: hidden;
+  position: relative;
+}
+#projectSection .preview-container .preview-carousel {
+  width: 600vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  column-gap: 20px;
+}
+#projectSection .preview-container .preview-carousel .carousel-item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  cursor: pointer;
+}
+#projectSection .preview-container .preview-carousel .item-1 {
+  background-image: url("/assets/images/templates-preview/digimedia.svg");
+}
+#projectSection .preview-container .preview-carousel .item-2 {
+  background-image: url("/assets/images/templates-preview/First-portfolio.svg");
+}
+#projectSection .preview-container .preview-carousel .item-3 {
+  background-image: url("/assets/images/templates-preview/leadership-event.svg");
+}
+
+/*
+    PROJECT SECTION END
+*/
+
+/*# sourceMappingURL=index_style.css.map */

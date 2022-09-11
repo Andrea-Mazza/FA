@@ -1,0 +1,78 @@
+/*
+    TABLE OF CONTENT
+    1. PROJECT SECTION
+*/
+
+/*
+    1. PROJECT SECTION
+*/
+#projectSection {
+    width: 100vw;
+    height: 80vh;
+    padding: 82px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+
+    .heading-section {
+        width: 20%;
+
+        h2 {
+            font-size: 80px;
+            width: 0;
+            overflow: hidden;
+            animation-name: typer;
+            animation-duration: .5s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes typer {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+    }
+
+    .preview-container {
+        width: 80%;
+        overflow-x: hidden;
+        position: relative;
+
+        .preview-carousel {
+            width: 600vw;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            column-gap: 20px;
+
+            .carousel-item {
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 25px;
+                cursor: pointer;
+            }
+
+            .item-1 {
+                background-image: url("/assets/images/templates-preview/digimedia.svg");
+            }
+
+            .item-2 {
+                background-image: url("/assets/images/templates-preview/First-portfolio.svg");
+            }
+
+            .item-3 {
+                background-image: url("/assets/images/templates-preview/leadership-event.svg");
+            }
+        }
+    }
+}
+
+/*
+    PROJECT SECTION END
+*/
