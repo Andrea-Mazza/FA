@@ -132,13 +132,20 @@ header {
   top: 0;
   right: 0;
   z-index: 10;
+  width: 100vw;
 }
 header .container {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: space-between;
   padding: 26px 27px;
   position: relative;
+}
+header .container .logo {
+  color: var(--heading-color-dark-mode);
+  z-index: 10;
+  font-size: 25px;
 }
 header .container .menu-icons {
   width: 30px;
@@ -170,6 +177,7 @@ header .container #menuContent {
   top: 0;
   right: 0;
   transform: scale(1, 0);
+  padding-top: 86px;
 }
 header .menu-icons {
   width: 30px;
