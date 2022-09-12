@@ -6,7 +6,31 @@
 /*
     1. PROJECT SECTION
 */
+@media screen and (max-width: 768px) {
+    #project-section {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 
+    #project-section .carousel-container {
+        overflow-x: scroll;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    #project-section .container {
+        flex-wrap: nowrap;
+        width: fit-content;
+    }
+
+    #project-section .container .project img {
+        width: 270px;
+        height: 270px;
+    }
+
+}
 
 /*
     PROJECT SECTION END

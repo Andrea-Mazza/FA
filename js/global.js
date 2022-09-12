@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 1. GLOBAL VARIABLES FOR ELEMENT
     const body = document.querySelector('body');
     const main = document.querySelector('main');
+    const header = document.querySelector('header');
     const h1 = Array.from(document.getElementsByTagName('h1'));
     const h2 = Array.from(document.getElementsByTagName('h2'));
     const h3 = Array.from(document.getElementsByTagName('h3'));
@@ -84,6 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //ANIMATION FOR HAMBURGER MENU END
+
+
 
     // 3. ANIMATION FOR THEME SWITCH BTN
 
