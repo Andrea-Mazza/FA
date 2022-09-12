@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const h5 = Array.from(document.getElementsByTagName('h5'));
     const h6 = Array.from(document.getElementsByTagName('h6'));
     const p = Array.from(document.getElementsByTagName('p'));
+    const logo = document.querySelector('.logo');
     const headingArray = [h1, h2, h3, h4, h5, h6];
 
 
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
             firstLine.animate(firstLineAnimation, lineTiming);
             thirdLine.animate(thirdLineAnimation, lineTiming);
             menuContent.animate(menuContentAnimation, menuContentTiming);
-            main.style.filter = "blur(4px)";
+            main.style.filter = "blur(100px)";
         }
         menuBtn.classList.toggle('active');
     });
@@ -114,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             menuLines.forEach(element => element.style.backgroundColor = "var(--background-dark)");
             headingArray.forEach(element => element.forEach(heading => heading.style.color = "var(--heading-color-light-mode)"));
             p.forEach(element => element.style.color = "var(--p-color-light-mode)");
+            logo.style.color = "var(--heading-color-light-mode)";
             actualThemeIcon.animate(themeIconAnimation, themeIconTiming);
             actualThemeIcon.src = moonIcon;
         } else {
@@ -123,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
             menuLines.forEach(element => element.style.backgroundColor = "var(--background-light)");
             headingArray.forEach(element => element.forEach(heading => heading.style.color = "var(--heading-color-dark-mode)"));
             p.forEach(element => element.style.color = "var(--p-color-dark-mode)");
+            logo.style.color = "var(--heading-color-dark-mode)";
             actualThemeIcon.animate(themeIconAnimation, themeIconTiming);
             actualThemeIcon.src = sunIcon;
         }

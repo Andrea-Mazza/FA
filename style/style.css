@@ -177,7 +177,7 @@ header .container #menuContent {
   top: 0;
   right: 0;
   transform: scale(1, 0);
-  padding-top: 86px;
+  padding: 86px 27px;
 }
 header .menu-icons {
   width: 30px;

@@ -1,73 +1,81 @@
 /*
     TABLE OF CONTENT
-    1. PROJECT SECTION
+    1. HERO
+    2. PROJECT SECTION
 */
 /*
-    1. PROJECT SECTION
+    1. HERO
 */
-#projectSection {
+#hero {
   width: 100vw;
-  height: 90vh;
-  padding: 82px 30px;
+  padding: 140px 27px 60px 27px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
 }
-#projectSection .heading-section {
-  width: 20%;
+#hero .container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
 }
-#projectSection .heading-section h2 {
-  font-size: 4.1666666667vw;
-  width: 0;
-  overflow: hidden;
-  animation-name: typer;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
+#hero .welcome {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: step(30, end);
   animation-fill-mode: forwards;
+  opacity: 0;
 }
-@keyframes typer {
+#hero .presentation {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
   from {
-    width: 0;
+    opacity: 0;
   }
   to {
-    width: 100%;
+    opacity: 1;
   }
 }
-#projectSection .preview-container {
-  width: 80%;
-  position: relative;
-  overflow-x: scroll;
+
+/*
+    HERO END
+*/
+/*
+    2. PROJECT SECTION
+*/
+#project-section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 26px 67px;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
-#projectSection .preview-container .preview-carousel {
-  width: fit-content;
+#project-section .container {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  column-gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  column-gap: 24px;
+  row-gap: 24px;
 }
-#projectSection .preview-container .preview-carousel .carousel-item {
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 25px;
-  cursor: pointer;
+#project-section .container .project {
+  border-radius: 10px;
 }
-#projectSection .preview-container .preview-carousel .item-1 {
-  background-image: url("/assets/images/templates-preview/digimedia.svg");
-}
-#projectSection .preview-container .preview-carousel .item-2 {
-  background-image: url("/assets/images/templates-preview/First-portfolio.svg");
-}
-#projectSection .preview-container .preview-carousel .item-3 {
-  background-image: url("/assets/images/templates-preview/leadership-event.svg");
-}
-#projectSection .preview-container .preview-carousel .double-item {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  column-gap: 20px;
-}
-#projectSection ::-webkit-scrollbar {
-  display: none;
+#project-section .container .project img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 /*
