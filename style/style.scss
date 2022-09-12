@@ -131,6 +131,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 a {
@@ -153,6 +154,7 @@ header {
     right: 0;
     z-index: 10;
     width: 100vw;
+    background-color: var(--background-dark);
 
     .container {
         width: 100%;
@@ -243,15 +245,17 @@ header {
     5. THEME SWITCH BTN
 */
 #themeSwitchBtn {
+
     position: fixed;
     bottom: 26px;
     right: 27px;
     z-index: 10;
     cursor: pointer;
 
+
     img {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
 }
 

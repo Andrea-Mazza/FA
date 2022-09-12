@@ -1,4 +1,22 @@
 /*
     TABLE OF CONTENTS
-    
+    1. HEADER
+*/
+
+/*
+    1. HEADER
+*/
+@media screen and (max-width: 768px) {
+    header .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #themeSwitchBtn {
+        right: 10px;
+    }
+}
+
+/*
+    HEADER END
 */

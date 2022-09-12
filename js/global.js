@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
             headingArray.forEach(element => element.forEach(heading => heading.style.color = "var(--heading-color-light-mode)"));
             p.forEach(element => element.style.color = "var(--p-color-light-mode)");
             logo.style.color = "var(--heading-color-light-mode)";
+            header.style.backgroundColor = "var(--background-light)";
             actualThemeIcon.animate(themeIconAnimation, themeIconTiming);
             actualThemeIcon.src = moonIcon;
         } else {
@@ -128,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
             menuLines.forEach(element => element.style.backgroundColor = "var(--background-light)");
             headingArray.forEach(element => element.forEach(heading => heading.style.color = "var(--heading-color-dark-mode)"));
             p.forEach(element => element.style.color = "var(--p-color-dark-mode)");
+            header.style.backgroundColor = "var(--background-dark)";
             logo.style.color = "var(--heading-color-dark-mode)";
             actualThemeIcon.animate(themeIconAnimation, themeIconTiming);
             actualThemeIcon.src = sunIcon;
