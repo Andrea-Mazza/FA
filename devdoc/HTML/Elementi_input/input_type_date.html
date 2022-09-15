@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;input type="date"&gt; (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;input type="date"&gt;</h1>
+                        <p>Gli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                di tipo <code>date</code> creano campi di input che
+                                consentono all'utente di inserire una data,
+                                con una casella di testo che convalida l'input o un'interfaccia speciale per la
+                                selezione della
+                                data.</p>
+                        <p>Il valore risultante include l'anno, il mese e il giorno, ma non l'ora. I tipi di input time
+                                e
+                                datetime-local supportano l'input di ora e data+ora.</p>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <h2 id="valore">Valore</h2>
+                        <p>Una stringa che rappresenta la data immessa nell'input.</p>
+                        <p>Puoi impostare un valore predefinito per l'input con una data all'interno dell'attributo
+                                <code>value</code>, in questo modo:
+                        </p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">date</span>" <span class="attr-name">value</span>="<span class="attr-value">01-06-2017</span>"&gt;</span></code></pre>
+                        </div>
+                        <h2 id="attributi">Attributi aggiuntivi</h2>
+                        <p>Insieme agli attributi comuni a tutti gli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,
+                                dategli input hanno i
+                                seguenti attributi.</p>
+                        <h3>max</h3>
+                        <p>L'ultima data da accettare. Se l'immissione di <code>value</code> nell'elemento si verifica
+                                in
+                                seguito, l'elemento
+                                non supera la convalida del vincolo . Se il valore dell'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>
+                                non è
+                                una
+                                possibile stringa
+                                di data nel formato yyyy-mm-dd, l'elemento non ha un valore di data massimo.</p>
+                        <p>Se sono impostati entrambi gli attributi <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>
+                                e <a href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>,
+                                questo
+                                valore
+                                deve
+                                essere una stringa di data successiva o uguale a quella nell'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>.
+                        </p>
+                        <h3>min</h3>
+                        <p>La prima data da accettare. Se l'immissione di <code>value</code> nell'elemento avviene in
+                                anticipo,
+                                l'elemento non
+                                supera la convalida del vincolo . Se il valore dell'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>
+                                non è
+                                una
+                                possibile stringa di
+                                data nel formato yyyy-mm-dd, l'elemento non ha un valore di data minimo.</p>
+                        <p>Se sono impostati entrambi gli attributi <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>
+                                e <a href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>,
+                                questo
+                                valore
+                                deve
+                                essere una stringa di data
+                                precedente o uguale a quella nell'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>.
+                        </p>
+                        <h3>step</h3>
+                        <p>L'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/step.html"><code>step</code></a>
+                                è un
+                                numero che specifica la granularità a cui deve attenersi il valore
+                                o il valore
+                                speciale <code>any</code>, descritto di seguito. Sono validi solo i valori che sono
+                                uguali alla
+                                base per il
+                                passaggio ( <code>min</code> se specificato, <code>value</code> altrimenti, e un valore
+                                predefinito appropriato se nessuno
+                                di questi è fornito).</p>
+                        <p>Un valore stringa di anysignifica che non è implicito alcun passaggio e qualsiasi valore è
+                                consentito
+                                (salvo altri vincoli, come <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>
+                                e <a href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>).
+                        </p>
+                        <p>Per gli input <code>date</code>, il valore di stepè espresso in giorni; e viene considerato
+                                come un
+                                numero di
+                                millisecondi pari a 86.400.000 volte il stepvalore (il valore numerico sottostante è in
+                                millisecondi). Il valore predefinito di stepè 1, che indica 1 giorno.</p>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

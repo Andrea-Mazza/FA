@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;input type="file"&gt; (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;input type="file"&gt;</h1>
+                        <p>Gli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                con <code>type="file"</code> consentono all'utente di
+                                scegliere uno o più file dalla memoria del
+                                proprio dispositivo. Una volta scelti, i file possono essere caricati su un server
+                                utilizzando
+                                l' invio di moduli o manipolati utilizzando il codice JavaScript e l'API File .</p>
+                        <h2 id="valore">Valore</h2>
+                        <p>L'attributo <code>value</code> di un input di file contiene una stringa che rappresenta il
+                                percorso
+                                dei file
+                                selezionati. Se l'utente ha selezionato più file, valuerappresenta il primo file
+                                nell'elenco dei
+                                file selezionati. Gli altri file possono essere identificati utilizzando la
+                                proprietà dell'input <code>HTMLInputElement.files</code>.</p>
+                        <h2 id="attributi">Attributi aggiuntivi</h2>
+                        <p>Oltre agli attributi <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a> comuni condivisi da tutti gli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,
+                                gli input di
+                                tipo <code>file</code> supportano anche i seguenti attributi.</p>
+                        <h3>accept</h3>
+                        <p>Il valore dell'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/accept.html"><code>accept</code></a>
+                                è
+                                una stringa che definisce i tipi di file che l'input
+                                del file deve
+                                accettare. Questa stringa è un elenco separato da virgole di identificatori di tipo di
+                                file
+                                univoci . Poiché un determinato tipo di file può essere identificato in più di un modo,
+                                è utile
+                                fornire un set completo di identificatori di tipo quando sono necessari file di un
+                                determinato
+                                formato.</p>
+                        <p>Ad esempio, ci sono diversi modi in cui è possibile identificare i file di Microsoft Word,
+                                quindi un
+                                sito che accetta file di Word potrebbe utilizzare un <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                simile:</p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">file</span>" <span class="attr-name">id</span>"<span class="attr-value">docpicker</span>"
+  <span class="attr-name">accept</span>="<span class="attr-value">.doc, .docx,application/msword,application/vnd.openxmlformats-o
+  fficedocument.wordprocessingml.document</span>"&gt;</span></code></pre>
+                        </div>
+                        <h3>capture</h3>
+                        <p>Il valore dell'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/capture.html"><code>capture</code></a>
+                                è una stringa che specifica quale telecamera utilizzare
+                                per acquisire
+                                dati di immagini o video, se l'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/accept.html"><code>accept</code></a>
+                                indica che l'input deve essere di
+                                uno di questi
+                                tipi. Un valore di userindica che è necessario utilizzare la fotocamera e/o il microfono
+                                rivolti
+                                verso l'utente. Un valore di <code>environment</code> specifica che è necessario
+                                utilizzare la
+                                fotocamera e/o
+                                il microfono rivolti verso l'esterno. Se questo attributo manca, lo user agent è libero
+                                di
+                                decidere da solo cosa fare. Se la modalità di fronteggiamento richiesta non è
+                                disponibile,
+                                l'interprete potrebbe tornare alla modalità predefinita preferita.</p>
+                        <h3>multiple</h3>
+                        <p>Quando <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/multiple.html"><code>multiple</code></a>
+                                viene specificato l'attributo booleano, l'input del file consente
+                                all'utente di selezionare più di un file.</p>
+                        <h2 id="attributi-2">Attributi non standard</h2>
+                        <p>Oltre agli attributi sopra elencati, su alcuni browser sono disponibili i seguenti attributi
+                                non
+                                standard. Dovresti cercare di evitare di usarli quando possibile, poiché ciò limiterà la
+                                capacità del tuo codice di funzionare nei browser che non li implementano.</p>
+                        <h3>webkitdirectory</h3>
+                        <p>L'attributo booleano <code>webkitdirectory</code>, se presente, indica che solo le directory
+                                devono
+                                essere
+                                disponibili per essere selezionate dall'utente nell'interfaccia di selezione file.</p>
+                        <p>Sebbene originariamente implementato solo per i browser basati su WebKit,
+                                <code>webkitdirectory</code> è
+                                utilizzabile anche in Microsoft Edge e Firefox 50 e versioni successive. Tuttavia, anche
+                                se ha
+                                un supporto relativamente ampio, non è ancora standard e non dovrebbe essere utilizzato
+                                a meno
+                                che tu non abbia alternative.
+                        </p>
+                        <h2 id="identificatori">Identificatori univoci del tipo di file</h2>
+                        <p>Un identificatore di tipo di file univoco è una stringa che descrive un tipo di file che può
+                                essere
+                                selezionato dall'utente in un elemento <code>&lt;input&gt;</code> di tipo file. Ciascun
+                                identificatore di tipo di
+                                file univoco può assumere una delle seguenti forme:</p>
+                        <ul>
+                                <li>Un'estensione del nome file valida senza distinzione tra maiuscole e minuscole, che
+                                        inizia
+                                        con un punto ("."). Ad esempio: .jpg, .pdf, o .doc.</li>
+                                <li>Una stringa di tipo MIME valida, senza estensioni.
+                                </li>
+                                <li>La stringa <code>audio/*</code> che significa "qualsiasi file audio".</li>
+                                <li>La stringa <code>video/*</code> che significa "qualsiasi file video".</li>
+                                <li>La stringa <code>image/*</code> che significa "qualsiasi file immagine".</li>
+                        </ul>
+                        <p>L'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/accept.html"><code>accept</code></a>
+                                accetta una stringa contenente uno o più di questi identificatori di
+                                tipo di file
+                                univoci come valore, separati da virgole. Ad esempio, un selettore di file che necessita
+                                di
+                                contenuto che può essere presentato come un'immagine, inclusi formati di immagine
+                                standard e
+                                file PDF, potrebbe avere il seguente aspetto:</p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">file</span>" <span class="attr-name">accept</span>="<span class="attr-value">image/*,.pdf</span>"&gt;</span></code></pre>
+                        </div>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+
+                </aside>
+        </main>
+
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

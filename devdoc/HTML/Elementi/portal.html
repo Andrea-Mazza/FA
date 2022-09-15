@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;portal&gt;: l'elemento "Portale" (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;portal&gt;: l'elemento "Portale"</h1>
+                        <p>L' elemento HTML <code>&lt;portal&gt;</code> consente di incorporare un'altra pagina HTML in
+                                quella
+                                corrente allo scopo di consentire
+                                una navigazione più agevole nelle nuove pagine.</p>
+                        <p>Un <code>&lt;portal&gt;</code> è simile a un <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/iframe.html"><code>&lt;iframe&gt;</code></a>.
+                                Un
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/iframe.html"><code>&lt;iframe&gt;</code></a>
+                                consente di incorporare un contesto di navigazione separato.
+                                Tuttavia, il contenuto incorporato di un <code>&lt;portal&gt;</code> è più limitato di
+                                quello di un
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/iframe.html"><code>&lt;iframe&gt;</code></a>.
+                                Non
+                                è possibile interagire con esso e pertanto non è adatto per incorporare widget in un
+                                documento. Al contrario, <code>&lt;portal&gt;</code> funge da anteprima del contenuto di
+                                un'altra
+                                pagina. Può essere navigato consentendo quindi una transizione senza
+                                interruzioni al contenuto incorporato.
+                        </p>
+                        <h2 id="attributi">Attributi</h2>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <dl>
+                                <dt><code>referrerpolicy</code></dt>
+                                <dd>
+                                        <p>Imposta la politica del referrer da utilizzare quando si richiede la pagina
+                                                all'URL fornito come
+                                                valore dell'attributo <code>src</code>.</p>
+                                </dd>
+                                <dt><code>src</code></dt>
+                                <dd>
+                                        <p>L'URL della pagina da incorporare.</p>
+                                </dd>
+                        </dl>
+                        <h2 id="esempi">Esempio</h2>
+                        <p>L'esempio seguente incorporerà il contenuto di <code>https://esempio.com</code> come
+                                anteprima.</p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">portal</span> <span class="attr-name">id</span>="<span class="attr-value">esempioPortal</span>" <span class="attr-name">src</span>="<span class="attr-value">https://esempio.com/</span>"&gt;</span><span class="punctuation">&lt;/<span class="tag">portal</span>&gt;</span></code></pre>
+                        </div>
+                        <h2 id="accessibilità">Problemi di accessibilità</h2>
+                        <p>L'anteprima visualizzata da un <code>&lt;portal&gt;</code> non è interattiva, quindi non
+                                riceve
+                                eventi di input o focus.
+                                Pertanto i contenuti incorporati del portale non sono esposti come elementi nell'albero
+                                dell'accessibilità. Il portale può essere navigato e attivato come un pulsante, il
+                                comportamento predefinito quando si fa clic sul portale è attivarlo.</p>
+                        <p>Ai portali viene assegnata un'etichetta predefinita che è il titolo della pagina incorporata.
+                                Se non
+                                è presente alcun titolo, il testo visibile nell'anteprima viene concatenato per creare
+                                un'etichetta. L'attributo <code>aria-label</code> può essere utilizzato per
+                                sovrascriverlo.</p>
+                        <p>I portali utilizzati solo per il prerendering devono essere nascosti con l'attributo HTML
+                                nascosto o
+                                la proprietà CSS <code>display</code> con un valore di <code>none</code>.</p>
+                        <p>Quando si utilizzano le animazioni durante l'attivazione del portale, è necessario rispettare
+                                la
+                                funzione multimediale <code>prefers-reduced-motion</code>.</p>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/portal">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/portal</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

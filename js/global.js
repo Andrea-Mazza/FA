@@ -91,8 +91,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // 3. ANIMATION FOR THEME SWITCH BTN
 
     const themeSwitchBtn = document.getElementById('themeSwitchBtn');
-    const sunIcon = "./assets/icons/light_mode.svg";
-    const moonIcon = "./assets/icons/dark_mode.svg";
+    const sunIcon = "/assets/icons/light_mode.svg";
+    const moonIcon = "/assets/icons/dark_mode.svg";
     const actualThemeIcon = document.getElementById('actualThemeIcon');
     const menuLines = [firstLine, secondLine, thirdLine];
 

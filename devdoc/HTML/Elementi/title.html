@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;title&gt;: l'elemento "titolo del documento" (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;title&gt;: l'elemento "titolo del documento"</h1>
+                        <p>L' elemento HTML <code>&lt;title&gt;</code> definisce il titolo del documento che viene
+                                mostrato
+                                nella barra del titolo di un
+                                browser o nella scheda di una pagina. Contiene solo testo; i tag all'interno
+                                dell'elemento
+                                vengono ignorati.</p>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <h2 id="note">Note d'uso</h2>
+                        <p>L'elemento <code>&lt;title&gt;</code> viene sempre utilizzato all'interno del blocco
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/head.html"><code>&lt;head&gt;</code></a>
+                                di
+                                una pagina.
+                        </p>
+                        <h3>Titolo delle pagine e SEO</h3>
+                        <p>Il contenuto del titolo di una pagina può avere implicazioni significative per
+                                l'ottimizzazione dei
+                                motori di ricerca ( SEO ). In generale, un titolo più lungo e descrittivo ha prestazioni
+                                migliori rispetto a titoli brevi o generici. Il contenuto del titolo è una delle
+                                componenti
+                                utilizzate dagli algoritmi dei motori di ricerca per decidere l'ordine in cui elencare
+                                le pagine
+                                nei risultati di ricerca. Inoltre, il titolo è il "gancio" iniziale con cui attiri
+                                l'attenzione
+                                dei lettori che danno un'occhiata alla pagina dei risultati di ricerca.</p>
+                        <p>Alcune linee guida e suggerimenti per comporre buoni titoli:</p>
+                        <ul>
+                                <li>Evita i titoli di una o due parole. Usa una frase descrittiva o un abbinamento
+                                        termine-definizione per glossario o pagine in stile riferimento.</li>
+                                <li>I motori di ricerca in genere visualizzano circa i primi 55-60 caratteri del titolo
+                                        di una
+                                        pagina. Il testo oltre potrebbe andare perso, quindi cerca di non avere titoli
+                                        più
+                                        lunghi di quello. Se devi usare un titolo più lungo, assicurati che le parti
+                                        importanti
+                                        arrivino prima e che non ci siano elementi critici nella parte del titolo che
+                                        rischia di
+                                        essere eliminata.</li>
+                                <li>Non utilizzare "blob di parole chiave". Se il tuo titolo è solo un elenco di parole,
+                                        gli
+                                        algoritmi spesso riducono la posizione della tua pagina nei risultati di
+                                        ricerca.</li>
+                                <li>Cerca di assicurarti che i tuoi titoli siano il più unici possibile all'interno del
+                                        tuo
+                                        sito. Titoli duplicati o quasi duplicati possono contribuire a risultati di
+                                        ricerca
+                                        imprecisi.</li>
+                        </ul>
+                        <h2 id="esempi">Esempio</h2>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">title</span>&gt;</span>Roba interessante<span class="punctuation">&lt;/<span class="tag">title</span>&gt;</span></code></pre>
+                        </div>
+                        <p>Questo esempio stabilisce una pagina il cui titolo (come visualizzato nella parte superiore
+                                della
+                                finestra o nella scheda della finestra) come "Roba interessante".</p>
+                        <h2 id="accessibilità">Problemi di accessibilità</h2>
+                        <p>È importante fornire un titolo accurato e conciso per descrivere lo scopo della pagina.</p>
+                        <p>Una tecnica di navigazione comune per gli utenti della tecnologia assistiva consiste nel
+                                leggere il
+                                titolo della pagina e dedurre il contenuto della pagina. Questo perché la navigazione in
+                                una
+                                pagina per determinarne il contenuto può essere un processo dispendioso in termini di
+                                tempo e
+                                potenzialmente fonte di confusione. I titoli dovrebbero essere univoci per ogni pagina
+                                di un
+                                sito Web, idealmente facendo emergere prima lo scopo principale della pagina, seguito
+                                dal nome
+                                del sito Web. Seguire questo schema aiuterà a garantire che lo scopo principale della
+                                pagina
+                                venga prima annunciato da un'utilità per la lettura dello schermo. Ciò fornisce
+                                un'esperienza di
+                                gran lunga migliore rispetto al dover ascoltare il nome di un sito Web prima del titolo
+                                univoco
+                                della pagina, per ogni pagina in cui un utente naviga nello stesso sito Web.</p>
+                        <h3>Esempio</h3>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">title</span>&gt;</span>Menu - Blue House Chinese Food - FoodYum: da asporto online oggi!
+<span class="punctuation">&lt;/<span class="tag">title</span>&gt;</span></code></pre>
+                        </div>
+                        <p>Se l'invio di un modulo contiene errori e l'invio esegue nuovamente il rendering della pagina
+                                corrente, il titolo può essere utilizzato per rendere gli utenti consapevoli di
+                                eventuali errori
+                                nell'invio. Ad esempio, aggiorna il valore di <code>title</code> della pagina per
+                                riflettere
+                                modifiche
+                                significative allo stato della pagina (come problemi di convalida dei moduli).</p>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

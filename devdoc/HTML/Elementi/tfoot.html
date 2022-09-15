@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;tfoot&gt;: l'elemento "tfoot" (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;tfoot&gt;: l'elemento "tfoot"</h1>
+                        <p>L' elemento HTML <code>&lt;tfoot&gt;</code> definisce un insieme di righe che riepilogano le
+                                colonne
+                                della tabella.</p>
+                        <h2 id="attributi">Attributi</h2>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <h3>Attributi deprecati</h3>
+                        <p>I seguenti attributi sono obsoleti e non devono essere utilizzati. Sono documentati di
+                                seguito come
+                                riferimento durante l'aggiornamento del codice esistente e solo per interesse storico.
+                        </p>
+                        <dl>
+                                <dt><code>align</code></dt>
+                                <dd>
+                                        <p>Questo attributo enumerato specifica come verrà gestito l'allineamento
+                                                orizzontale
+                                                del contenuto di ciascuna cella. I valori possibili sono:</p>
+                                        <ul>
+                                                <li><code>left</code>, allineando il contenuto a sinistra della cella
+                                                </li>
+                                                <li><code>center</code>, centrando il contenuto della cella</li>
+                                                <li><code>right</code>, allineando il contenuto a destra della cella
+                                                </li>
+                                                <li><code>justify</code>, inserendo spazi nel contenuto testuale in modo
+                                                        che il
+                                                        contenuto sia giustificato nella cella</li>
+                                                <li><code>char</code>, allineando il contenuto testuale su un carattere
+                                                        speciale
+                                                        con un offset minimo, definito dagli attributi <code>char</code>
+                                                        e
+                                                        <code>charoff</code>.
+                                                </li>
+                                        </ul>
+                                        <p>Se questo attributo non è impostato, viene assunto il valore
+                                                <code>left</code>.
+                                        </p>
+                                        <p>Poiché questo attributo è deprecato, utilizza invece la proprietà CSS
+                                                <code>text-align</code>.
+                                        </p>
+                                </dd>
+                                <dt><code>bgcolor</code></dt>
+                                <dd>
+                                        <p>Il colore di sfondo del tavolo. È un codice RGB esadecimale a 6 cifre ,
+                                                preceduto da
+                                                un '#'.</p>
+                                        <p>Per ottenere un effetto simile, usa la proprietà CSS
+                                                <code>background-color</code>.
+                                        </p>
+                                </dd>
+                                <dt><code>char</code></dt>
+                                <dd>
+                                        <p>Questo attributo viene utilizzato per impostare il carattere su cui allineare
+                                                le
+                                                celle in una colonna. I valori tipici per questo includono un punto
+                                                (<code>.</code>) quando
+                                                si tenta di allineare numeri o valori monetari. Se <code>align</code>
+                                                non è
+                                                impostato su <code>char</code>,
+                                                questo attributo viene ignorato.</p>
+
+                                </dd>
+                                <dt><code>charoff</code></dt>
+                                <dd>
+                                        <p>Questo attributo viene utilizzato per indicare il numero di caratteri per
+                                                compensare
+                                                i dati della colonna dai caratteri di allineamento specificati
+                                                dall'attributo
+                                                <code>char</code>.
+                                        </p>
+                                </dd>
+                                <dt><code>valign</code></dt>
+                                <dd>
+                                        <p>Questo attributo specifica l'allineamento verticale del testo all'interno di
+                                                ogni
+                                                riga di celle dell'intestazione della tabella. I possibili valori per
+                                                questo
+                                                attributo sono:</p>
+                                        <ul>
+                                                <li><code>baseline</code>, che metterà il testo il più vicino possibile
+                                                        alla
+                                                        parte inferiore della cella, ma lo allineerà alla linea di base
+                                                        dei
+                                                        caratteri anziché alla parte inferiore di essi. Se i caratteri
+                                                        sono
+                                                        tutti della dimensione, questo ha lo stesso effetto di
+                                                        <code>bottom</code>.
+                                                </li>
+                                                <li><code>bottom</code>, che metterà il testo il più vicino possibile
+                                                        alla parte
+                                                        inferiore della cella;</li>
+                                                <li><code>middle</code>, che centra il testo nella cella;</li>
+                                                <li><code>top</code>, che metterà il testo il più vicino possibile alla
+                                                        parte
+                                                        superiore della cella.</li>
+                                        </ul>
+                                        <p>Poiché questo attributo è deprecato, utilizza invece la proprietà CSS
+                                                <code>vertical-align</code>.
+                                        </p>
+                                </dd>
+                                <h2 id="esempi">Esempi</h2>
+                                <p>Per vedere esempi su <code>&lt;tfooot&gt;</code>, consultare la pagina dedicata a <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/table.html"><code>&lt;table&gt;</code></a>.
+                                </p>
+                                <h2>Guarda anche</h2>
+                                <ul>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/caption.html"><code>&lt;caption&gt;</code></a>
+                                        </li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/col.html"><code>&lt;col&gt;</code></a>
+                                        </li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/colgroup.html"><code>&lt;colgroup&gt;</code></a>
+                                        </li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/table.html"><code>&lt;table&gt;</code></a>
+                                        </li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/tbody.html"><code>&lt;tbody&gt;</code></a>
+                                        </li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/td.html"><code>&lt;td&gt;</code></a>
+                                        </li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/th.html"><code>&lt;th&gt;</code></a>
+                                        </li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/thead.html"><code>&lt;thead&gt;</code></a>
+                                        </li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/tr.html"><code>&lt;tr&gt;</code></a>
+                                        </li>
+                                </ul>
+                                <h2 id="lista">Liste utili</h2>
+                                <ul>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                        </li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                        globali</a></li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                        </li>
+                                </ul>
+                                <div class="copyright-card">
+                                        <p>© 2005–2021 MDN contributors.</p>
+                                        <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or
+                                                later.</p>
+                                        <a
+                                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot</a>
+                                </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

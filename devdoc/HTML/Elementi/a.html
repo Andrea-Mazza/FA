@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+
+        <title>&lt;a&gt;: Elemento di ancoraggio (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;a&gt;: Elemento di ancoraggio</h1>
+                        <p>L'elemento <strong><code>&lt;a&gt;</code></strong> (o elemento di
+                                <em>ancoraggio</em>), con il suo attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/href.html"><code>href</code></a>
+                                , crea un collegamento
+                                ipertestuale a
+                                pagine Web, file, indirizzi e-mail, posizioni nella stessa pagina o a qualsiasi altra
+                                cosa un URL può
+                                indirizzare.
+                        </p>
+                        <p>Il contenuto di ogni <code>&lt;a&gt;</code> <span class="bold">dovrebbe</span> indicare la
+                                destinazione del
+                                collegamento. Se l'attributo <code>href</code> è presente, premendo il tasto invio
+                                mentre il mouse è
+                                sull'elemento
+                                <code>&lt;a&gt;</code> lo attiverà.
+                        </p>
+                        <h2 id="attributes">Attributi</h2>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <div class="margin-div">
+                                <dl>
+                                        <dt>
+                                                <span class="bold"><a id="attr-download"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-download"><code>download</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>Richiede all'utente di salvare l'URL collegato invece di accedervi.
+                                                        Può essere utilizzato con
+                                                        o senza un valore:</p>
+                                                <ul>
+                                                        <li>Senza un valore, il browser suggerirà un nome
+                                                                file/estensione, generato da varie fonti:
+                                                                <ul>
+                                                                        <li>L'intestazione HTTP
+                                                                                <code>Content-Disposition</code>
+                                                                        </li>
+                                                                        <li>Il segmento finale nel percorso dell'URL
+                                                                        </li>
+                                                                        <li>Il tipo di supporto (dall'intestazione
+                                                                                <code>Content-Type</code>, l'inizio di
+                                                                                un
+                                                                                <code>data:</code> URL,
+                                                                                o <code>Blob.type</code> per un
+                                                                                <code>blob:</code> URL)
+                                                                        </li>
+                                                                </ul>
+                                                        </li>
+                                                        <li>la definizione di un valore lo suggerisce come nome del
+                                                                file. I caratteri <code>/</code>
+                                                                e <code>\</code>
+                                                                vengono convertiti in caratteri di sottolineatura
+                                                                (<code>_</code>). I filesystems
+                                                                possono vietare altri caratteri nei nomi dei file,
+                                                                quindi i browser regoleranno il nome
+                                                                suggerito se necessatio.</li>
+                                                </ul>
+                                        </dd>
+                                        <dt><span class="bold"><a id="attr-href"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-href"><code>href</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>L'URL a cui punta il collegamento ipertestuale. I collegamenti non
+                                                        sono limitati agli URL
+                                                        basati su HTTP: possono utilizzare qualsiasi schema di URL
+                                                        supportato dai browser:</p>
+                                                <ul>
+                                                        <li>Sezioni di una pagina con un URL</li>
+                                                        <li>Parti di file multimediali con frammenti multimediali</li>
+                                                        <li>Numeri di telefono con un URL <code>tel:</code></li>
+                                                        <li>Indirizzi e-mail con URL <code>mailto:</code> </li>
+                                                        <li>Sebbene i browser Web potrebbero non supportare altri schemi
+                                                                URL, i siti Web possono
+                                                                farlo con
+                                                                <code>registerProtocolHandler()</code>
+                                                        </li>
+                                                </ul>
+                                        </dd>
+                                        <dt><span class="bold"><a id="attr-hreflang"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-hreflang"><code>hreflang</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>Suggerimenti al linguaggio umano dell'URL collegato. Nessuna
+                                                        funzionalità integrata. I valori
+                                                        consentiti sono gli stessi dell'attributo globale
+                                                        <code>lang</code>.
+                                                </p>
+                                        </dd>
+                                        <dt><a id="attr-ping"
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-ping"><span
+                                                                class="bold"><code>ping</code></span></a></dt>
+                                        <dd>
+                                                <p>Un elenco di URL separati da spazi. Quando il collegamento viene
+                                                        seguito, il browser invierà
+                                                        richieste
+                                                        <code>POST</code> requests con il corpo
+                                                        <code>PING</code> agli URL. Tipicamente per il monitoraggio.
+                                                </p>
+                                        </dd>
+                                        <dt><span class="bold"><a id="attr-referrerpolicy"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-referrerpolicy"><code>referrerpolicy</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>Quanto referrer inviare quando si segue il collegamento</p>
+                                                <ul>
+                                                        <li><code>no-referrer</code>: l'intestazione
+                                                                <code>Referer</code> non saraà inviata
+                                                        </li>
+                                                        <li><code>no-referrer-when-downgrade</code>: l'intestazione
+                                                                <code>Referer</code> non verrà
+                                                                inviata alle origini senza TLS (HTTPS).
+                                                        </li>
+                                                        <li><code>origin</code>: il referrer inviato sarà limitato
+                                                                all'origine della pagina
+                                                                referente: schema, host e porta</li>
+                                                        <li><code>origin-when-cross-origin</code>: il referrer inviato
+                                                                ad altre origini sarà
+                                                                limitato allo schema, all'host e alla porta. Le
+                                                                navigazioni sulla stessa origine
+                                                                includeranno comunque il percorso</li>
+                                                        <li><code>same-origin</code>: verrà inviato un referrer per la
+                                                                stessa origine, ma le
+                                                                richieste cross-origin non conterranno informazioni sul
+                                                                referrer.</li>
+                                                        <li><code>strict-origin</code>: invia l'origine del documento
+                                                                come referrer solo quando il
+                                                                livello di sicurezza del protocollo rimane lo stesso
+                                                                (HTTPS→HTTPS), ma non a una
+                                                                destinazione meno sicura (HTTPS→HTTP).</li>
+                                                        <li><code>strict-origin-when-cross-origin</code> (predefinito):
+                                                                invia un URL completo quando
+                                                                si esegue una richiesta della stessa origine, invia
+                                                                l'origine solo quando il livello di
+                                                                sicurezza del protocollo rimane lo stesso (HTTPS→HTTPS)
+                                                                e non invia alcuna intestazione
+                                                                a un destinazione meno sicura (HTTPS→HTTP)</li>
+                                                        <li><code>unsafe-url</code>: il referrer includerà l'origine
+                                                                <em>e</em> il percorso (ma non
+                                                                il frammento, la password o il nome utente).
+                                                                <strong>Questo valore non è
+                                                                        sicuro</strong>, perché perde origini e percorsi
+                                                                dalle risorse protette da TLS a
+                                                                origini non sicure
+                                                        </li>
+                                                </ul>
+                                        </dd>
+                                        <dt><span class="bold"><a id="attr-rel"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-rel"><code>rel</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>La relazione dell'URL collegato come tipi di collegamento separati da
+                                                        spazi.</p>
+                                        </dd>
+                                        <dt><span class="bold"><a id="attr-target"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-terget"><code>target</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>Dove visualizzare l'URL collegato, come nome per un <em>contesto di
+                                                                navigazione</em> (una
+                                                        scheda, una finestra,
+                                                        o un
+                                                        <code>&lt;iframe&gt;</code>). Le seguenti parole chiave hanno
+                                                        significati speciali per dove
+                                                        caricare l'URL:
+                                                </p>
+                                                <ul>
+                                                        <li><code>_self</code>: il contesto di navigazione corrente.
+                                                                (Predefinito)</li>
+                                                        <li><code>_blank</code>: di solito una nuova scheda, ma gli
+                                                                utenti possono invece
+                                                                configurare i browser per aprire una nuova finestra.
+                                                        </li>
+                                                        <li><code>_parent</code>: il contesto di navigazione padre di
+                                                                quello corrente. Se nessun
+                                                                genitore, si comporta come <code>_self</code>.</li>
+                                                        <li><code>_top</code>: il contesto di navigazione più in alto
+                                                                (il contesto "più alto" che è
+                                                                un antenato di quello attuale). Se nessun antenato, si
+                                                                comporta come <code>_self</code>.
+                                                        </li>
+                                                </ul>
+                                        </dd>
+                                        <dt><span class="bold"><a id="attr-type"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-type"><code>type</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>Suggerimenti al formato URL collegato con un tipo MIME. Nessuna
+                                                        funzionalità integrata.</p>
+                                        </dd>
+                                </dl>
+                                <h3 id="deprecated-attributes">Attributi deprecati</h3>
+                                <dl>
+                                        <dt><span class="bold"><a id="attr-charset"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-charset"><code>charset</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>Suggerimenti alla codifica dei caratteri dell'URL collegato.</p>
+                                                <div class="notecard note">
+                                                        <p><span class="bold">Nota:</span> Questo attributo è deprecato
+                                                                e
+                                                                <span class="bold">non deve essere utilizzato
+                                                                        dagli autori</span>. Usare l'intestazione HTTP
+                                                                <code>Content-Type</code>
+                                                                sull'URL collegato
+                                                        </p>
+                                                </div>
+                                        </dd>
+                                        <dt><span class="bold"><a id="attr-coords"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-coords"><code>coords</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>Usato con l'attributo <code>shape</code>. Un elenco di coordinate
+                                                        separate da virgole</p>
+                                        </dd>
+                                        <dt><span class="bold"><a id="#attr-name"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-name"><code>name</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>Era necessario per definire una possibile posizione di destinazione
+                                                        in una pagina. In HTML
+                                                        4.01, <a
+                                                                href="/Documenti_per_sviluppatori/html/Attributi/id.html"><code>id</code></a>
+                                                        e <code>name</code> possono essere usati entrambi su
+                                                        <code>&lt;a&gt;</code>, purché
+                                                        abbiano valori identici
+                                                </p>
+                                                <div class="notecard">
+                                                        <p><strong>Nota:</strong> utilizza invece l'attributo
+                                                                <a
+                                                                        href="/Documenti_per_sviluppatori/html/Attributi/id.html"><code>id</code></a>.
+                                                        </p>
+                                                </div>
+                                        </dd>
+                                        <dt><span class="bold"><a id="attr-rev"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-rev"><code>rev</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>SSpecificato un collegamento inverso; l'opposto dell'attributo
+                                                        <a
+                                                                href="/Documenti_per_sviluppatori/html/Attributi/rel.html"><code>rel</code></a>.
+                                                        Deprecato
+                                                        per essere molto confuso.
+                                                </p>
+                                        </dd>
+                                        <dt><span class="bold"><a id="attr-shape"
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-shape"><code>shape</code></a></span>
+                                        </dt>
+                                        <dd>
+                                                <p>La forma della regione del collegamento ipertestuale in una mappa
+                                                        immagine.</p>
+                                                <div class="notecard">
+                                                        <p><strong>Nota:</strong> usa invece l'elemento
+                                                                <a
+                                                                        href="/Documenti_per_sviluppatori/html/Elementi/area.html"><code>&lt;area&gt;</code></a>
+                                                                per le
+                                                                mappe-immagine
+                                                        </p>
+                                                </div>
+                                        </dd>
+                                </dl>
+                        </div>
+                        <h2 id="examples">Esempi</h2>
+                        <h3>Collegamento a un URL assoluto</h3>
+                        <h4>HTML</h4>
+                        <div class="example-code-card">
+                                <pre><span class="punctuation">&lt;</span><span class="tag">a</span> <span class="attr-name">href</span><span class="punctuation">="</span><span class="attr-value">https://it.wikipedia.org/</span><span class="punctuation">"&gt;</span>
+    Wikipedia
+<span class="punctuation">&lt;/</span><span class="tag">a</span><span class="punctuation">&gt;</span></pre>
+                        </div>
+                        <h4>Risultato</h4>
+                        <div class="result-card">
+                                <a href="https://it.wikipedia.org/">Wikipedia</a>
+                        </div>
+                        <h3>Collegamento ad un elemento sulla stessa pagina</h3>
+                        <div class="example-code-card">
+                                <pre><code><span class="comment">&lt;!-- Un elemento &lt;a&gt; che rimanda ad una sezione più in basso --&gt;</span>
+<span class="punctuation">&lt;</span><span class="tag">p</span><span class="punctuation">&gt;</span><span class="punctuation">a</span> <span class="attr-name">href</span><span class="punctuation">="</span><span class="attr-value">#Sezione_piu_in_basso</span><span class="punctuation">"&gt;</span>
+    Vai alla sezione più in basso
+<span class="punctuation">&lt;/</span><span class="tag">a</span><span class="punctuation">&gt;&lt;/</span><span class="tag">p</span><span class="punctuation">&gt;</span>
+
+<span class="comment">&lt;!-- Sezione a cui si sta rimandando --&gt;</span>
+<span class="punctuation">&lt;</span><span class="tag">h2</span><span class="attr-name">id</span><span class="punctuation">="</span><span class="attr-value">Sezione_piu_in_basso</span><span class="punctuation">"&gt;</span>Sezione più in basso<span class="punctuation">&lt;/</span><span class="tag">h2</span><span class="punctuation">&gt;</span></code></pre>
+                        </div>
+                        <br>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or
+                                        later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;p&gt;: l'elemento paragrafo (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;p&gt;: l'elemento paragrafo</h1>
+                        <p>L' elemento HTML <code>&lt;p&gt;</code> rappresenta un paragrafo. I paragrafi sono
+                                solitamente
+                                rappresentati nei media visivi
+                                come blocchi di testo separati da blocchi adiacenti da righe vuote e/o rientri della
+                                prima riga, ma i
+                                paragrafi HTML possono essere qualsiasi raggruppamento strutturale di contenuto
+                                correlato, come immagini
+                                o campi modulo.</p>
+                        <p>I paragrafi sono elementi a livello di blocco e, in particolare, si chiuderanno
+                                automaticamente se un
+                                altro elemento a livello di blocco viene analizzato prima del tag di chiusura
+                                <code>&lt;/p&gt;</code>.
+                        </p>
+                        <h2 id="attributi">Attributi</h2>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <div class="notecard">
+                                <p><span class="bold">Nota</span>: l'attributo <code>align</code> sui tag
+                                        <code>&lt;p&gt;</code>
+                                        è obsoleto
+                                        e non deve
+                                        essere utilizzato.
+                                </p>
+                        </div>
+                        <h2 id="esempi">Esempio</h2>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">p</span>&gt;</span>Questo è il primo paragrafo
+Questo è il primo paragrafo
+Questo è il primo paragrafo
+Questo è il primo paragrafo.<span class="punctuation">&lt;/<span class="tag">p</span>&gt;</span>
+<span class="punctuation">&lt;<span class="tag">p</span>&gt;</span>Questo è il secondo paragrafo
+Questo è il secondo paragrafo
+Questo è il secondo paragrafo
+Questo è il secondo paragrafo.<span class="punctuation">&lt;/<span class="tag">p</span>&gt;</span></code></pre>
+                        </div>
+                        <h2 id="accessibilità">Problemi di accessibilità</h2>
+                        <p>Suddividere il contenuto in paragrafi aiuta a rendere una pagina più accessibile. I lettori
+                                di schermo e
+                                altre tecnologie assistive forniscono scorciatoie per consentire agli utenti di saltare
+                                al paragrafo
+                                successivo o precedente, consentendo loro di scorrere i contenuti come il modo in cui lo
+                                spazio bianco
+                                consente agli utenti visivi di saltare.</p>
+                        <p>L'uso di elementi <code>&lt;p&gt;</code> vuoti per aggiungere spazio tra i paragrafi è
+                                problematico per
+                                le persone che navigano con la tecnologia di lettura dello schermo. Gli screen reader
+                                possono annunciare
+                                la presenza del paragrafo, ma non il contenuto in esso contenuto, perché non ce n'è. Ciò
+                                può confondere
+                                e frustrare la persona che utilizza lo screen reader.</p>
+                        <p>Se si desidera spazio extra, utilizzare le proprietà CSS <code>margin</code> come per creare
+                                l'effetto:</p>
+                        <div class="example-code-card">
+                                <pre><code><span class="selector">p</span> <span class="punctuation">{</span>
+  <span class="property">margin-bottom</span><span class="punctuation">:</span> 2em<span class="punctuation">;</span>
+<span class="punctuation">}</span></code></pre>
+                        </div>
+                        <h2>Guarda anche</h2>
+                        <u>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/hr.html"><code>&lt;hr&gt;</code></a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/br.html"><code>&lt;br&gt;</code></a>
+                                </li>
+                        </u>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

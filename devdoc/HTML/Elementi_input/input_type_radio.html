@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;input type="radio"&gt; (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;input type="radio"&gt;</h1>
+                        <p>Gli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                di tipo radiosono generalmente utilizzati nei gruppi radio :
+                                raccolte di pulsanti di opzione che descrivono un insieme di opzioni correlate.</p>
+                        <p>È possibile selezionare un solo pulsante di opzione in un determinato gruppo alla volta. I
+                                pulsanti
+                                di opzione sono in genere visualizzati come piccoli cerchi, che vengono riempiti o
+                                evidenziati
+                                quando vengono selezionati.</p>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <h2 id="valore">Valore</h2>
+                        <p>L'attributo <code>value</code> è una stringa contenente il valore del pulsante di opzione. Il
+                                valore
+                                non viene mai mostrato all'utente dal suo programma utente . Viene invece utilizzato per
+                                identificare quale pulsante di opzione in un gruppo è selezionato.</p>
+                        <h3>Definizione di un gruppo "radio"</h3>
+                        <p>Un gruppo radio è definito assegnando lo stesso a ciascuno dei pulsanti radio nel gruppo
+                                <code>name</code>. Una
+                                volta stabilito un gruppo radio, la selezione di qualsiasi pulsante di opzione in quel
+                                gruppo
+                                deseleziona automaticamente qualsiasi pulsante di opzione attualmente selezionato nello
+                                stesso
+                                gruppo.
+                        </p>
+                        <p>Puoi avere tutti i gruppi radiofonici che vuoi su una pagina, purché ognuno abbia il suo
+                                unico
+                                <code>name</code>.
+                        </p>
+                        <p>Ad esempio, se il modulo deve richiedere all'utente il metodo di contatto preferito, è
+                                possibile
+                                creare tre pulsanti di opzione, ciascuno con la proprietà <code>name</code> impostata su
+                                contactuno solo con
+                                il valore <code>email</code>, uno con il valore <code>phone</code> e uno con il valore
+                                <code>mail</code>. L'utente non vede mai <code>value</code> o
+                                il <code>name</code>(a meno che non si aggiunga espressamente il codice per
+                                visualizzarlo).
+                        </p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">form</span>&gt;</span>
+  <span class="punctuation">&lt;<span class="tag">p</span>&gt;</span>Inserisci il metodo di contatto che preferisci:<span class="punctuation">&lt;/<span class="tag">p</span>&gt;</span>
+    <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
+      <span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">radio</span>" <span class="attr-name">id</span>="<span class="attr-value">contactChoice1</span>"
+      <span class="attr-name">name</span>="<span class="attr-value">contact</span>" <span class="attr-name">value</span>="<span class="attr-value">email</span>"&gt;</span>
+      <span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">contactChoice1</span>"&gt;</span>Email<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
+      <span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">radio</span>" <span class="attr-name">id</span>="<span class="attr-value">contactChoice2</span>"
+      <span class="attr-name">name</span>="<span class="attr-value">contact</span>" <span class="attr-name">value</span>="<span class="attr-value">phone</span>"&gt;</span>
+      <span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">contactChoice2</span>"&gt;</span>Phone<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
+      <span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">radio</span>" <span class="attr-name">id</span>="<span class="attr-value">contactChoice3</span>"
+      <span class="attr-name">name</span>="<span class="attr-value">contact</span>" <span class="attr-name">value</span>="<span class="attr-value">mail</span>"&gt;</span>
+      <span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">contactChoice3</span>"&gt;</span>Mail<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
+    <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
+    <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
+      <span class="punctuation">&lt;<span class="tag">button</span> <span class="attr-name">type</span>="<span class="attr-value">submit</span>"&gt;</span>Invia<span class="punctuation">&lt;/<span class="tag">button</span>&gt;</span>
+    <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
+<span class="punctuation">&lt;/<span class="tag">form</span>&gt;</span></code></pre>
+                        </div>
+                        <p>Qui puoi vedere i tre pulsanti di opzione, ognuno con l'impostazione
+                                <code>name contact</code> e
+                                ciascuno con un
+                                unico <code>value</code> che identifica in modo univoco quel singolo pulsante di opzione
+                                all'interno del
+                                gruppo. Ognuno di essi ha anche un univoco id, che viene utilizzato dall'attributo
+                                <a href="/Documenti_per_sviluppatori/html/Attributi/for.html"><code>for</code></a>
+                                dell'elemento <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/label.html"><code>&lt;label&gt;</code></a>
+                                per associare le etichette ai pulsanti di opzione.
+                        </p>
+                        <h2 id="attributi-aggiuntivi">Attributi aggiuntivi</h2>
+                        <p>Oltre agli attributi comuni condivisi da tutti gli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,
+                                gli
+                                input <code>radio</code> supportano i seguenti attributi.</p>
+                        <dl>
+                                <dt><code>checked</code></dt>
+                                <dd>
+                                        <p>Un attributo booleano che, se presente, indica che questo pulsante di opzione
+                                                è
+                                                quello selezionato di default nel gruppo.</p>
+                                </dd>
+                                <dt><code>value</code></dt>
+                                <dd>
+                                        <p>L'attributo <code>value</code> è condiviso da tutti gli <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>;
+                                                tuttavia, ha uno scopo speciale per
+                                                input di tipo radio: quando viene inviato un modulo, solo i pulsanti di
+                                                opzione
+                                                attualmente selezionati vengono inviati al server e il valore riportato
+                                                è il
+                                                valore dell'attributo <code>value</code>. Se <code>value</code> non è
+                                                altrimenti
+                                                specificato, è la stringa
+                                                <code>on</code> per impostazione predefinita.
+                                        </p>
+                                </dd>
+                        </dl>
+                        <h2 id="utilizzo">Utilizzo degli input radio</h2>
+                        <p>Per fare in modo che un pulsante di opzione sia selezionato per impostazione predefinita,
+                                includi l'
+                                attributo <code>checked</code>, come mostrato in questa versione rivista dell'esempio
+                                precedente:</p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">form</span>&gt;</span>
+    <span class="punctuation">&lt;<span class="tag">p</span>&gt;</span>Inserisci il metodo di contatto che preferisci:<span class="punctuation">&lt;/<span class="tag">p</span>&gt;</span>
+  <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
+    <span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">radio</span>" <span class="attr-name">id</span>="<span class="attr-value">contactChoice1</span>"
+    <span class="attr-name">name</span>="<span class="attr-value">contact</span>" <span class="attr-name">value</span>="<span class="attr-value">email</span>" <span class="attr-name">checked</span>&gt;</span>
+    <span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">contactChoice1</span>"&gt;</span>Email<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
+    <span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">radio</span>" <span class="attr-name">id</span>="<span class="attr-value">contactChoice2</span>"
+    <span class="attr-name">name</span>="<span class="attr-value">contact</span>" <span class="attr-name">value</span>="<span class="attr-value">phone</span>" <span class="attr-name">checked</span>&gt;</span>
+    <span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">contactChoice2</span>"&gt;</span>Phone<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
+    <span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">radio</span>" <span class="attr-name">id</span>="<span class="attr-value">contactChoice3</span>"
+    <span class="attr-name">name</span>="<span class="attr-value">contact</span>" <span class="attr-name">value</span>="<span class="attr-value">mail</span>" <span class="attr-name">checked</span>&gt;</span>
+    <span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">contactChoice3</span>"&gt;</span>Mail<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
+  <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
+  <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
+    <span class="punctuation">&lt;<span class="tag">button</span> <span class="attr-name">type</span>="<span class="attr-value">submit</span>"&gt;</span>Invia<span class="punctuation">&lt;/<span class="tag">button</span>&gt;</span>
+  <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
+<span class="punctuation">&lt;/<span class="tag">form</span>&gt;</span></code></pre>
+                        </div>
+                        <h2 id="convalida">Convalida</h2>
+                        <p>I pulsanti di opzione non partecipano alla convalida dei vincoli; non hanno alcun valore
+                                reale da
+                                vincolare.</p>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;source&gt;: l'elemento "Media" o "Image Source" (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;source&gt;: l'elemento "Media" o "Image Source"</h1>
+                        <p>L' elemento HTML <code>&lt;source&gt;</code> specifica più risorse multimediali per
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/video.html"><code>&lt;video&gt;</code></a>,
+                                l'elemento <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>
+                                o l'elemento
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/audio.html"><code>&lt;audio&gt;</code></a>.
+                                È
+                                un elemento vuoto,
+                                il che significa che non ha contenuto e non ha un tag di chiusura. Viene comunemente
+                                utilizzato per
+                                offrire lo stesso contenuto multimediale in più formati di file al fine di fornire
+                                compatibilità con
+                                un'ampia gamma di browser, dato il loro diverso supporto per formati di file immagine e
+                                formati di file
+                                multimediali .
+                        </p>
+                        <h2 id="attributi">Attributi</h2>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <dl>
+                                <dt><code>type</code></dt>
+                                <dd>
+                                        <p>Il tipo di supporto MIME della risorsa , facoltativamente con un parametro
+                                                <code>codecs</code>.
+                                        </p>
+                                </dd>
+                                <dt><code>src</code></dt>
+                                <dd>
+                                        <p>Obbligatorio se il padre dell'elemento <code>source</code> è un elemento
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/audio.html"><code>&lt;audio&gt;</code></a>
+                                                e
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/video.html"><code>&lt;video&gt;</code></a>,
+                                                ma non consentito se il padre
+                                                dell'elemento <code>source</code> è un elemento
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>.
+                                        </p>
+                                        <p>Indirizzo della risorsa multimediale.</p>
+                                </dd>
+                                <dt><code>srcset</code></dt>
+                                <dd>
+                                        <p>Obbligatorio se il padre dell'elemento <code>source</code> è un elemento
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>,
+                                                ma non
+                                                consentito se il padre dell'elemento <code>source</code> è un elemento
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/audio.html"><code>&lt;audio&gt;</code></a>
+                                                o <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/video.html"><code>&lt;video&gt;</code></a>.
+                                        </p>
+                                        <p>Un elenco di una o più stringhe, separate da virgole, che indica un insieme
+                                                di possibili immagini
+                                                rappresentate dalla sorgente per l'utilizzo da parte del browser. Ogni
+                                                stringa è composta da:
+                                        </p>
+                                        <ol>
+                                                <li>Un URL che specifica un'immagine.</li>
+                                                <li>Un descrittore di larghezza, che consiste in una stringa contenente
+                                                        un intero positivo
+                                                        seguito direttamente da "w", ad esempio 300w. Il valore
+                                                        predefinito, se mancante, è
+                                                        l'infinito.</li>
+                                                <li>Un descrittore di densità di pixel, ovvero un numero mobile positivo
+                                                        seguito direttamente da
+                                                        "x". Il valore predefinito, se mancante, è 1x.</li>
+                                        </ol>
+                                        <p>Ogni stringa nell'elenco deve avere almeno un descrittore di larghezza o un
+                                                descrittore di
+                                                densità di pixel per essere valida. Nell'elenco, deve esserci solo una
+                                                stringa contenente la
+                                                stessa tupla di descrittore di larghezza e descrittore di densità di
+                                                pixel. Il browser sceglie
+                                                l'immagine più adeguata da visualizzare in un determinato momento.</p>
+                                </dd>
+                                <dt><code>sizes</code></dt>
+                                <dd>
+                                        <p>Consentito se il padre dell'elemento <code>source</code> è un elemento
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>,
+                                                ma non
+                                                consentito se il
+                                                padre dell'elemento <code>source</code> è un elemento
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/audio.html"><code>&lt;audio&gt;</code></a>
+                                                o
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/video.html"><code>&lt;video&gt;</code></a>.
+                                        </p>
+                                        <p>Un elenco di dimensioni dell'origine che descrive la larghezza di rendering
+                                                finale dell'immagine
+                                                rappresentata dall'origine. Ciascuna dimensione di origine è costituita
+                                                da un elenco separato da
+                                                virgole di coppie condizione-lunghezza del supporto. Queste informazioni
+                                                vengono utilizzate dal
+                                                browser per determinare, prima di impaginare la pagina, quale immagine
+                                                definire da
+                                                utilizzare. Tieni presente che <code>sizes</code> avrà effetto solo se i
+                                                descrittori delle
+                                                dimensioni della
+                                                larghezza vengono forniti con <code>srcset</code> anziché con valori di
+                                                rapporto
+                                                pixel
+                                                (200w invece di 2x per
+                                                esempio).</p>
+                                </dd>
+                                <dt><code>media</code></dt>
+                                <dd>
+                                        <p>Consentito se il padre dell'elemento <code>source</code> è un elemento
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>,
+                                                ma non
+                                                consentito se il
+                                                sourcepadre dell'elemento è un elemento <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/audio.html"><code>&lt;audio&gt;</code></a>
+                                                o
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/video.html"><code>&lt;video&gt;</code></a>.
+                                        </p>
+                                </dd>
+                                <dt><code>height</code></dt>
+                                <dd>
+                                        <p>Consentito se il padre dell'elemento <code>source</code> è un elemento
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>,
+                                                ma non
+                                                consentito se il sourcepadre dell'elemento è un elemento
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/audio.html"><code>&lt;audio&gt;</code></a>
+                                                o
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/video.html"><code>&lt;video&gt;</code></a>.
+                                        </p>
+                                        <p>L'altezza intrinseca dell'immagine, in pixel. Deve essere un numero intero
+                                                senza unità.</p>
+                                </dd>
+                                <dt><code>width</code></dt>
+                                <dd>
+                                        <p>Consentito se il sourcepadre dell'elemento è un elemento
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>,
+                                                ma non
+                                                consentito se il
+                                                sourcepadre dell'elemento è un elemento <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/audio.html"><code>&lt;audio&gt;</code></a>
+                                                o
+                                                <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/video.html"><code>&lt;video&gt;</code></a>.
+                                        </p>
+                                </dd>
+                                <p>Se l'attributo <code>type</code> non è specificato, il tipo di supporto viene
+                                        recuperato dal server e
+                                        verificato
+                                        per vedere se l'interprete può gestirlo; se non può essere renderizzato,
+                                        <code>&lt;source&gt;</code> viene selezionato il successivo. Se l'attributo
+                                        <code>type</code> è
+                                        specificato, viene confrontato con i
+                                        tipi che l'agente utente può presentare e, se non viene riconosciuto, il server
+                                        non viene nemmeno
+                                        interrogato; invece, l'elemento <code>&lt;source&gt;</code> successivo viene
+                                        controllato
+                                        immediatamente.
+                                </p>
+                                <p>Quando viene utilizzato nel contesto di un elemento <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>,
+                                        il
+                                        browser tornerà
+                                        a utilizzare
+                                        l'immagine specificata dal figlio <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>
+                                        dell'elemento
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/img.html"><code>&lt;img&gt;</code></a>
+                                        se non è in grado di trovare
+                                        un'immagine adatta da utilizzare dopo aver esaminato ogni
+                                        <code>&lt;source&gt;</code>.
+                                </p>
+                        </dl>
+                        <h2 id="note">Note d'uso</h2>
+                        <p>L'elemento <code>&lt;source&gt;</code> è un elemento vuoto (o elemento <code>void</code>) ,
+                                il che
+                                significa che non
+                                solo non ha contenuto
+                                ma non ha anche tag di chiusura. Cioè, non usi mai " <code>&lt;/source&gt;</code>" nel
+                                tuo HTML.
+                        </p>
+                        <h2 id="esempi">Esempi</h2>
+                        <h3>Esempi di video</h3>
+                        <p>Questo esempio mostra come offrire un video in formato Ogg per gli utenti i cui browser
+                                supportano il
+                                formato Ogg e un video in formato QuickTime per gli utenti i cui browser lo supportano.
+                                Se l'
+                                elemento audio o video non è supportato dal browser, viene visualizzato un avviso. Se il
+                                browser
+                                supporta l'elemento ma non supporta nessuno dei formati specificati, viene generato un
+                                evento <code>error</code> e i controlli multimediali predefiniti (se abilitati)
+                                indicheranno un
+                                errore. </p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">video</span> <span class="attr-name">controls</span>&gt;</span>
+  <span class="punctuation">&lt;<span class="tag">source</span> <span class="attr-name">src</span>="<span class="attr-value">foo.webm</span>" <span class="attr-name">type</span>="<span class="attr-value">video/webm</span>"&gt;</span>
+  <span class="punctuation">&lt;<span class="tag">source</span> <span class="attr-name">src</span>="<span class="attr-value">foo.ogg</span>" <span class="attr-name">type</span>="<span class="attr-value">video/ogg</span>"&gt;</span>
+  <span class="punctuation">&lt;<span class="tag">source</span> <span class="attr-name">src</span>="<span class="attr-value">foo.mov</span>" <span class="attr-name">type</span>="<span class="attr-value">video/quicktime</span>"&gt;</span>
+  Mi dispiace ma il tuo browser sembra non supportare i formati del video.
+<span class="punctuation">&lt;/<span class="tag">video</span>&gt;</span></code></pre>
+                        </div>
+                        <h3>Esempio di immagine</h3>
+                        <p>In questo esempio, due
+                                elementi <code>&lt;source&gt;</code> sono inclusi all'interno di <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>,
+                                fornendo versioni di un'immagine da
+                                utilizzare quando lo spazio disponibile supera determinate larghezze. Se la larghezza
+                                disponibile è inferiore alla più piccola di queste larghezze, il programma utente
+                                ricadrà sull'immagine fornita dall'elemento <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/img.html"><code>&lt;img&gt;</code></a>.
+                        </p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;picture&gt;</span>
+  <span class="punctuation">&lt;<span class="tag">source</span> <span class="attr-name">srcset</span>="<span class="attr-value">freeattitude-logo-largo.png</span>" <span class="attr-name">media</span>="<span class="attr-value">(min-width: 800px)</span>"&gt;</span>
+  <span class="punctuation">&lt;<span class="tag">source</span> <span class="attr-name">srcset</span>="<span class="attr-value">freeattitude-logo-medio.png</span>" <span class="attr-name">media</span>="<span class="attr-value">(min-width: 600px)</span>"&gt;</span>
+  <span class="punctuation">&lt;<span class="tag">img</span> <span class="attr-name">src</span>="<span class="attr-value">freeattitude-logo.png</span>" <span class="attr-name">alt</span>="<span class="attr-value">FreeAttitude Docs</span>"&gt;</span>
+<span class="punctuation">&lt;/<span class="tag">picture</span>&gt;</span></code></pre>
+                        </div>
+                        <p>Con l'elemento <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>,
+                                devi sempre includere un <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/img.html"><code>&lt;img&gt;</code></a>
+                                con
+                                un'immagine di riserva, con un attributo <code>alt</code> per garantire l'accessibilità
+                                (a meno
+                                che l'immagine non sia un'immagine decorativa di sfondo irrilevante).</p>
+                        <h2>Guarda anche</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/picture.html"><code>&lt;picture&gt;</code></a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/audio.html"><code>&lt;audio&gt;</code></a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/video.html"><code>&lt;video&gt;</code></a>
+                                </li>
+                        </ul>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>
