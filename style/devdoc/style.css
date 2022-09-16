@@ -1,6 +1,39 @@
 main {
+  padding: 81px 27px;
+  display: grid;
+  grid-template-areas: "sidebar content table";
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr) minmax(0, 15rem);
+}
+
+#sidebarLgDevice {
+  grid-area: sidebar;
+}
+#sidebarLgDevice summary {
+  color: var(--heading-color-dark-mode);
+}
+#sidebarLgDevice .main-list {
+  list-style-type: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 15px;
+  color: var(--heading-color-dark-mode);
+  cursor: pointer;
+  width: fit-content;
+}
+#sidebarLgDevice .main-list ul,
+#sidebarLgDevice .main-list ol,
+#sidebarLgDevice .main-list li {
+  list-style-type: none;
+  padding-left: 0.75rem;
+}
+#sidebarLgDevice .main-list .main-label {
+  padding-bottom: 10px;
+}
+#sidebarLgDevice .main-list .main-label .nested-label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

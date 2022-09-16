@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const menuArguments = ['HTML', 'CSS', 'JS'];
 
-    const asideContent = [
-        html = [
-            Attributi = [
-                title = [
+    const asideContent = {
+        html: {
+            Attributi: {
+                name: [
                     'accept-charset',
                     "accept",
                     "accesskey",
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     "x-ms-acceleratorkey",
                     "x-ms-format-detection"
                 ],
-                path = [
+                path: [
                     "/devdoc/HTML/Elementi/form.html#attr-accept-charset",
                     "/devdoc/HTML/Attributi/accept.html",
                     "/devdoc/HTML/Attributi/accesskey.html",
@@ -178,9 +178,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     "/devdoc/HTML/Attributi/x-ms-acceleratorkey.html",
                     "/devdoc/HTML/Attributi/x-ms-format-detection.html"
                 ]
-            ],
-            Attributi_globali = [
-                title = [
+            },
+            "Attributi globali": {
+                name: [
                     "accesskey",
                     "autocapitalize",
                     "autofocus",
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     "x-ms-acceleratorkey",
                     "x-ms-format-detection"
                 ],
-                path = [
+                path: [
                     "/devdoc/HTML/Attributi/accesskey.html",
                     "/devdoc/HTML/Attributi/autocapitalize.html",
                     "/devdoc/HTML/Attributi/autofocus.html",
@@ -244,9 +244,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     "/devdoc/HTML/Attributi/x-ms-acceleratorkey.html",
                     "/devdoc/HTML/Attributi/x-ms-format-detection.html"
                 ]
-            ],
-            Elementi = [
-                title = [
+            },
+            Elementi: {
+                name: [
                     "<a>",
                     "<abbr>",
                     "<acronym>",
@@ -383,7 +383,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     "<wbr>",
                     "<xmp>"
                 ],
-                path = [
+                path: [
                     "/devdoc/HTML/Elementi/a.html",
                     "/devdoc/HTML/Elementi/abbr.html",
                     "/devdoc/HTML/Elementi/acronym.html",
@@ -520,9 +520,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     "/devdoc/HTML/Elementi/wbr.html",
                     "/devdoc/HTML/Elementi/xmp.html",
                 ]
-            ],
-            Elementi_sinput = [
-                title = [
+            },
+            "Elementi input": {
+                name: [
                     '<input type="button">',
                     '<input type="checkbox">',
                     '<input type="color">',
@@ -547,7 +547,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     '<input type="url">',
                     '<input type="week">'
                 ],
-                path = [
+                path: [
                     "/devdoc/HTML/Elementi_input/input_type_button.html",
                     "/devdoc/HTML/Elementi_input/input_type_checkbox.html",
                     "/devdoc/HTML/Elementi_input/input_type_color.html",
@@ -572,134 +572,65 @@ document.addEventListener('DOMContentLoaded', function () {
                     "/devdoc/HTML/Elementi_input/input_type_url.html",
                     "/devdoc/HTML/Elementi_input/input_type_week.html"
                 ]
-            ]
-
-        ]
-    ];
-
-    console.log(asideContent[0].length);
-
-    const sidebarLgDevice = document.getElementById('sidebarLgDevice');
-
-    for (i = 0; i < menuArguments.length; i++) {
-        const mainDetails = document.createElement('details');
-
-        const mainSummary = document.createElement('summary');
-        mainSummary.innerHTML = menuArguments[i];
-
-        // for (x = 0; x < asideContent[i].length; x++) {
-        //     const nestedDetails = document.createElement('details');
-        //     const nestedSummary = document.createElement('summary');
-        //     nestedSummary.innerHTML = asideContent[x];
-
-        //     nestedDetails.appendChild(nestedSummary);
-        //     mainDetails.appendChild(nestedDetails);
-
-        // };
-
-
-        mainDetails.appendChild(mainSummary);
-        sidebarLgDevice.appendChild(mainDetails);
+            }
+        }
     };
 
 
 
-    // const place = Array.from(document.getElementsByClassName('js-aside'));
+    const sidebarLgDevice = document.getElementById('sidebarLgDevice');
+    const mainList = document.getElementById('mainList');
 
-    // for (const element of place) {
-    //     for (let menuArgument = 0; menuArgument < asideContent.menuArguments.length; menuArgument++) {
+    for (i = 0; i < menuArguments.length; i++) {
+        const mainItem = document.createElement('li');
+        const mainDetails = document.createElement('details');
+        const mainSummary = document.createElement('summary');
+        mainSummary.classList.add('main-label');
+        mainSummary.innerHTML = menuArguments[i];
+        const nestedList = document.createElement('ol');
+        nestedList.classList.add('nested-list');
 
-    //         const mainDetails = document.createElement('details');
-    //         const mainSummary = document.createElement('summary');
-    //         const mainSummaryContent = document.createTextNode(asideContent.menuArguments[menuArgument]);
-    //         mainSummary.appendChild(mainSummaryContent);
-    //         mainDetails.appendChild(mainSummary);
+        // This is about HTML
+        if (i === 0) {
+            const nestedItem = document.createElement('li');
+            const nestedDetails = document.createElement('details');
+            const nestedSummary = document.createElement('summary');
+            nestedSummary.classList.add('nested-label');
 
-    //         //This is about HTML
-    //         if (menuArgument === 0) {
-    //             for (let i = 0; i < Object.keys(asideContent.html.htmlArgument).length; i++) {
-    //                 const secondDetails = document.createElement('details');
-    //                 const secondSummary = document.createElement('summary');
-    //                 const secondSummaryContent = document.createTextNode(Array.from(
-    //                     Object.keys(asideContent.html.htmlArgument
-    //                     ))[i]);
-    //                 secondSummary.classList.add('nested-list');
+            for (x = 0; x < Object.keys(asideContent.html).length; x++) {
+                nestedSummary.innerHTML = Array.from(Object.keys(asideContent.html)[x]);
 
-    //                 const listContainer = document.createElement('ul');
 
-    //                 // This is about Attributi
-    //                 if (i === 0) {
-    //                     for (let listItemCounter = 0; listItemCounter < asideContent.html.htmlArgument.Attributi.name.length; listItemCounter++) {
-    //                         const listItem = document.createElement('li');
-    //                         const linkTag = document.createElement('a');
-    //                         const codeTag = document.createElement('code');
-    //                         const codeTagContent = document.createTextNode(asideContent.html.htmlArgument.Attributi.name[listItemCounter]);
-    //                         linkTag.href = asideContent.html.htmlArgument.Attributi.path[listItemCounter];
-    //                         codeTag.appendChild(codeTagContent);
-    //                         linkTag.appendChild(codeTag);
-    //                         listItem.appendChild(linkTag);
-    //                         listContainer.appendChild(listItem);
-    //                         console.log(Array.from(asideContent.html.htmlArgument.Attributi.name[listItemCounter]));
-    //                     }
-    //                 }
 
-    //                 // This is about Attributi globali
-    //                 if (i === 1) {
-    //                     for (let listItemCounter = 0; listItemCounter < asideContent.html.htmlArgument["Attributi globali"].name.length; listItemCounter++) {
-    //                         const listItem = document.createElement('li');
-    //                         const linkTag = document.createElement('a');
-    //                         const codeTag = document.createElement('code');
-    //                         const codeTagContent = document.createTextNode(asideContent.html.htmlArgument["Attributi globali"].name[listItemCounter]);
-    //                         linkTag.href = asideContent.html.htmlArgument["Attributi globali"].path[listItemCounter];
-    //                         codeTag.appendChild(codeTagContent);
-    //                         linkTag.appendChild(codeTag);
-    //                         listItem.appendChild(linkTag);
-    //                         listContainer.appendChild(listItem);
-    //                         console.log(Array.from(asideContent.html.htmlArgument["Attributi globali"].name[listItemCounter]));
-    //                     }
-    //                 }
+            }
 
-    //                 // This is about Elementi
-    //                 if (i === 2) {
-    //                     for (let listItemCounter = 0; listItemCounter < asideContent.html.htmlArgument.Elementi.name.length; listItemCounter++) {
-    //                         const listItem = document.createElement('li');
-    //                         const linkTag = document.createElement('a');
-    //                         const codeTag = document.createElement('code');
-    //                         const codeTagContent = document.createTextNode(asideContent.html.htmlArgument.Elementi.name[listItemCounter]);
-    //                         linkTag.href = asideContent.html.htmlArgument.Elementi.path[listItemCounter];
-    //                         codeTag.appendChild(codeTagContent);
-    //                         linkTag.appendChild(codeTag);
-    //                         listItem.appendChild(linkTag);
-    //                         listContainer.appendChild(listItem);
-    //                     }
-    //                 }
 
-    //                 // This is about Elementi input
-    //                 if (i === 3) {
-    //                     for (let listItemCounter = 0; listItemCounter < asideContent.html.htmlArgument["Elementi input"].name.length; listItemCounter++) {
-    //                         const listItem = document.createElement('li');
-    //                         const linkTag = document.createElement('a');
-    //                         const codeTag = document.createElement('code');
-    //                         const codeTagContent = document.createTextNode(asideContent.html.htmlArgument["Elementi input"].name[listItemCounter]);
-    //                         linkTag.href = asideContent.html.htmlArgument["Elementi input"].path[listItemCounter];
-    //                         codeTag.appendChild(codeTagContent);
-    //                         linkTag.appendChild(codeTag);
-    //                         listItem.appendChild(linkTag);
-    //                         listContainer.appendChild(listItem);
-    //                         console.log(Array.from(asideContent.html.htmlArgument["Elementi input"].name[listItemCounter]));
-    //                     }
-    //                 }
+            nestedDetails.appendChild(nestedSummary);
+            nestedItem.appendChild(nestedDetails);
+            nestedList.appendChild(nestedItem);
+        }
 
-    //                 secondSummary.appendChild(secondSummaryContent);
-    //                 secondDetails.appendChild(secondSummary);
-    //                 secondDetails.appendChild(listContainer);
-    //                 mainDetails.appendChild(secondDetails);
-    //             }
-    //         }
+        if (i === 1) {
+            const nestedItem = document.createElement('li');
+            const nestedDetails = document.createElement('details');
+            const nestedSummary = document.createElement('summary');
+            nestedSummary.classList.add('nested-label');
 
-    //         element.appendChild(mainDetails);
-    //     };
-    // };
+            for (x = 0; x < Object.keys(asideContent.html).length; x++) {
+                nestedSummary.innerHTML = Object.keys(asideContent.html)[i];
+            }
+
+
+            nestedDetails.appendChild(nestedSummary);
+            nestedItem.appendChild(nestedDetails);
+            nestedList.appendChild(nestedItem);
+        }
+
+        mainDetails.appendChild(mainSummary);
+        mainDetails.appendChild(nestedList);
+        mainItem.appendChild(mainDetails);
+        mainList.appendChild(mainItem);
+    }
 
 
     // // This generates list item for each table of content
