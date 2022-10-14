@@ -102,6 +102,9 @@ a,
   display: flex;
   justify-content: space-evenly;
 }
+#carousel .preview-container {
+  padding: 20px;
+}
 #carousel img {
   border-radius: 10px;
   margin: 0;
