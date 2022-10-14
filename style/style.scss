@@ -1,0 +1,102 @@
+/*
+    TABLE OF CONTENT
+    1. VARIABLE
+    2. REBOOT AND GENERAL SETTINGS
+    3. HEADER
+    4. PORTFOLIO SECTION
+*/
+
+/*
+    2. REBOOT AND GENERAL SETTINGS
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 60px;
+}
+
+/*
+    REBOOT AND GENERAL SETTINGS END
+*/
+
+/*
+    3. HEADER
+*/
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+}
+
+.navbar-brand,
+.nav-link {
+    color: white;
+}
+
+nav {
+
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    #menuBtn {
+        position: relative;
+    }
+
+    .line {
+        position: absolute;
+        height: 2px;
+        background-color: white;
+        border-radius: 50px;
+    }
+
+    #lineOne {
+        top: 0;
+        right: 0;
+        width: 20px;
+    }
+
+    #lineTwo {
+        top: 7px;
+        right: 0;
+        width: 30px;
+    }
+
+    #lineThree {
+        top: 14px;
+        right: 0;
+        width: 40px;
+    }
+
+}
+
+/*
+    HEADER END
+*/
+
+/*
+    4. PORTFOLIO SECTION
+*/
+#portfolio {
+
+    img {
+        border-radius: 10%;
+        padding: 20px;
+    }
+}
+
+/*
+    PORTFOLIO SECTION END
+*/
