@@ -13,13 +13,14 @@
     <!-- JS -->
     <script src="./js/navbar.js"></script>
     <script src="./js/preview.js"></script>
+    <script src="./js/portfolio.js"></script>
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
         rel="stylesheet">
-    <title>FreeAttitude</title>
+    <title>Portfolio - FreeAttitude</title>
 </head>
 
 <body>
@@ -49,17 +50,28 @@
         </nav>
     </header>
     <!-- NAVBASR END -->
-    <main>
-        <!-- PREVIEW SECTION -->
-        <section id="preview" class="container">
-            <h2>Portfolio</h2>
-            <p>Dai un'occhiata ai progetti che ho sviluppato</p>
-            <div class="row" id="previewContainer">
 
+    <main>
+        <section id="preview" class="container">
+            <div class="row" id="previewContainer">
+                <div id="preview-card" class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
+                    <a href="./templates/digimedia.html"><img src="./assets/template_preview/digimedia.svg"
+                            class="img-fluid"></a>
+                    <div class="description">
+                        <p>Costruito con.</p>
+                        <div class="tech-icon-container">
+                            <img title="HTML5" src="./assets/icons/html-5.svg" alt="" class="img-fluid">
+                            <img src="./assets/icons/css3.svg" alt="" class="img-fluid">
+                            <img src="./assets/icons/sass.svg" alt="" class="img-fluid">
+                            <img src="./assets/icons/bootstrap.svg" alt="" class="img-fluid">
+                            <img src="./assets/icons/javascript.svg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- PREVIEW SECTION END -->
     </main>
+
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"

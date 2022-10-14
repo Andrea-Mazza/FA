@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (let i = 0; i < title.length; i++) {
         const col = document.createElement('div');
+        col.classList.add('preview-card');
         col.classList.add('col-12');
         col.classList.add('col-lg-3');
         col.classList.add('col-md-6');

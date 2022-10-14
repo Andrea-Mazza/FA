@@ -3,7 +3,7 @@
     1. VARIABLE
     2. REBOOT AND GENERAL SETTINGS
     3. HEADER
-    4. PORTFOLIO SECTION
+    4. PREVIEW SECTION
 */
 /*
     2. REBOOT AND GENERAL SETTINGS
@@ -18,7 +18,7 @@ body {
   background-color: black;
   color: white;
   font-family: "Nunito", sans-serif;
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 /*
@@ -37,6 +37,10 @@ header {
 
 .navbar-brand,
 .nav-link {
+  color: white;
+}
+
+.nav-link:hover {
   color: white;
 }
 
@@ -74,15 +78,29 @@ nav #lineThree {
     HEADER END
 */
 /*
-    4. PORTFOLIO SECTION
+    4. PREVIEW SECTION
 */
-#portfolio img {
+#preview a {
+  width: fit-content;
+}
+#preview img {
   border-radius: 10%;
+}
+#preview #preview-card {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
+  align-items: center;
+}
+#preview .tech-icon-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 5px;
 }
 
 /*
-    PORTFOLIO SECTION END
+    PREVIEW SECTION END
 */
 
 /*# sourceMappingURL=style.css.map */
