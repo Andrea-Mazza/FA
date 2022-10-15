@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;input type="image"&gt; (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;input type="image"&gt;</h1>
+                        <p>Gli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                di tipo <code>image</code> vengono utilizzati per creare
+                                pulsanti di invio grafici, ovvero pulsanti di invio che assumono la forma di un'immagine
+                                anziché
+                                di testo.</p>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <h2 id="valore">Valore</h2>
+                        <p>Gli elementi <code>&lt;input type="image"&gt;</code> non accettano attributi
+                                <code>value</code>. Il
+                                percorso dell'immagine da visualizzare è specificato nell'attributo <code>src</code>.
+                        </p>
+                        <h2 id="attributi">Attributi aggiungitvi</h2>
+                        <p>Oltre agli attributi condivisi da tutti gli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,
+                                gli input
+                                <code>image</code> dei pulsanti supportano i seguenti attributi.
+                        </p>
+                        <h3>alt</h3>
+                        <p>L'attributo <code>alt</code> fornisce una stringa alternativa da utilizzare come etichetta
+                                del
+                                pulsante se
+                                l'immagine non può essere visualizzata (a causa di un errore, un programma utente che
+                                non può o
+                                è configurato per non mostrare le immagini, o se l'utente utilizza un dispositivo di
+                                lettura
+                                dello schermo). Se fornita, deve essere una stringa non vuota appropriata come etichetta
+                                per il
+                                pulsante.</p>
+                        <p>Ad esempio, se hai un pulsante grafico che mostra un'immagine con un'icona e/o il testo
+                                dell'immagine
+                                "Accedi ora", dovresti anche impostare l'attributo <code>alt</code> su qualcosa come
+                                <code>Login Now</code>.
+                        </p>
+                        <div class="notecard">
+                                <p><span class="bold">Nota</span>: sebbene l' altattributo sia tecnicamente facoltativo,
+                                        dovresti sempre includerne
+                                        uno per massimizzare l'usabilità dei tuoi contenuti.</p>
+                        </div>
+                        <p>Funzionalmente, l'attributo <code>alt</code> su <code>&lt;input type="image"&gt;</code>
+                                funziona
+                                proprio come l'attributo <code>alt</code> sugli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/img.html"><code>&lt;&gt;img</code></a>.
+                        </p>
+
+                        <h3>formaction</h3>
+                        <p>Una stringa che indica l'URL a cui inviare i dati. Questo ha la precedenza sull'attributo
+                                <code>action</code>
+                                dell'elemento <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/form.html"><code>&lt;&gt;form</code></a>
+                                che possiede l'<a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;&gt;input</code></a>.
+                        </p>
+                        <p>Questo attributo è disponibile anche sugli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_submit.html"><code>&lt;input type="submit"&gt;</code></a>
+                                e
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/button.html"><code>&lt;button&gt;</code></a>.
+                        </p>
+
+                        <h3>formenctype</h3>
+                        <p>Una stringa che identifica il metodo di codifica da utilizzare quando si inviano i dati del
+                                modulo al
+                                server. Ci sono tre valori consentiti:</p>
+                        <dl>
+                                <dt><code>application/x-www-form-urlencoded</code></dt>
+                                <dd>
+                                        <p>Questo, il valore predefinito, invia i dati del modulo come una stringa dopo
+                                                la
+                                                codifica URL del testo utilizzando un algoritmo come
+                                                <code>encodeURI()</code>.
+                                        </p>
+                                </dd>
+                                <dt><code>multipart/form-data</code></dt>
+                                <dd>
+                                        <p>Utilizza l'API FormData per gestire i dati, consentendo l'invio dei file al
+                                                server. È
+                                                necessario utilizzare questo tipo di codifica se il modulo include
+                                                elementi <a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                                di tipo file
+                                                (<a
+                                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_file.html"><code>&lt;input type="file"&gt;</code></a>)
+                                        </p>
+                                </dd>
+                                <dt><code>text/plain</code></dt>
+                                <dd>
+                                        <p>Testo normale; per lo più utile solo per il debug, quindi puoi facilmente
+                                                vedere i
+                                                dati che devono essere inviati.</p>
+                                </dd>
+                        </dl>
+                        <p>Se specificato, il valore dell'attributo <code>formenctype</code> sovrascrive l'attributo
+                                <code>action</code> del modulo proprietario.
+                        </p>
+                        <p>Questo attributo è disponibile anche sugli elementi <code>&lt;input type="submit"&gt;</code>
+                                e
+                                <code>&lt;button&gt;</code>.
+                        </p>
+
+                        <h3>formmethod</h3>
+                        <p>Una stringa che indica il metodo HTTP da utilizzare durante l'invio dei dati del modulo;
+                                questo
+                                valore sovrascrive qualsiasi attributo <code>method</code> fornito nel modulo
+                                proprietario. I
+                                valori ammessi
+                                sono:</p>
+                        <dl>
+                                <dt><code>get</code></dt>
+                                <dd>
+                                        <p>Un URL viene costruito iniziando con l'URL fornito dall'attributo
+                                                <code>formaction</code> o <code>action</code>,
+                                                aggiungendo un punto interrogativo ("?"), quindi aggiungendo i dati del
+                                                modulo,
+                                                codificati come descritto da <code>formenctype</code> o l'attributo
+                                                <code>enctype</code> del modulo. Questo
+                                                URL viene quindi inviato al server utilizzando una richiesta get HTTP.
+                                                Questo
+                                                metodo funziona bene per moduli semplici che contengono solo caratteri
+                                                ASCII e
+                                                non hanno effetti collaterali. Questo è il valore predefinito.
+                                        </p>
+                                </dd>
+                                <dt><code>post</code></dt>
+                                <dd>
+                                        <p>I dati del modulo sono inclusi nel corpo della richiesta che viene inviata
+                                                all'URL
+                                                fornito dall'attributo <code>formaction</code> o <code>action</code>
+                                                utilizzando
+                                                una richiesta HTTP post.
+                                                Questo metodo supporta dati complessi e file allegati.</p>
+                                </dd>
+                                <dt><code>dialog</code></dt>
+                                <dd>
+                                        <p>Questo metodo viene utilizzato per indicare che il pulsante chiude la
+                                                finestra di
+                                                dialogo a cui è associato l'input e non trasmette affatto i dati del
+                                                modulo.</p>
+                                </dd>
+                        </dl>
+                        <p>Questo attributo è disponibile anche sugli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_submit.html"><code>&lt;input type="submit"&gt;</code></a>
+                                e
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/button.html"><code>&lt;button&gt;</code></a>.
+                        </p>
+                        <h3>formnovalidate</h3>
+                        <p>Un attributo booleano che, se presente, specifica che il modulo non deve essere convalidato
+                                prima
+                                dell'invio al server. Questo sovrascrive il valore dell'attributo
+                                <code>novalidate</code> nel
+                                modulo
+                                proprietario dell'elemento.
+                        </p>
+                        <p>Questo attributo è disponibile anche sugli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_submit.html"><code>&lt;input type="submit"&gt;</code></a>
+                                e
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/button.html"><code>&lt;button&gt;</code></a>.
+                        </p>
+                        <h3>formtarget</h3>
+                        <p>Una stringa che specifica un nome o una parola chiave che indica dove visualizzare la
+                                risposta
+                                ricevuta dopo l'invio del modulo. La stringa deve essere il nome di un contesto di
+                                navigazione
+                                (ovvero una scheda, una finestra o <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/iframe.html"><code>&lt;iframe&gt;</code></a>.
+                                Un valore
+                                specificato qui
+                                sovrascrive qualsiasi
+                                destinazione fornita dall'attributo <code>target</code> sul <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/form.html"><code>&lt;form&gt;</code></a>
+                                proprietario di questo input.</p>
+                        <p>Oltre ai nomi effettivi di schede, finestre o frame inline, ci sono alcune parole chiave
+                                speciali che
+                                possono essere utilizzate:</p>
+                        <dl>
+                                <dt><code>_self</code></dt>
+                                <dd>
+                                        <p>Carica la risposta nello stesso contesto di navigazione di quello che
+                                                contiene il
+                                                modulo. Questo sostituirà il documento corrente con i dati ricevuti.
+                                                Questo è il
+                                                valore predefinito utilizzato se non ne viene specificato nessuno.</p>
+                                </dd>
+                                <dt><code>_blank</code></dt>
+                                <dd>
+                                        <p>Carica la risposta in un nuovo contesto di navigazione senza nome. Si tratta
+                                                in
+                                                genere di una nuova scheda nella stessa finestra del documento corrente,
+                                                ma può
+                                                differire a seconda della configurazione dell'agente utente .</p>
+                                </dd>
+                                <dt><code>_parent</code></dt>
+                                <dd>
+                                        <p>Carica la risposta nel contesto di navigazione padre di quello corrente. Se
+                                                non
+                                                esiste un contesto padre, si comporta come <code>_self</code>.</p>
+                                </dd>
+                                <dt><code>_top</code></dt>
+                                <dd>
+                                        <p>Carica la risposta nel contesto di navigazione di primo livello; questo è il
+                                                contesto
+                                                di navigazione che è l'antenato più in alto del contesto corrente. Se il
+                                                contesto corrente è il contesto più in alto, si comporta come
+                                                <code>_self</code>.
+                                        </p>
+                                </dd>
+                        </dl>
+                        <p>Questo attributo è disponibile anche sugli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_submit.html"><code>&lt;input type="submit"&gt;</code></a>
+                                e
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/button.html"><code>&lt;button&gt;</code></a>.
+                        </p>
+                        <h3>height</h3>
+                        <p>Un numero che specifica l'altezza, in pixel CSS, alla quale disegnare l'immagine specificata
+                                dall'attributo <code>src</code>.</p>
+                        <h3>src</h3>
+                        <p>Una stringa che specifica l'URL del file immagine da visualizzare per rappresentare il
+                                pulsante di
+                                invio grafico. Quando l'utente interagisce con l'immagine, l'input viene gestito come
+                                qualsiasi
+                                altro pulsante di input.</p>
+                        <h3>width</h3>
+                        <p>Un numero che indica la larghezza alla quale disegnare l'immagine, in pixel CSS.</p>
+                        <h2 id="attributi-obsoleti">Attributi obsoleti</h2>
+                        <p>Il seguente attributo è stato definito da HTML 4 per gli input di tipo <code>image</code>, ma
+                                non è
+                                stato implementato da
+                                tutti i browser e da allora è stato deprecato.</p>
+                        <h3>usemap</h3>
+                        <p>Se <code>usemap</code> è specificato, deve essere il nome di un elemento della mappa
+                                immagine,
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/map.html"><code>&lt;map&gt;</code></a>,
+                                che
+                                definisce una mappa immagine da utilizzare con l'immagine. Questo
+                                utilizzo è obsoleto; dovresti passare all'uso dell'elemento <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/img.html"><code>&lt;img&gt;</code></a>
+                                quando vuoi
+                                usare le mappe di immagini.
+                        </p>
+                        <h2 id="lista" w>Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

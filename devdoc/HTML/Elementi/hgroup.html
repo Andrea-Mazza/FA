@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;hgroup&gt; (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;hgroup&gt;</h1>
+                        <div class="warningcard">
+                                <p><span class="bold">Avvertenza</span>: <code>&lt;hgroup&gt;</code> non deve essere
+                                        utilizzato
+                                        perché
+                                        nessuna tecnologia
+                                        assistiva lo supporta e di conseguenza ha un effetto dannoso sull'assistenza per
+                                        le intestazioni
+                                        poste al suo interno.</p>
+                        </div>
+                        <p>L' elemento HTML <code>&lt;hgroup&gt;</code> rappresenta un'intestazione multilivello per una
+                                sezione di
+                                un documento. Raggruppa un insieme di elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/h1_h6.html"><code>&lt;h1&gt;-&lt;h6&gt;</code></a>.
+                        </p>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <h2 id="note">Note d'uso</h2>
+                        <div class="notecard">
+                                <p><span class="bold">Nota</span>: l'elemento <code>&lt;hgroup&gt;</code> è stato
+                                        rimosso dalla
+                                        specifica
+                                        HTML5 (W3C), ma è
+                                        ancora nella versione WHATWG di HTML. Tuttavia, è parzialmente implementato
+                                        nella maggior parte dei
+                                        browser, quindi è improbabile che scompaia. Tuttavia, dato che uno scopo chiave
+                                        dell'elemento
+                                        <code>&lt;hgroup&gt;</code> è influenzare il modo in cui le intestazioni vengono
+                                        visualizzate
+                                        dall'algoritmo di struttura definito nella specifica HTML, ma l'algoritmo di
+                                        struttura HTML non è
+                                        implementato in nessun browser , la semantica <code>&lt;hgroup&gt;</code> è in
+                                        pratica solo teorica.
+                                        Quindi la specifica HTML5 (W3C) fornisce consigli su come contrassegnare
+                                        sottotitoli, sottotitoli,
+                                        titoli alternativi e tagline senza utilizzare <code>&lt;hgroup&gt;</code>.
+                                </p>
+                        </div>
+                        <p>L'elemento <code>&lt;hgroup&gt;</code> consente di raggruppare l'intestazione principale di
+                                una sezione
+                                del documento con qualsiasi intestazione secondaria, ad esempio sottotitoli o titoli
+                                alternativi, per
+                                formare un'intestazione a più livelli .</p>
+                        <p>In altre parole, l'elemento <code>&lt;hgroup&gt;</code> impedisce a uno qualsiasi dei suoi
+                                figli
+                                secondari <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/h1_h6.html"><code>&lt;h1&gt;-&lt;h6&gt;</code></a>
+                                di creare sezioni separate nella struttura,
+                                come
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/h1_h6.html"><code>&lt;h1&gt;-&lt;h6&gt;</code></a>
+                                farebbero normalmente quegli elementi se non fossero
+                                figli di
+                                qualsiasi <code>&lt;hgroup&gt;</code>.
+                        </p>
+                        <p>Quindi, nello schema astratto prodotto dall'algoritmo di schema HTML definito nella specifica
+                                HTML,
+                                l'insieme <code>&lt;hgroup&gt;</code> forma un'unica intestazione logica, con l'intero
+                                insieme di figli
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/h1_h6.html"><code>&lt;h1&gt;-&lt;h6&gt;</code></a>
+                                dello schema <code>&lt;hgroup&gt;</code> che entrano
+                                nello schema
+                                come un'unità multilivello , per comprendere quella singola intestazione logica nello
+                                schema astratto.
+                        </p>
+                        <p>Per produrre una vista renderizzata (non astratta) di un tale contorno, è necessario fare una
+                                scelta
+                                nella progettazione dello strumento di rendering su come rendere le intestazioni
+                                <code>&lt;hgroup&gt;</code> in modo tale da trasmettere la loro natura multilivello. Ci
+                                sono una varietà
+                                di modi in cui un <code>&lt;hgroup&gt;</code> potrebbe essere mostrato in una struttura
+                                renderizzata;
+                                per esempio:
+                        </p>
+                        <ul>
+                                <li>
+                                        <p>un elemento <code>&lt;hgroup&gt;</code> potrebbe essere mostrato in un
+                                                contorno reso con un
+                                                carattere due punti e uno spazio (": ") o un altro segno di
+                                                punteggiatura simile dopo
+                                                l'intestazione principale e prima della prima intestazione secondaria (e
+                                                con la stessa
+                                                punteggiatura o simile prima di qualsiasi altra intestazione secondaria
+                                        </p>
+                                </li>
+                                <li>
+                                        <p>un elemento <code>&lt;hgroup&gt;</code> potrebbe essere mostrato in uno
+                                                schema renderizzato con
+                                                l'intestazione principale seguita da parentesi attorno alle intestazioni
+                                                secondarie</p>
+                                </li>
+                        </ul>
+                        <h2 id="esempi">Esempio</h2>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">hgroup</span> <span class="attr-name">id</span>="<span class="attr-value">document-title</span>"&gt;</span>
+  <span class="punctuation">&lt;h1&gt;</span>HTML<span class="punctuation">&lt;/<span class="tag">h1</span>&gt;</span>
+  <span class="punctuation">&lt;h2&gt;</span>Versione Corrente - Ultimo aggiornamento 14 dicembre 2017<span class="punctuation">&lt;/<span class="tag">h2</span>&gt;</span>
+<span class="punctuation">&lt;/<span class="tag">hgroup</span>&gt;</span></code></pre>
+                        </div>
+                        <h2 id="accessibilità">Problemi di accessibilità</h2>
+                        <p>La presenza di <code>hgroup</code> può rimuovere le informazioni segnalate alla tecnologia
+                                assistiva
+                                sulla parte di sottotitolo del gruppo di intestazioni.</p>
+                        <h2>Guarda anche</h2>
+                        <ul>
+                                <li>Altri elementi relativi alla sezione: <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/body.html"><code>&lt;body&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/article.html"><code>&lt;article&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/section.html"><code>&lt;section&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/aside.html"><code>&lt;aside&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/h1_h6.html"><code>&lt;h1&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/h1_h6.html"><code>&lt;h2&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/h1_h6.html"><code>&lt;h3&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/h1_h6.html"><code>&lt;h4&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/h1_h6.html"><code>&lt;h5&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/h1_h6.html"><code>&lt;h6&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/nav.html"><code>&lt;nav&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/header.html"><code>&lt;header&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/footer.html"><code>&lt;footer&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/address.html"><code>&lt;address&gt;</code></a>;
+                                </li>
+                        </ul>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

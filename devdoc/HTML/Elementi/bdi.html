@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+
+        <title>&lt;bdi&gt;: l'elemento Bidirezionale Isolato (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;bdi&gt;: l'elemento Bidirezionale Isolato</h1>
+                        <p>L'elemento HTML <code>&lt;bdi&gt;</code> indica all'algoritmo bidirezionale del browser di
+                                trattare il
+                                testo che contiene in isolamento dal testo circostante. È particolarmente utile quando
+                                un sito Web
+                                inserisce in modo dinamico del testo e non conosce la direzionalità del testo inserito.
+                        </p>
+                        <p>Il testo bidirezionale è un testo che può contenere sia sequenze di caratteri che sono
+                                disposti
+                                da sinistra
+                                a destra (LTR) sia sequenze di caratteri che sono disposti da destra a sinistra (RTL),
+                                come una
+                                citazione araba incorporata in una stringa inglese o italiana. I browser implementano
+                                l'Algoritmo
+                                bidirezionale
+                                Unicode per gestire questo. In questo algoritmo, ai caratteri viene assegnata una
+                                direzionalità
+                                implicita: ad esempio, i caratteri latini vengono trattati come LTR mentre i caratteri
+                                arabi vengono
+                                trattati come RTL. Alcuni altri caratteri (come spazi e alcuni segni di punteggiatura)
+                                sono trattati
+                                come neutri e vengono assegnati direzionalità in base a quella dei caratteri
+                                circostanti.</p>
+                        <p>Di solito, l'algoritmo bidirezionale farà la cosa giusta senza che l'autore debba fornire
+                                alcun markup
+                                speciale ma, occasionalmente, l'algoritmo ha bisogno di aiuto. Ecco dove
+                                <code>&lt;bdi&gt;</code> entra
+                                in gioco.
+                        </p>
+                        <p>L'elemento <code>&lt;bdi&gt;</code> viene utilizzato per avvolgere un intervallo di testo e
+                                indica
+                                all'algoritmo bidirezionale di trattare questo testo in isolamento dall'ambiente
+                                circostante. Questo
+                                funziona in due modi:</p>
+                        <ul>
+                                <li>La direzionalità del testo incorporato in <code>&lt;bdi&gt;</code> non influenza la
+                                        direzionalità
+                                        del testo circostante.</li>
+                                <li>La direzionalità del testo incorporato in <code>&lt;bdi&gt;</code> non è influenzata
+                                        dalla
+                                        direzionalità del testo circostante.</li>
+                        </ul>
+                        <p>Incorporare i caratteri in <code>&lt;span dir="auto"&gt;</code> ha lo stesso effetto
+                                dell'utilizzo di
+                                <code>&lt;bdi&gt;</code>, ma la sua semantica è meno chiara
+                        </p>
+                        <h2 id="attributi">Attributi</h2>
+                        <p>Come tutti gli altri elementi HTML, questo elemento supporta gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a> tranne
+                                per il fatto
+                                che l'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/dir.html"><code>dir</code></a>
+                                si
+                                comporta in modo diverso dal normale: il valore
+                                predefinito è
+                                <code>auto</code>, il che significa che il suo valore non viene mai ereditato
+                                dall'elemento padre. Ciò
+                                significa che, a meno che non specifichi un valore di <code>rtl</code> o
+                                <code>ltr</code> per
+                                <code>dir</code>, l' interprete determinerà la corretta direzionalità da utilizzare in
+                                base al contenuto
+                                di <code>&lt;bdi&gt;</code>.
+                        </p>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi</a>
+                        </div>
+                </article>
+                <aside class="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;input type="range"&gt; (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;input type="range"&gt;</h1>
+                        <p>Gli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                di tipo <code>range</code> consentono all'utente di
+                                specificare un valore numerico che non deve
+                                essere inferiore a un dato valore e non superiore a un altro dato valore. Il valore
+                                preciso,
+                                tuttavia, non è considerato importante. Questo è in genere rappresentato utilizzando un
+                                dispositivo di scorrimento o un controllo di composizione anziché una casella di
+                                immissione di
+                                testo come <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_number.html"><code>&lt;input type="number"&gt;</code></a>.
+                        </p>
+                        <p>Poiché questo tipo di widget è impreciso, dovrebbe essere utilizzato solo se il valore esatto
+                                del
+                                controllo non è importante.</p>
+                        <p>Se il browser dell'utente non supporta <code>&lt;input type="range"&gt;</code>, ricadrà e lo
+                                tratterà
+                                come <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_text.html"><code>&lt;input type="text"&gt;</code></a>.
+                        </p>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <h2 id="convalida">Convalida</h2>
+                        <p>Non è disponibile alcuna convalida del modello; tuttavia, vengono eseguite le seguenti forme
+                                di
+                                validazione automatica:</p>
+                        <ul>
+                                <li>Se <code>value</code> è impostato su qualcosa che non può essere convertito in un
+                                        numero a
+                                        virgola mobile
+                                        valido, la convalida non riesce perché l'input soffre di un input errato.</li>
+                                <li>Il valore non sarà inferiore a <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>.
+                                        Il valore predefinito è <code>0</code>.
+                                </li>
+                                <li>Il valore non sarà maggiore di <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>.
+                                        Il valore predefinito è <code>100</code>.
+                                </li>
+                                <li>Il valore sarà un multiplo di <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/step.html"><code>step</code></a>.
+                                        Il valore predefinito è <code>1</code>.
+                                </li>
+                        </ul>
+                        <h2 id="valore">Valore</h2>
+                        <p>L'attributo <code>value</code> contiene una stringa che contiene una rappresentazione di
+                                stringa del
+                                numero
+                                selezionato. Il valore non è mai una stringa vuota (""). Il valore predefinito è a metà
+                                strada
+                                tra il minimo e il massimo specificati, a meno che il massimo non sia effettivamente
+                                inferiore
+                                al minimo, nel qual caso il valore predefinito è impostato sul valore dell'attributo
+                                <a href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>.
+                                L'algoritmo per determinare il valore predefinito è:
+                        </p>
+                        <div class="example-code-card">
+                                <pre><code>defaultValue = (rangeElem.max &lt; rangeElem.min) ? rangeElem.min
+        : rangeElem.min + (rangeElem.max - rangeElem.min)/2;
+                                </code></pre>
+                        </div>
+                        <p>Se si tenta di impostare il valore inferiore al minimo, questo viene impostato al minimo.
+                                Allo stesso
+                                modo, un tentativo di impostare un valore superiore al massimo comporta l'impostazione
+                                del
+                                valore massimo.</p>
+                        <h2 id="attributi-aggiuntivi">Attributi aggiuntivi</h2>
+                        <p>Oltre agli attributi condivisi da tutti gli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,
+                                gli input di
+                                intervallo offrono i seguenti attributi.</p>
+                        <h3>list</h3>
+                        <p>I valori dell'attributo list sono quelli id di un elemento <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/datalist.html"><code>&lt;datalist&gt;</code></a>
+                                che si trova
+                                nello stesso
+                                documento. <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/datalist.html"><code>&lt;datalist&gt;</code></a>
+                                fornisce un elenco di valori predefiniti da suggerire
+                                all'utente
+                                per questo input. Eventuali valori nell'elenco che non sono compatibili con
+                                typenon sono inclusi nelle opzioni suggerite. I valori forniti sono
+                                suggerimenti, non requisiti: gli utenti possono selezionare da questo elenco
+                                predefinito o fornire un valore diverso.</p>
+                        <h3>max</h3>
+                        <p>Il valore massimo nell'intervallo di valori consentiti. Se il valore immesso nell'elemento
+                                supera questo valore, l'elemento non supera la convalida del vincolo. Se il valore
+                                dell'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>
+                                non è un
+                                numero, l'elemento non ha un valore massimo.</p>
+                        <p>Questo valore deve essere maggiore o uguale al valore dell'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>.
+                        </p>
+                        <h3>min</h3>
+                        <p>Il valore più basso nell'intervallo di valori consentiti. Se il valore dell'elemento è
+                                inferiore a questo, l'elemento non supera la convalida del vincolo. Se viene specificato
+                                un
+                                valore <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>
+                                che
+                                non è un
+                                numero valido, l'input non ha un valore minimo.</p>
+                        <p>Questo valore deve essere minore o uguale al valore dell'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>.
+                        </p>
+                        <h3>step</h3>
+                        <p>L'attributo <a href="/Documenti_per_sviluppatori/html/Attributi/"><code>step</code></a> è un
+                                numero
+                                che specifica la granularità a cui deve attenersi il valore
+                                o il valore
+                                speciale <code>any</code>, descritto di seguito. Sono validi solo i valori che sono
+                                uguali alla
+                                base per lo
+                                stepping (<a href="/Documenti_per_sviluppatori/html/Attributi/min.html">
+                                        <code>min</code></a> se
+                                specificato, <code>value</code> altrimenti, e un valore
+                                predefinito appropriato se nessuno di
+                                questi è fornito).</p>
+                        <p>Un valore stringa di anysignifica che non è implicito alcun passaggio e qualsiasi valore è
+                                consentito
+                                (salvo altri vincoli, come <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>
+                                e <a href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>).
+                        </p>
+                        <h2 id="attributi-non-standard">Attributi non standard</h2>
+                        <h3>orient</h3>
+                        <p>Simile alla proprietà CSS non standard <code>-moz-orient</code> che influisce sugli elementi
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/progress.html"><code>&lt;progress&gt;</code></a>
+                                e <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/meter.html"><code>&lt;meter&gt;</code></a>,
+                                l'
+                                attributo <code>orient</code> definisce l'orientamento del dispositivo di scorrimento
+                                dell'intervallo. I
+                                valori includono <code>horizontal</code>, che significa che l'intervallo viene
+                                visualizzato
+                                orizzontalmente, e
+                                <code>vertical</code>, dove l'intervallo viene visualizzato verticalmente.
+                        </p>
+                        <h2 id="esempi">Esempi</h2>
+                        <p>Sebbene <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_number.html"><code>&lt;input type="number"&gt;</code></a>
+                                consenta agli utenti di immettere un numero con
+                                vincoli facoltativi che
+                                obbligano il loro valore a essere compreso tra un valore minimo e un valore massimo, è
+                                necessario che inseriscano un valore specifico. <code>&lt;input type="range"&gt;</code>
+                                ti
+                                consente di chiedere
+                                all'utente un valore nei casi in cui all'utente potrebbe non interessare o sapere quale
+                                sia il
+                                valore numerico specifico selezionato.</p>
+                        <p>Alcuni esempi di situazioni in cui vengono comunemente utilizzati input di intervallo:</p>
+                        <ul>
+                                <li>Controlli audio come volume e bilanciamento o controlli del filtro.</li>
+                                <li>Controlli di configurazione del colore come canali di colore, trasparenza,
+                                        luminosità, ecc.
+                                </li>
+                                <li>Controlli di configurazione del gioco come difficoltà, distanza di visibilità,
+                                        dimensione
+                                        del mondo e così via.</li>
+                                <li>Lunghezza della password per le password generate da un gestore di password.</li>
+                        </ul>
+                        <p>Di norma, se è più probabile che l'utente sia interessato alla percentuale della distanza tra
+                                i
+                                valori minimo e massimo rispetto al numero effettivo stesso, un input di intervallo è un
+                                ottimo
+                                candidato. Ad esempio, nel caso di un controllo del volume stereo domestico, gli utenti
+                                in
+                                genere pensano "impostare il volume a metà del massimo" invece di "impostare il volume
+                                su 0,5".
+                        </p>
+                        <h3>Specificare il minimo e il massimo</h3>
+                        <p>Per impostazione predefinita, il minimo è 0 e il massimo è 100. Se non è quello che vuoi,
+                                puoi
+                                facilmente specificare limiti diversi modificando i valori degli attributi <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>
+                                e/o
+                                <a href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>.
+                                Questi
+                                possono essere qualsiasi valore a virgola mobile.
+                        </p>
+                        <p>Ad esempio, per chiedere all'utente un valore compreso tra -10 e 10, puoi utilizzare:</p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">range</span>" <span class="attr-name">min</span>="<span class="attr-value">-10</span>" <span class="attr-name">max</span>="<span class="attr-value">10</span>"&gt;</span></code></pre>
+                        </div>
+                        <h3>Impostazione della granularità del valore</h3>
+                        <p>Per impostazione predefinita, la granularità è 1, il che significa che il valore è sempre un
+                                numero
+                                intero. È possibile modificare l' attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/step.html"><code>step</code></a>
+                                per
+                                controllare la granularità. Ad
+                                esempio, se è
+                                necessario un valore compreso tra 5 e 10, con una precisione di due decimali, è
+                                necessario
+                                impostare il valore di <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/step.html"><code>step</code></a>
+                                su
+                                0,01:</p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">range</span>" <span class="attr-name">min</span>="<span class="attr-value">5</span>" <span class="attr-name">max</span>="<span class="attr-value">10</span>" <span class="attr-name">step</span>="<span class="attr-value">0.01</span>"&gt;</span></code></pre>
+                        </div>
+                        <p>Se vuoi accettare qualsiasi valore indipendentemente da quante posizioni decimali si estende,
+                                puoi
+                                specificare un valore <code>any</code> per l'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/step.html"><code>step</code></a>:
+                        </p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">type</span>="<span class="attr-value">range</span>" <span class="attr-name">min</span>="<span class="attr-value">0</span>" <span class="attr-name">max</span>="<span class="attr-value">3.14</span>" <span class="attr-name">step</span>="<span class="attr-value">any</span>"&gt;</span></code></pre>
+                        </div>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

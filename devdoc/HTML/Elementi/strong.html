@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;strong&gt;: l'elemento "forte importanza" (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;strong&gt;: l'elemento "forte importanza"</h1>
+                        <p>L' elemento HTML <code>&lt;strong&gt;</code> indica che i suoi contenuti hanno una forte
+                                importanza,
+                                serietà o urgenza. I browser in
+                                genere rendono i contenuti in grassetto.</p>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <h2 id="note">Note d'uso</h2>
+                        <p>L'elemento <code>&lt;strong&gt;</code> riguarda i contenuti di "forte importanza", comprese
+                                le cose di
+                                grande serietà o
+                                urgenza (come gli avvertimenti). Questa potrebbe essere una frase di grande importanza
+                                per l'intera
+                                pagina, oppure potresti semplicemente provare a sottolineare che alcune parole sono di
+                                maggiore
+                                importanza rispetto ai contenuti vicini.</p>
+                        <p>In genere questo elemento viene visualizzato per impostazione predefinita utilizzando uno
+                                spessore del
+                                carattere in grassetto. Tuttavia, non dovrebbe essere utilizzato per applicare uno stile
+                                audace;
+                                utilizzare la proprietà CSS <code>font-weight</code> a tale scopo. Utilizzare l'elemento
+                                <a href="/Documenti_per_sviluppatori/html/Elementi/b.html"><code>&lt;b&gt;</code></a>
+                                per
+                                attirare l'attenzione
+                                su un determinato testo senza indicare un livello di importanza più elevato. Utilizzare
+                                l'elemento
+                                <a href="/Documenti_per_sviluppatori/html/Elementi/em.html"><code>&lt;em&gt;</code></a>
+                                per
+                                contrassegnare il testo con enfasi sottolineata.
+                        </p>
+                        <p>Un altro uso accettato per <code>&lt;strong&gt;</code> è quello di denotare le etichette dei
+                                paragrafi
+                                che rappresentano note
+                                o avvertenze all'interno del testo di una pagina.</p>
+                        <h3>&lt;b&gt; contro &lt;strong&gt;</h3>
+                        <p>Spesso i nuovi sviluppatori confondono il motivo per cui ci sono così tanti modi per
+                                esprimere la stessa
+                                cosa su un sito Web renderizzato. <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/b.html"><code>&lt;b&gt;</code></a>
+                                e
+                                <code>&lt;strong&gt;</code>
+                                sono forse una
+                                delle fonti di confusione più comuni, che
+                                portano gli sviluppatori a chiedere "Dovrei usare <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/b.html"><code>&lt;b&gt;</code></a>
+                                o
+                                <code>&lt;strong&gt;</code>?
+                                Non fanno entrambi la stessa
+                                cosa?"
+                        </p>
+                        <p>Non esattamente. L'elemento <code>&lt;strong&gt;</code> è per il contenuto di maggiore
+                                importanza, mentre
+                                l'elemento <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/b.html"><code>&lt;b&gt;</code></a>
+                                viene utilizzato per attirare l'attenzione sul testo
+                                senza indicare
+                                che è più importante.</p>
+                        <p>Può essere utile rendersi conto che entrambi sono elementi validi e semantici in HTML5 e che
+                                è una
+                                coincidenza che entrambi abbiano lo stesso stile predefinito (grassetto) nella maggior
+                                parte dei browser
+                                (sebbene alcuni browser più vecchi in realtà sottolineino <code>&lt;strong&gt;</code>).
+                                Ogni elemento è
+                                pensato per essere
+                                utilizzato in determinati tipi di scenari e, se si desidera utilizzare il testo in
+                                grassetto per la
+                                decorazione, è necessario utilizzare effettivamente la proprietà CSS
+                                <code>font-weight</code>.
+                        </p>
+                        <p>Il significato o lo scopo previsto del testo allegato dovrebbe essere ciò che determina quale
+                                elemento
+                                utilizzare. Comunicare il significato è ciò che riguarda la semantica.</p>
+                        <h3>&lt;em&gt; contro &lt;strong&gt;</h3>
+                        <p>In aggiunta alla confusione c'è il fatto che mentre HTML 4 ha definito
+                                <code>&lt;strong&gt;</code> come
+                                un'enfasi più forte,
+                                HTML 5 definisce <code>&lt;strong&gt;</code> come una "forte importanza per i suoi
+                                contenuti". Questa è
+                                una distinzione
+                                importante da fare.
+                        </p>
+                        <p>Mentre <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/em.html"><code>&lt;em&gt;</code></a>
+                                è
+                                usato per cambiare il significato di una frase come fa
+                                l'enfasi
+                                pronunciata (" Amo le
+                                carote" vs. "Amo le carote "), <code>&lt;strong&gt;</code> è usato per dare maggiore
+                                importanza a
+                                porzioni di una frase
+                                (ad esempio, " Attenzione! Questo è molto pericoloso. ") Entrambi
+                                <code>&lt;strong&gt;</code> e
+                                <a href="/Documenti_per_sviluppatori/html/Elementi/em.html"><code>&lt;em&gt;</code></a>
+                                possono
+                                essere
+                                nidificati per aumentare rispettivamente il grado relativo di importanza o l'enfasi
+                                dell'accento.
+                        </p>
+                        <h2 id="esempi">Esempi</h2>
+                        <h3>Esempio di base</h3>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">p</span>&gt;</span>Prima di procedere, <span class="punctuation">&lt;<span class="tag">strong</span>&gt;</span> sii sicuro di indossare gli occhiali
+di protezione <span class="punctuation">&lt;/<span class="tag">strong</span>&gt;</span>.<span class="punctuation">&lt;/<span class="tag">p</span>&gt;</span></code></pre>
+                        </div>
+                        <h3>Avvertenze</h3>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">strong</span>&gt;</span>Importante<span class="punctuation">&lt;/<span class="tag">strong</span>&gt;</span><span class="punctuation">&lt;<span class="tag">p</span>&gt;</span>Prima di procedere, sii sicuro di indossare gli occhiali
+di protezione.<span class="punctuation">&lt;/<span class="tag">p</span>&gt;</span></code></pre>
+                        </div>
+                        <h2>Guarda anche</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/b.html"><code>&lt;b&gt;</code></a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/em.html"><code>&lt;em&gt;</code></a>
+                                </li>
+                        </ul>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

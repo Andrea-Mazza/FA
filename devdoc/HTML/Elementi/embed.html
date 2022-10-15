@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;embed&gt;: l'elemento "Incorpora contenuto esterno" (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;embed&gt;: l'elemento "Incorpora contenuto esterno"</h1>
+                        <p>L' elemento HTML <code>&lt;embed&gt;</code> incorpora il contenuto esterno nel punto
+                                specificato nel
+                                documento. Questo contenuto è fornito da un'applicazione esterna o da un'altra fonte di
+                                contenuto
+                                interattivo come un plug-in del browser.</p>
+                        <div class="notecard">
+                                <p><span class="bold">Nota:</span> questo argomento documenta solo l'elemento definito
+                                        come
+                                        parte di HTML5.
+                                        Non affronta
+                                        l'implementazione precedente e non standardizzata dell'elemento.</p>
+                        </div>
+                        <p>Tieni presente che la maggior parte dei browser moderni ha deprecato e rimosso il supporto
+                                per i plug-in
+                                del browser, quindi fare affidamento su <code>&lt;embed&gt;</code> in genere non è
+                                saggio se desideri
+                                che il tuo sito sia utilizzabile sul browser dell'utente medio.</p>
+                        <h2 id="attributi">Attributi</h2>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <dl>
+                                <dt><code>height</code></dt>
+                                <dd>
+                                        <p>L'altezza visualizzata della risorsa, in pixel CSS . Questo deve essere un
+                                                valore assoluto; non
+                                                sono ammesse percentuali .</p>
+                                </dd>
+                                <dt><code>src</code></dt>
+                                <dd>
+                                        <p>L'URL della risorsa incorporata.</p>
+                                </dd>
+                                <dt><code>type</code></dt>
+                                <dd>
+                                        <p>Il tipo MIME da utilizzare per selezionare il plug-in di cui creare
+                                                un'istanza.</p>
+                                </dd>
+                                <dt><code>width</code></dt>
+                                <dd>
+                                        <p>La larghezza visualizzata della risorsa, in pixel CSS . Questo deve essere un
+                                                valore assoluto;
+                                                non sono ammesse percentuali .</p>
+                                </dd>
+                        </dl>
+                        <h2 id="note">Note d'uso</h2>
+                        <p>È possibile utilizzare la proprietà <code>object-position</code> per regolare il
+                                posizionamento
+                                dell'oggetto incorporato all'interno della cornice dell'elemento e la proprietà
+                                <code>object-fit</code>
+                                per controllare il modo in cui le dimensioni dell'oggetto vengono regolate per adattarsi
+                                alla cornice.
+                        </p>
+                        <h2 id="esempi">Esempi</h2>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">embed</span> <span class="attr-name">type</span>="<span class="attr-value">video/quicktime</span>" <span class="attr-name">src</span>="<span class="attr-value">movie.mov</span>" <span class="attr-name">width</span>="<span class="attr-value">640</span>" <span class="attr-name">height</span>="<span class="attr-value">480</span>"
+<span class="attr-name">title</span>="<span class="attr-value">Titolo del mio video</span>"&gt;</span></code></pre>
+                        </div>
+                        <h2 id="accessibilità">Problemi di accessibilità</h2>
+                        <p>Utilizzare l'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/title.html"><code>title</code></a>
+                                su
+                                un elemento <code>&lt;embed&gt;</code> per
+                                etichettarne il
+                                contenuto in modo che le persone che navigano con tecnologie assistive, come un'utilità
+                                per la lettura
+                                dello schermo, possano capire cosa contiene. Il valore del titolo dovrebbe descrivere in
+                                modo conciso il
+                                contenuto incorporato. Senza un titolo, potrebbero non essere in grado di determinare
+                                quale sia il suo
+                                contenuto incorporato. Questo cambio di contesto può creare confusione e richiedere
+                                molto tempo,
+                                soprattutto se l'elemento <code>&lt;embed&gt;</code> contiene contenuto interattivo come
+                                video o audio.
+                        </p>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

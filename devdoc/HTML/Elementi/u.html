@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;u&gt;: l'elemento "sottolineatura ondulata" (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;u&gt;: l'elemento "sottolineatura ondulata"</h1>
+                        <p>L' elemento HTML <code>&lt;u&gt;</code> rappresenta un intervallo di testo inline che
+                                dovrebbe essere
+                                visualizzato in modo da indicare che ha un'annotazione non testuale. Questo è reso per
+                                impostazione predefinita come una semplice sottolineatura continua, ma può essere
+                                modificato
+                                utilizzando CSS.</p>
+                        <div class="warningcard">
+                                <p><span class="bold">Avvertenza</span>: questo elemento veniva chiamato elemento
+                                        "Sottolinea"
+                                        nelle versioni
+                                        precedenti di HTML e talvolta viene ancora utilizzato in modo improprio in
+                                        questo modo.
+                                        Per sottolineare il testo, dovresti invece applicare uno stile che includa la
+                                        proprietà CSS <code>text-decoration</code> impostata su <code>underline</code>.
+                                </p>
+                        </div>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <h2 id="note">Note d'uso</h2>
+                        <p>Insieme ad altri elementi di stile puro, l'elemento HTML Underline (<code>&lt;u&gt;</code>)
+                                originale
+                                è stato deprecato in HTML 4; tuttavia, <code>&lt;u&gt;</code> è stato ripristinato in
+                                HTML 5 con
+                                un nuovo significato semantico: contrassegnare il testo con una qualche forma di
+                                annotazione non
+                                testuale applicata.</p>
+                        <div class="notecard">
+                                <p><span class="bold">Nota</span>: evitare di utilizzare l'elemento
+                                        <code>&lt;u&gt;</code> con
+                                        il suo stile
+                                        predefinito (di testo
+                                        sottolineato) in modo tale da essere confuso con un collegamento ipertestuale,
+                                        anch'esso sottolineato per impostazione predefinita.
+                                </p>
+                        </div>
+                        <h3>Casi d'uso</h3>
+                        <p>I casi d'uso validi per l'elemento <code>&lt;u&gt;</code> includono l'annotazione di errori
+                                di
+                                ortografia, l'applicazione di un segno di nome proprio per denotare i nomi propri nel
+                                testo
+                                cinese e altre forme di annotazione.</p>
+                        <p>Non dovresti usare <code>&lt;u&gt;</code> per sottolineare il testo a scopo di presentazione
+                                o per
+                                denotare titoli di libri.</p>
+                        <h3>Altri elementi da considerare</h3>
+                        <p>Nella maggior parte dei casi, dovresti usare un elemento diverso da <code>&lt;u&gt;</code>,
+                                come ad
+                                esempio:</p>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/em.html"><code>&lt;em&gt;</code></a>
+                                        per
+                                        denotare l'enfasi dello stress</li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/b.html"><code>&lt;b&gt;</code></a>
+                                        per
+                                        attirare l'attenzione sul testo</li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/mark.html"><code>&lt;mark&gt;</code></a>
+                                        per contrassegnare parole o frasi chiave</li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/strong.html"><code>&lt;strong&gt;</code></a>
+                                        per indicare che il testo ha una forte importanza</li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/cite.html"><code>&lt;cite&gt;</code></a>
+                                        per contrassegnare i titoli di libri o altre pubblicazioni</li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/i.html"><code>&lt;i&gt;</code></a>
+                                        per
+                                        denotare termini tecnici, traslitterazioni, pensieri o nomi di
+                                        navi nei testi occidentali</li>
+                        </ul>
+                        <p>Per fornire annotazioni testuali (al contrario delle annotazioni non testuali create con
+                                <code>&lt;u&gt;</code>), utilizzare l'elemento <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/ruby.html"><code>&lt;ruby&gt;</code></a>.
+                        </p>
+                        <p>Per applicare un aspetto sottolineato senza alcun significato semantico, utilizzare il valore
+                                <code>underline</code> della proprietà <code>text-decoration</code>.
+                        </p>
+                        <h2 id="esempi">Esempi</h2>
+                        <h3>Idica un errore di ortografia</h3>
+                        <p>Questo esempio usa l'elemento <code>&lt;u&gt;</code> e alcuni CSS per visualizzare un
+                                paragrafo che
+                                include un errore di
+                                ortografia, con l'errore indicato nello stile di sottolineatura ondulata rossa che è
+                                abbastanza comunemente usato per questo scopo.</p>
+                        <h4>HTML</h4>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">p</span>&gt;</span>In questa frase c'è una parola scritta 
+<span class="punctuation">&lt;<span class="tag">u</span> <span class="attr-name">class</span>="<span class="attr-value">spelling</span>"&gt;</span>sbaghliata<span class="punctuation">&lt;/<span class="tag">u</span>&gt;</span><span class="punctuation">&lt;/<span class="tag">p</span>&gt;</span></code></pre>
+                        </div>
+                        <p>Nell'HTML, vediamo l'uso di <code>&lt;u&gt;</code>con una classe, spelling, che è usata per
+                                indicare
+                                l'errore di ortografia della parola "sbaghliata".</p>
+                        <h4>CSS</h4>
+                        <div class="example-code-card">
+                                <pre><code><span class="selector">u.spelling</span> <span class="punctuation">{</span>
+  <span class="property">text-decoration</span>: red wavy underline;
+<span class="punctuation">}</span></code></pre>
+                        </div>
+                        <p>Questo CSS indica che quando l' <u>elemento ha uno stile con la classe spelling, dovrebbe
+                                        avere una
+                                        sottolineatura ondulata rossa sotto il suo testo. Questo è uno stile comune per
+                                        gli
+                                        errori di ortografia. Un altro stile comune può essere presentato usando red
+                                        dashed
+                                        underline.</p>
+                        <h2>Guarda anche</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/span.html"><code>&lt;span&gt;</code></a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/i.html"><code>&lt;i&gt;</code></a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/em.html"><code>&lt;em&gt;</code></a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/b.html"><code>&lt;b&gt;</code></a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/cite.html"><code>&lt;cite&gt;</code></a>
+                                </li>
+                        </ul>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

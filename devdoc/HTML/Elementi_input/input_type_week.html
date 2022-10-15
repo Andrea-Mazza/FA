@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;input type="week"&gt; (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;input type="week"&gt;</h1>
+                        <p>Gli elementi <code>&lt;input type="week"&gt;</code> creano campi di input che consentono di
+                                inserire
+                                facilmente un anno
+                                più il numero della settimana ISO 8601 durante quell'anno</p>
+                        <p>L'interfaccia utente del controllo varia da browser a browser; il supporto cross-browser è
+                                attualmente un po' limitato, con solo Chrome/Opera e Microsoft Edge che lo supportano in
+                                questo
+                                momento. Nei browser non di supporto, il controllo degrada in modo regolare per
+                                funzionare in
+                                modo identico a <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_text.html"><code>&lt;input type="text"&gt;</code></a>.
+                        </p>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <h2 id="valore">Valore</h2>
+                        <p>Una stringa che rappresenta il valore della settimana/anno immesso nell'input.</p>
+                        <p>Puoi impostare un valore predefinito per l'input includendo un valore all'interno
+                                dell'attributo <code>value</code>, in questo modo:</p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">week</span>"&gt;</span>Da quale settimana preferisci iniziare?<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
+<span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">id</span>="<span class="attr-value">week</span>" <span class="attr-name">type</span>="<span class="attr-value">week</span>" <span class="attr-name">name</span>="<span class="attr-value">week</span>" <span class="attr-name">value</span>="<span class="attr-value">2017-W01</span>"&gt;</span></code></pre>
+                        </div>
+                        <p>Una cosa da notare è che il formato visualizzato può differire da quello effettivo value, che
+                                è
+                                sempre formattato <code>yyyy-Www</code>. Quando il valore precedente viene inviato al
+                                server, ad
+                                esempio, i
+                                browser possono visualizzarlo come <code>Week 01, 2017</code>, ma il valore inviato sarà
+                                sempre
+                                simile a
+                                <code>week=2017-W01</code>.
+                        </p>
+                        <p>Puoi anche ottenere e impostare il valore in JavaScript usando la proprietà
+                                <code>value</code>
+                                dell'elemento di input, ad esempio:
+                        </p>
+                        <div class="example-code-card">
+                                <pre><code><span class="varKeyword">var</span> weekControl = document.<span class="attr-name">querySelector</span>(<span class="attr-value">'input[type="week"]</span>);
+weekControl.value = <span class="attr-value">'2017-W45'</span>;</code></pre>
+                        </div>
+                        <h2 id="attributi-aggiuntivi">Attributi aggiuntivi</h2>
+                        <p>Oltre agli attributi comuni agli elementi <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,
+                                gli input
+                                settimanali offrono i
+                                seguenti attributi.</p>
+                        <h3>max</h3>
+                        <p>L'ultimo numero (in termini temporali) dell'anno e della settimana, nel formato stringa
+                                discusso
+                                nella sezione Valore sopra, da accettare. Se il valore immesso nell'elemento supera
+                                questo
+                                valore, l'elemento non supera la convalida del vincolo . Se il valore dell'attributo
+                                <a href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a> non è
+                                una stringa di una settimana valida, l'elemento non ha un valore massimo.
+                        </p>
+                        <p>Questo valore deve essere maggiore o uguale all'anno e alla settimana specificati
+                                dall'attributo
+                                <a href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>.
+                        </p>
+                        <h3>min</h3>
+                        <p>Il primo anno e la prima settimana da accettare. Se il valore dell'elemento è inferiore a
+                                questo, l'elemento non supera la convalida del vincolo . Se viene specificato un valore
+                                <a href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a> che
+                                non è una stringa di una settimana valida, l'input non ha un valore minimo.
+                        </p>
+                        <p>Questo valore deve essere minore o uguale al valore dell'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>.
+                        </p>
+                        <h3>readonly</h3>
+                        <p>Un attributo booleano che, se presente, significa che questo campo non può essere modificato
+                                dall'utente. Tuttavia, <code>value</code> può ancora essere modificato dal codice
+                                JavaScript
+                                impostando
+                                direttamente la proprietà <code>HTMLInputElement value</code>.</p>
+                        <h3>step</h3>
+                        <p>L'attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/step.html"><code>step</code></a>
+                                è un
+                                numero che specifica la granularità a cui deve
+                                attenersi il valore
+                                o il valore
+                                speciale <code>any</code>, descritto di seguito. Sono validi solo i valori che sono
+                                uguali alla
+                                base per lo
+                                stepping (<a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>
+                                se
+                                specificato, <code>value</code> altrimenti, e un
+                                valore
+                                predefinito appropriato se nessuno di
+                                questi è fornito).</p>
+                        <p>Un valore stringa di <code>any</code> significa che non è implicito alcun passaggio e
+                                qualsiasi
+                                valore è consentito
+                                (salvo altri vincoli, come <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>
+                                e <a href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>).
+                        </p>
+                        <p>Per gli <code>&lt;input type="week"&gt;</code>, il valore di stepè espresso in settimane, con
+                                un
+                                fattore di scala di 604.800.000
+                                (poiché il valore numerico sottostante è in millisecondi). Il valore predefinito di
+                                stepè 1, che
+                                indica 1 settimana. La base stepping predefinita è -259.200.000, ovvero l'inizio della
+                                prima
+                                settimana del 1970 ("1970-W01").</p>
+                        <h2 id="utilizzo">Utilizzo di <code>&lt;input type="week"&gt;</code></h2>
+                        <p>Gli input settimanali sembrano convenienti a prima vista, poiché forniscono un'interfaccia
+                                utente
+                                semplice per la scelta delle settimane e normalizzano il formato dei dati inviati al
+                                server,
+                                indipendentemente dal browser o dalle impostazioni locali dell'utente. Tuttavia, ci sono
+                                problemi con <code>&lt;input type="week"&gt;</code> perché il supporto del browser non è
+                                garantito su tutti i browser.
+                        </p>
+                        <p>L'uso più semplice di <code>&lt;input type="week"&gt;</code> prevede una combinazione di base
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                ed
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/label.html"><code>&lt;label&gt;</code></a>,
+                                come
+                                mostrato di seguito:
+                        </p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">form</span>&gt;</span>
+<span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">week</span>"&gt;</span>Da quale settimana preferisci iniziare?<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
+<span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">id</span>="<span class="attr-value">week</span>" <span class="attr-name">type</span>="<span class="attr-value">week</span>" <span class="attr-name">name</span>="<span class="attr-value">week</span>" <span class="attr-name">value</span>="<span class="attr-value">2017-W01</span>"&gt;</span>
+<span class="punctuation">&lt;/<span class="tag">form</span>&gt;</span></code></pre>
+                        </div>
+                        <h2 id="convalida">Convalida</h2>
+                        <p>Per impostazione predefinita, <code>&lt;input type="week"&gt;</code> non applica alcuna
+                                convalida ai
+                                valori immessi. Le
+                                implementazioni dell'interfaccia utente in genere non ti consentono di specificare nulla
+                                che non
+                                sia una settimana/anno valido, il che è utile, ma è comunque possibile inviare con il
+                                campo
+                                vuoto e potresti voler limitare l'intervallo di settimane selezionabili.</p>
+                        <h3>Impostazione delle settimane minime e massime</h3>
+                        <p>È possibile utilizzare gli attributi <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>
+                                e <a href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a> per
+                                limitare le settimane
+                                valide che possono essere
+                                scelte dall'utente. Nell'esempio seguente impostiamo un valore minimo di Week 01, 2017e
+                                un
+                                valore massimo di Week 52, 2017:</p>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;<span class="tag">form</span>&gt;</span>
+  <span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">week</span>"&gt;</span>Da quale settimana preferisci iniziare?<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
+  <span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">id</span>="<span class="attr-value">week</span>" <span class="attr-name">type</span>="<span class="attr-value">week</span>" <span class="attr-name">name</span>="<span class="attr-value">week</span>"
+  <span class="attr-name">min</span>="<span class="attr-value">2017-W01</span>" <span class="attr-name">max</span>="<span class="attr-value">2017-W52</span>"&gt;</span>
+<span class="punctuation">&lt;/<span class="tag">form</span>&gt;</span></code></pre>
+                        </div>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/week">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/week</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>&lt;main&gt; (HTML)</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>&lt;main&gt;</h1>
+                        <p>L'elemento HTML <code>&lt;main&gt;</code> rappresenta il contenuto dominante dell'elemento
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/body.html"><code>&lt;body&gt;</code></a>
+                                di
+                                un documento. L'area del contenuto principale è
+                                costituita da contenuti direttamente correlati o che espandono l'argomento centrale di
+                                un documento o la
+                                funzionalità centrale di un'applicazione.
+                        </p>
+                        <p>Un documento non deve avere più di un elemento <code>&lt;main&gt;</code> che non ha
+                                l'attributo
+                                <code>hidden</code> specificato.
+                        </p>
+                        <p>Gli attributi di questo elemento includono gli <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                        globali</a>.</p>
+                        <h2 id="note">Note d'uso</h2>
+                        <p>Il contenuto di un elemento <code>&lt;main&gt;</code> dovrebbe essere unico per il documento.
+                                I contenuti
+                                ripetuti in una serie di documenti o
+                                sezioni di documenti come barre laterali, collegamenti di navigazione, informazioni sul
+                                copyright, loghi
+                                del sito e moduli di ricerca non devono essere inclusi a meno che il modulo di ricerca
+                                non sia la
+                                funzione principale della pagina.</p>
+                        <p><code>&lt;main&gt;</code> non contribuisce alla struttura del documento; cioè, a differenza
+                                di elementi
+                                come <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/body.html"><code>&lt;body&gt;</code></a>,
+                                intestazioni come <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/h1_h6.html"><code>&lt;h2&gt;</code></a>,
+                                e simili,
+                                <code>&lt;main&gt;</code> non influisce sul concetto del DOM della struttura
+                                della pagina. È strettamente informativo.
+                        </p>
+                        <h2 id="esempi">Esempio</h2>
+                        <div class="example-code-card">
+                                <pre><code><span class="punctuation">&lt;</span><span class="tag">main</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;</span><span class="tag">h1</span><span class="punctuation">&gt;</span>Apples<span class="punctuation">&lt;/</span><span class="tag">h1</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;</span><span class="tag">p</span><span class="punctuation">&gt;</span>The apple is the pomaceous fruit of the apple tree.<span class="punctuation">&lt;/</span><span class="tag">p</span><span class="punctuation">&gt;</span>
+
+    <span class="punctuation">&lt;</span><span class="tag">article</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="tag">h2</span><span class="punctuation">&gt;</span>Red Delicious<span class="punctuation">&lt;/</span><span class="tag">h2</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="tag">p</span><span class="punctuation">&gt;</span>These bright red apples are the most common found in many
+        supermarkets.<span class="punctuation">&lt;/</span><span class="tag">p</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="tag">p</span><span class="punctuation">&gt;</span>...<span class="punctuation">&lt;/</span><span class="tag">p</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="tag">p</span><span class="punctuation">&gt;</span>...<span class="punctuation">&lt;/</span><span class="tag">p</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;/</span><span class="tag">article</span><span class="punctuation">&gt;</span>
+        
+    <span class="punctuation">&lt;</span><span class="tag">article</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="tag">h2</span><span class="punctuation">&gt;</span>Granny Smith<span class="punctuation">&lt;/</span><span class="tag">h2</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="tag">p</span><span class="punctuation">&gt;</span>These juicy, green apples make a great filling for
+        apple pies.<span class="punctuation">&lt;/</span><span class="tag">p</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="tag">p</span><span class="punctuation">&gt;</span>...<span class="punctuation">&lt;/</span><span class="tag">p</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="tag">p</span><span class="punctuation">&gt;</span>...<span class="punctuation">&lt;/</span><span class="tag">p</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;/</span><span class="tag">article</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;/</span><span class="tag">main</span><span class="punctuation">&gt;</span>
+        </code></pre>
+                        </div>
+                        <h2 id="accessibilità">Problemi di accessibilità</h2>
+                        <p>L'elemento <code>&lt;main&gt;</code> si comporta come un ruolo mainfondamentale. I punti di
+                                riferimento possono essere utilizzati dalla tecnologia assistiva per identificare
+                                rapidamente e
+                                navigare in ampie sezioni del documento. Preferire utilizzare l'elemento
+                                <code>&lt;main&gt;</code> rispetto alla dichiarazione <code>role="main"</code>.
+                        </p>
+                        <h3>Salta la navigazione</h3>
+                        <p>Skip Navigation, noto anche come "skipnav", è una tecnica che consente a un utente di
+                                tecnologie
+                                assistive di bypassare rapidamente ampie sezioni di contenuti ripetuti (navigazione
+                                principale,
+                                banner informativi, ecc.). Ciò consente all'utente di accedere più rapidamente al
+                                contenuto
+                                principale della pagina.</p>
+                        <p>L'aggiunta di un attributo <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/id.html"><code>id</code></a>
+                                all'elemento <code>&lt;main&gt;</code> consente che sia
+                                una destinazione di un collegamento di navigazione salta.</p>
+                        <h3>Modalità lettore</h3>
+                        <p>La funzionalità della modalità di lettura del browser cerca la presenza
+                                dell'elemento <code>&lt;main&gt;</code>, nonché gli elementi di intestazione e sezione
+                                del
+                                contenuto durante la conversione
+                                del contenuto in una vista di lettura specializzata.</p>
+                        <h2>Guarda anche</h2>
+                        <ul>
+                                <li>Elementi strutturali di base: <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/html.html"><code>&lt;html&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/head.html"><code>&lt;head&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/body.html"><code>&lt;body&gt;</code></a>
+                                </li>
+                                <li>Elementi relativi alla sezione: <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/article.html"><code>&lt;article&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/aside.html"><code>&lt;aside&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/footer.html"><code>&lt;footer&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/header.html"><code>&lt;header&gt;</code></a>,
+                                        o <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/nav.html"><code>&lt;nav&gt;</code></a>
+                                </li>
+                        </ul>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>
