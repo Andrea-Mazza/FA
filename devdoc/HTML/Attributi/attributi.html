@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>Attributi HTML</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>Attributi HTML</h1>
+                        <p>Gli elementi in HTML hanno <strong>attributi</strong> ; si tratta di valori aggiuntivi che
+                                configurano gli
+                                elementi o ne
+                                regolano il comportamento in vari modi per soddisfare i criteri desiderati dagli utenti.
+                        </p>
+                        <h2 id="elenco">Elenco di attributi</h2>
+                        <table>
+                                <thead>
+                                        <tr>
+                                                <td><span class="bold">Nome attributo</span></td>
+                                                <td><span class="bold">Elementi</span></td>
+                                                <td><span class="bold">Descrizione</span></td>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/accept.html"><code>accept</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/form.html"><code>&lt;form&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                                </td>
+                                                <td>Elenco dei tipi accettati dal server, in genere un tipo di file.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/form.html#attr-accept-charset"><code>accept-charset</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/form.html"><code>&lt;form&gt;</code></a>
+                                                </td>
+                                                <td>Elenco dei set di caratteri supportati.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/accesskey.html"><code>accesskey</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                                globali</a></td>
+                                                <td>Scorciatoia da tastiera per attivare o aggiungere lo stato attivo
+                                                        all'elemento.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/iframe.html#attr-allow"><code>allow</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/iframe.html"><code>&lt;iframe&gt;</code></a>
+                                                </td>
+                                                <td>Specifica una policy di funzionalità per l'iframe.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/script.html##attr-async"><code>async</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/script.html"><code>&lt;script&gt;</code></a>
+                                                </td>
+                                                <td>Specifica una policy di funzionalità per l'iframe.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/autocapitalize.html"><code>autocapitalize</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Imposta se l'input viene automaticamente scritto in maiuscolo quando
+                                                        viene
+                                                        immesso dall'utente
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/autocomplete.html"><code>autocomplete</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/form.html"><code>&lt;form&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/select.html"><code>&lt;select&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>
+                                                </td>
+                                                <td>Indica se i controlli in questo modulo possono, per impostazione
+                                                        predefinita, avere i loro
+                                                        valori completati automaticamente dal browser.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/capture.html"><code>capture</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                                </td>
+                                                <td>Specifica che è possibile acquisire un nuovo file.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/keygen.html#attr-challenge"><code>challenge</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/keygen.html"><code>&lt;keygen&gt;</code></a>
+                                                </td>
+                                                <td>Una stringa di verifica inviata insieme alla chiave pubblica.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/class.html"><code>class</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi
+                                                                globali</a></td>
+                                                <td>Spesso utilizzato con CSS per applicare uno stile agli elementi con
+                                                        proprietà comuni.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/applet.html#attr-code"><code>code</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/applet.html"><code>&lt;applet&gt;</code></a>
+                                                </td>
+                                                <td>Specifica l'URL del file di classe dell'applet da caricare ed
+                                                        eseguire.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/applet.html#attr-codebase"><code>codebase</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/applet.html"><code>&lt;applet&gt;</code></a>
+                                                </td>
+                                                <td>Questo attributo fornisce l'URL assoluto o relativo della directory
+                                                        in cui
+                                                        sono archiviati i
+                                                        file .class delle applet a cui fa riferimento l'attributo code.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/textarea.html#attr-cols"><code>cols</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>
+                                                </td>
+                                                <td>Definisce il numero di colonne in un'area di testo.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/meta.html#attr-content"><code>content</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/meta.html"><code>&lt;meta&gt;</code></a>
+                                                </td>
+                                                <td>Un valore associato <code>http-equiv</code> o <code>name</code>
+                                                        dipendente
+                                                        dal contesto.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/contenteditable.html"><code>contenteditable</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Indica se il contenuto dell'elemento è modificabile.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/area.html#attr-coords"><code>coords</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/area.html"><code>&lt;area&gt;</code></a>
+                                                </td>
+                                                <td>Un insieme di valori che specificano le coordinate della regione
+                                                        dell'hotspot.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/crossorigin.html"><code>crossorigin</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/audio.html"><code>&lt;audio&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/img.html"><code>&lt;img&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/link.html"><code>&lt;link&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/script.html"><code>&lt;script&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/video.html"><code>&lt;video&gt;</code></a>
+                                                </td>
+                                                <td>In che modo l'elemento gestisce le richieste tra origini</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/object.html#attr-data"><code>data</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/object.html"><code>&lt;object&gt;</code></a>
+                                                </td>
+                                                <td>Specifica l'URL della risorsa.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/data-*.html"><code>data-*</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Consente di allegare attributi personalizzati a un elemento HTML.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/img.html#attr-decoding"><code>decoding</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/img.html"><code>&lt;img&gt;</code></a>
+                                                </td>
+                                                <td>Indica il metodo preferito per decodificare l'immagine.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/track.html#attr-default"><code>default</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/track.html"><code>&lt;track&gt;</code></a>
+                                                </td>
+                                                <td>Indica che la traccia deve essere abilitata a meno che le preferenze
+                                                        dell'utente non indichino
+                                                        qualcosa di diverso.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/script.html#attr-defer"><code>defer</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/script.html"><code>&lt;script&gt;</code></a>
+                                                </td>
+                                                <td>Indica che lo script deve essere eseguito dopo che la pagina è stata
+                                                        analizzata.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/dir.html"><code>dir</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Definisce la direzione del testo. I valori consentiti sono ltr (da
+                                                        sinistra
+                                                        a destra) o rtl (da
+                                                        destra a sinistra)</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/disabled.html"><code>disabled</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/button.html"><code>&lt;button&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/fieldset.html"><code>&lt;fieldset&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/keygen.html"><code>&lt;keygen&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/optgroup.html"><code>&lt;optgroup&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/option.html"><code>&lt;option&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/select.html"><code>&lt;select&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>
+                                                </td>
+                                                <td>Indica se l'utente può interagire con l'elemento.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/draggable.html"><code>draggable</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Definisce se l'elemento può essere trascinato.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/form.html#attr-enctype"><code>enctype</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/form.html"><code>&lt;form&gt;</code></a>
+                                                </td>
+                                                <td>Definisce il tipo di contenuto dei dati del modulo quando
+                                                        <code>method</code> è POST.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/for.html"><code>for</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/label.html"><code>&lt;label&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/output.html"><code>&lt;output&gt;</code></a>
+                                                </td>
+                                                <td>Descrive gli elementi che appartengono a questo.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/hidden.html"><code>hidden</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                                globali</a></td>
+                                                <td>Impedisce il rendering di un dato elemento, mantenendo attivi gli
+                                                        elementi
+                                                        figlio, ad esempio
+                                                        gli elementi di script.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/meter.html#attr-high"><code>high</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/meter.html"><code>&lt;meter&gt;</code></a>
+                                                </td>
+                                                <td>Indica il limite inferiore dell'intervallo superiore.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/meta.html#attr-http-equiv"><code>http-equiv</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/meta.html"><code>&lt;meta&gt;</code></a>
+                                                </td>
+                                                <td>Definisce una direttiva pragma.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/id.html"><code>id</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Spesso utilizzato con CSS per definire uno stile di un elemento
+                                                        specifico.
+                                                        Il valore di questo
+                                                        attributo deve essere univoco.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/link.html#attr-integrity"><code>integrity</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/link.html"><code>&lt;link&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/script.html"><code>&lt;script&gt;</code></a>
+                                                </td>
+                                                <td>Specifica un valore di integrità della sottorisorsa che consente ai
+                                                        browser
+                                                        di verificare ciò
+                                                        che recuperano.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/inputmode.html"><code>inputmode</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>
+                                                </td>
+                                                <td>Fornisce un suggerimento sul tipo di dati che potrebbero essere
+                                                        inseriti
+                                                        dall'utente durante la
+                                                        modifica dell'elemento o del suo contenuto. L'attributo può
+                                                        essere
+                                                        utilizzato con i controlli
+                                                        del modulo (come il valore degli elementi textarea) o negli
+                                                        elementi in
+                                                        un host di modifica (ad
+                                                        esempio, utilizzando l'attributo <code>contenteditable</code>).
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/img.html#attr-ismap"><code>ismap</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/img.html"><code>&lt;img&gt;</code></a>
+                                                </td>
+                                                <td>Indica che l'immagine fa parte di una mappa immagine lato server.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/itemprop.html"><code>itemprop</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td></td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/keygen.html#attr-keytype"><code>keytype</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/keygen.html"><code>&lt;keygen&gt;</code></a>
+                                                </td>
+                                                <td></td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/track.html#attr-kind"><code>kind</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/track.html"><code>&lt;track&gt;</code></a>
+                                                </td>
+                                                <td>Specifica il tipo di traccia di testo.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/lang.html"><code>lang</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Definisce la lingua utilizzata nell'elemento.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/script.html#attr-language"><code>language</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/script.html"><code>&lt;script&gt;</code></a>
+                                                </td>
+                                                <td>Definisce il linguaggio di script utilizzato nell'elemento.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html#attr-list"><code>list</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                                </td>
+                                                <td>Identifica un elenco di opzioni predefinite da suggerire all'utente.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/meter.html#attr-low"><code>low</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/meter.html"><code>&lt;meter&gt;</code></a>
+                                                </td>
+                                                <td>Indica il limite superiore dell'intervallo inferiore.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/html.html#attr-manifest"><code>manifest</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/html.html"><code>&lt;html&gt;</code></a>
+                                                </td>
+                                                <td>Specifica l'URL del manifest della cache del documento.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/meter.html"><code>&lt;meter&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/progress.html"><code>&lt;progress&gt;</code></a>
+                                                </td>
+                                                <td>Indica il valore massimo consentito.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/maxlength.html"><code>maxlength</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>
+                                                </td>
+                                                <td>Definisce il numero massimo di caratteri consentiti nell'elemento.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/minlength.html"><code>minlength</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>
+                                                </td>
+                                                <td>Definisce il numero minimo di caratteri consentiti nell'elemento.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/form.html#attr-method"><code>method</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/form.html"><code>&lt;form&gt;</code></a>
+                                                </td>
+                                                <td>Definisce quale metodo HTTP utilizzare durante l'invio del modulo.
+                                                        Può
+                                                        essere GET(predefinito) o
+                                                        POST.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/meter.html"><code>&lt;meter&gt;</code></a>
+                                                </td>
+                                                <td>Indica il valore minimo consentito.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/multiple.html"><code>multiple</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/select.html"><code>&lt;select&gt;</code></a>
+                                                </td>
+                                                <td>Indica se è possibile immettere più valori in un input di tipo email
+                                                        o file.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/form.html#attr-novalidate"><code>novalidate</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/form.html"><code>&lt;form&gt;</code></a>
+                                                </td>
+                                                <td>Questo attributo indica che il modulo non deve essere convalidato al
+                                                        momento
+                                                        dell'invio.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/meter.html#attr-optimum"><code>optimum</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/meter.html"><code>&lt;meter&gt;</code></a>
+                                                </td>
+                                                <td>Indica il valore numerico ottimale.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/pattern.html"><code>pattern</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                                </td>
+                                                <td>Definisce un'espressione regolare rispetto alla quale verrà
+                                                        convalidato il
+                                                        valore dell'elemento.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/a.html#attr-ping"><code>ping</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/a.html"><code>&lt;a&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/area.html"><code>&lt;area&gt;</code></a>
+                                                </td>
+                                                <td>L'attributo <code>ping</code> specifica un elenco di URL separati da
+                                                        spazi
+                                                        da notificare se un
+                                                        utente segue
+                                                        il collegamento ipertestuale.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/video.html#attr-poster"><code>poster</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/video.html"><code>&lt;video&gt;</code></a>
+                                                </td>
+                                                <td>Un URL che indica un fotogramma poster da mostrare fino a quando
+                                                        l'utente
+                                                        non riproduce o cerca.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/readonly.html"><code>readonly</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>
+                                                </td>
+                                                <td>Indica se l'elemento può essere modificato.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/rel.html"><code>rel</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/a.html"><code>&lt;a&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/area.html"><code>&lt;area&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/link.html"><code>&lt;link&gt;</code></a>
+                                                </td>
+                                                <td>Specifica la relazione dell'oggetto di destinazione con l'oggetto
+                                                        collegamento.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/required.html"><code>required</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/select.html"><code>&lt;select&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>
+                                                </td>
+                                                <td>Indica se questo elemento deve essere compilato o meno.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/ol.html#attr-reversed"><code>reversed</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/ol.html"><code>&lt;ol&gt;</code></a>
+                                                </td>
+                                                <td>Indica se l'elenco deve essere visualizzato in ordine decrescente
+                                                        anziché
+                                                        crescente.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/role.html"><code>role</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Definisce un ruolo esplicito per un elemento per l'utilizzo da parte
+                                                        delle
+                                                        tecnologie assistive.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/textarea.html#attr-rows"><code>rows</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>
+                                                </td>
+                                                <td>Definisce il numero di righe in un'area di testo.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/iframe.html#attr-sandbox"><code>sandbox</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/iframe.html"><code>&lt;iframe&gt;</code></a>
+                                                </td>
+                                                <td>Impedisce a un documento caricato in un iframe di utilizzare
+                                                        determinate
+                                                        funzioni (come l'invio
+                                                        di moduli o l'apertura di nuove finestre).</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/th.html#attr-scope"><code>scope</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/th.html"><code>&lt;th&gt;</code></a>
+                                                </td>
+                                                <td>th definisce le celle a cui si riferisce il test di intestazione
+                                                        (definito
+                                                        nell'elemento).</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/style.html#attr-scoped"><code>scoped</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/style.html"><code>&lt;style&gt;</code></a>
+                                                </td>
+                                                <td></td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/option.html#attr-selected"><code>selected</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/option.html"><code>&lt;option&gt;</code></a>
+                                                </td>
+                                                <td>Definisce un valore che verrà selezionato al caricamento della
+                                                        pagina.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/size.html"><code>size</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,<a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/select.html"><code>&lt;select&gt;</code></a>
+                                                </td>
+                                                <td>Definisce la larghezza dell'elemento (in pixel). Se l'attributo
+                                                        <code>type</code> dell'elemento
+                                                        è text o
+                                                        password allora è il numero di caratteri.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/slot.html"><code>slot</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Assegna uno slot in un albero ombra DOM shadow a un elemento.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/spellcheck.html"><code>spellcheck</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Indica se il controllo ortografico è consentito per l'elemento.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/iframe.html#attr-srcdoc"><code>srcdoc</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/iframe.html"><code>&lt;iframe&gt;</code></a>
+                                                </td>
+                                                <td></td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/track.html#attr-srclang"><code>srclang</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/track.html"><code>&lt;track&gt;</code></a>
+                                                </td>
+                                                <td></td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/ol.html#attr-start"><code>start</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/ol.html"><code>&lt;ol&gt;</code></a>
+                                                </td>
+                                                <td>Definisce il primo numero se diverso da 1.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/step.html"><code>step</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                                </td>
+                                                <td></td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/style.html"><code>style</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td> Definisce gli stili CSS che sovrascriveranno gli stili
+                                                        precedentemente
+                                                        impostati.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/table.html#attr-summary"><code>summary</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/table.html"><code>&lt;table&gt;</code></a>
+                                                </td>
+                                                <td></td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/tabindex.html"><code>tabindex</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Sostituisce l'ordine di tabulazione predefinito del browser e segue
+                                                        invece
+                                                        quello specificato.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/title.html"><code>title</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Testo da visualizzare in una descrizione comando quando si passa il
+                                                        mouse
+                                                        sopra l'elemento.</td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/translate.html"><code>translate</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributo
+                                                                globale</a></td>
+                                                <td>Specificare se i valori degli attributi di un elemento e i valori
+                                                        dei suoi
+                                                        nodi secondari
+                                                        <code>Text</code> devono essere tradotti quando la pagina viene
+                                                        localizzata o se lasciarli
+                                                        invariati.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/textarea.html#attr-wrap"><code>wrap</code></a>
+                                                </td>
+                                                <td><a href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>
+                                                </td>
+                                                <td>Indica se il testo deve essere avvolto.</td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+</body>
+
+</html>

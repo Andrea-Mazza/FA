@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>step:attributo HTML</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>step:attributo HTML</h1>
+                        <p>L'attributo <code>step</code> è un numero che specifica la granularità a cui deve attenersi
+                                il valore
+                                o la parola
+                                chiave <code>any</code>. È valido per gli input <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_date.html"><code>&lt;input type="date"&gt;</code></a>,
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_month.html"><code>&lt;input type="month"&gt;</code></a>,
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_week.html"><code>&lt;input type="week"&gt;</code></a>,
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_time.html"><code>&lt;input type="time"&gt;</code></a>,
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_datetime-local.html"><code>&lt;input type="datetime-local"&gt;</code></a>,
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_number.html"><code>&lt;input type="number"&gt;</code></a>
+                                e <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_range.html"><code>&lt;input type="range"&gt;</code></a>.
+                        </p>
+                        <p><code>step</code> imposta l' intervallo di avanzamento quando si fa clic sui pulsanti di
+                                selezione su
+                                e giù, si
+                                sposta un dispositivo di scorrimento a sinistra ea destra su un intervallo e si
+                                convalidano i
+                                diversi tipi di data. Se non esplicitamente incluso, il valore predefinito di
+                                <code>step</code>
+                                è 1 per <code>number</code> e
+                                <code>range</code> e 1 tipo di unità (minuti, settimana, mese, giorno) per i tipi di
+                                input di
+                                data/ora. Il
+                                valore può essere un numero positivo - intero o float - o il valore speciale
+                                <code>any</code>,
+                                il che
+                                significa che non è implicito alcun passaggio e qualsiasi valore è consentito (salvo
+                                altri
+                                vincoli, come <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>
+                                e <a href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>).
+                        </p>
+                        <p>Il valore di avanzamento predefinito per numbergli input è 1, consentendo l'immissione solo
+                                di numeri
+                                interi, a meno che la base di avanzamento non sia un numero intero. Il valore di
+                                passaggio
+                                predefinito per <code>time</code> è 1 secondo, con 900 pari a 15 minuti.</p>
+                        <h2 id="sintassi">Sintassi</h2>
+                        <table>
+                                <thead>
+                                        <tr>
+                                                <td><span class="bold">Tipo di ingresso</span></td>
+                                                <td><span class="bold">Valore</span></td>
+                                                <td><span class="bold">Esempio</span></td>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                                <td>date</td>
+                                                <td>1 (giorno)</td>
+                                                <td><code>&lt;input type="date" min="2019-12-25" step="1"&gt;</code>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>month</td>
+                                                <td>1 (mese)</td>
+                                                <td><code>&lt;input type="month" min="2019-12" step="12"&gt;</code></td>
+                                        </tr>
+                                        <tr>
+                                                <td>week</td>
+                                                <td>1 (settimana)</td>
+                                                <td><code>&lt;input type="week" min="2019-W23" step="2"&gt;</code></td>
+                                        </tr>
+                                        <tr>
+                                                <td>time</td>
+                                                <td>60 (secondi)</td>
+                                                <td><code>&lt;input type="time" min="09:00" step="900"&gt;</code></td>
+                                        </tr>
+                                        <tr>
+                                                <td>datetime-local</td>
+                                                <td>1 (secondo)</td>
+                                                <td><code>&lt;input type="datetime-local" min="2019-12-25T19:30" step="7"&gt;</code>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>number</td>
+                                                <td>1</td>
+                                                <td><code>&lt;input type="number" min="0" step="0.1" max="10"&gt;</code>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>range</td>
+                                                <td>1</td>
+                                                <td><code>&lt;input type="range" min="0" step="2" max="10"&gt;</code>
+                                                </td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                        <p>Se <code>any</code> non è impostato in modo esplicito, i valori validi per i tipi di input
+                                number,
+                                data/ora e
+                                range i tipi di input sono uguali alla base per il passaggio: il valore <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/min.html"><code>min</code></a>
+                                e gli
+                                incrementi del
+                                valore del passaggio, fino al valore <a
+                                        href="/Documenti_per_sviluppatori/html/Attributi/max.html"><code>max</code></a>,
+                                se
+                                specificato. Ad esempio, se abbiamo
+                                <code>&lt;input
+                                type="number" min="10" step="2"&gt;</code> un numero intero pari, 10 o maggiore, è
+                                valido. Se
+                                omesso, <code>&lt;input type="number"&gt;</code>, qualsiasi intero è valido, ma i float,
+                                come
+                                4.2, non sono validi,
+                                poiché il valore di <code>step</code> predefinito è 1. Perché 4.2 sia valido,
+                                <code>step</code>
+                                avrebbe dovuto essere impostato
+                                su <code>any</code>, 0.1, 0.2 o qualsiasi valore minimo avrebbe avuto essere un numero
+                                che
+                                termina con .2,
+                                come <code>&lt;input type="number" min="-5.2"&gt;</code>.
+                        </p>
+                        <h2 id="accessibilità">Problemi di accessibilità</h2>
+                        <p>Fornire istruzioni per aiutare gli utenti a comprendere come completare il modulo e
+                                utilizzare i
+                                controlli dei singoli moduli. Indicare eventuali input obbligatori e facoltativi,
+                                formati dei
+                                dati e altre informazioni pertinenti. Quando si utilizza l'attributo <code>min</code>,
+                                assicurarsi che questo
+                                requisito minimo sia compreso dall'utente. Fornire istruzioni all'interno di
+                                <a
+                                        href="/Documenti_per_sviluppatori/html/Elementi/label.html"><code>&lt;label&gt;</code></a>
+                                può essere
+                                sufficiente. Se si forniscono istruzioni al di fuori delle etichette, che consentono un
+                                posizionamento e un design più flessibili, considerare l'utilizzo di
+                                <code>aria-labelledby</code> o
+                                <code>aria-describedby</code>.
+                        </p>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step">https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>

@@ -4,6 +4,7 @@
     2. REBOOT AND GENERAL SETTINGS
     3. HEADER
     4. PREVIEW SECTION
+    5. RESOURCE SECTION
 */
 
 /*
@@ -25,6 +26,19 @@ body {
 a {
     color: unset;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
 }
 
 /*
@@ -105,7 +119,7 @@ nav {
     row-gap: 20px;
 
     img {
-        border-radius: 10%;
+        border-radius: 10px;
 
     }
 
@@ -142,4 +156,34 @@ nav {
 
 /*
     PREVIEW SECTION END
+*/
+
+/*
+    5. RESOURCE SECTION
+*/
+#resources {
+
+    a:hover {
+        color: #ffffff;
+    }
+
+    .resource-card {
+        border: 1px solid #ffffff;
+        width: fit-content;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        padding: 20px 10px;
+
+        .description {
+            text-align: center;
+        }
+
+    }
+}
+
+/*
+    RESOURCE SECTION END
 */

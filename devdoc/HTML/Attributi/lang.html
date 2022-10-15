@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google icon -->
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
+        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <!-- JS -->
+        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
+        <title>lang: attributo HTML</title>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <nav>
+                        <ul>
+                                <li><a href="/index.html">Home</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div class="mobile-menu">
+                        <button class="icon-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        sort
+                                </span></button>
+                </div>
+                <aside class="lf-aside-2 collapsed js-aside">
+                        <button class="icon-btn sidebar-btn"
+                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
+                                        class="material-symbols-outlined">
+                                        close
+                                </span></button>
+                        <aside id="table-of-content-3">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <aside class="lf-aside js-aside">
+                        <aside id="table-of-content-2">
+                                <p>Indice</p>
+                                <ul class="tableList">
+                                </ul>
+                        </aside>
+
+                </aside>
+                <article>
+                        <h1>lang: attributo HTML</h1>
+                        <p>L' attributo <code>lang</code> aiuta a definire la lingua di un elemento: la lingua in cui
+                                sono
+                                scritti gli
+                                elementi non modificabili o la lingua in cui gli elementi modificabili devono essere
+                                scritti
+                                dall'utente.</p>
+                        <p>Se il valore dell'attributo è una stringa vuota ( lang=""), la lingua è impostata su unknown
+                                ; se il
+                                tag di lingua non è valido secondo BCP47, viene impostato su non valido .</p>
+                        <p>Anche se l' attributo lang è impostato, potrebbe non essere preso in considerazione, poiché
+                                l'
+                                attributo xml:lang ha la priorità.</p>
+                        <p>Per la pseudo-classe CSS :lang, due nomi di lingua non validi sono diversi se i loro nomi
+                                sono
+                                diversi. Quindi, mentre corrisponde :lang(es) a entrambi lang="es-ES" e lang="es-419",
+                                :lang(xyzzy) non corrisponderebbe a lang="xyzzy-Zorp!" .</p>
+                        <h2 id="sintassi">Sintassi dei tag di lingua</h2>
+                        <p>La sintassi completa di BCP47 è sufficientemente approfondita da contrassegnare dialetti
+                                linguistici
+                                estremamente specifici, ma la maggior parte dell'utilizzo è molto più semplice.</p>
+                        <p>Un tag di lingua è costituito da sottotag di lingua separati da trattini , in cui ogni
+                                sottotag
+                                indica una determinata proprietà della lingua. I 3 sottotag più comuni sono:</p>
+                        <dl>
+                                <dt>Sottoetichetta della lingua</dt>
+                                <dd>
+                                        <p>Necessario. Un codice di 2 o 3 caratteri che definisce il linguaggio di base,
+                                                in
+                                                genere scritto tutto in minuscolo. Ad esempio, il codice della lingua
+                                                per
+                                                l'inglese è <code>en</code>, e il codice per Badeshi è <code>bdz</code>.
+                                        </p>
+                                </dd>
+                                <dt>Sottoetichetta dello script</dt>
+                                <dd>
+                                        <p>Opzionale. Questo sottotag definisce il sistema di scrittura utilizzato per
+                                                la
+                                                lingua, ed è sempre lungo 4 caratteri, con la prima lettera maiuscola.
+                                                Ad
+                                                esempio, il francese in Braille è fr-Brai ed ja-Kana è giapponese
+                                                scritto con
+                                                l'alfabeto Katakana. Se la lingua è scritta in un modo molto tipico,
+                                                come
+                                                l'inglese nell'alfabeto latino, non è necessario utilizzare questo
+                                                sottotag.</p>
+                                </dd>
+                                <dt>Sottoetichetta della regione</dt>
+                                <dd>
+                                        <p>Opzionale. Questo sottotag definisce un dialetto della lingua di base da una
+                                                posizione particolare, ed è composto da 2 lettere in ALLCAPS che
+                                                corrispondono a
+                                                un prefisso nazionale o da 3 numeri corrispondenti a un'area non
+                                                nazionale. Ad
+                                                esempio, es-ES è lo spagnolo parlato in Spagna ed es-013è lo spagnolo
+                                                parlato in
+                                                America Centrale. "Spagnolo internazionale" sarebbe solo es.</p>
+                                </dd>
+                        </dl>
+                        <p>Il sottotag dello script precede il sottotag della regione se entrambi sono presenti:
+                                ru-Cyrl-BY è
+                                russo, scritto in alfabeto cirillico, come parlato in Bielorussia.</p>
+                        <h2 id="accessibilità">Accessibilità</h2>
+                        <p>Il criterio di successo WCAG 3.1.1 richiede che la lingua della pagina sia specificata in un
+                                modo che
+                                può essere 'determinato a livello di programmazione' (ad esempio tramite l'attributo
+                                lang).</p>
+                        <p>Il criterio di successo WCAG 3.1.2 richiede che le pagine con parti in lingue diverse abbiano
+                                anche
+                                le lingue di quelle parti specificate. Ancora una volta, l' langattributo è il
+                                meccanismo
+                                corretto per questo.</p>
+                        <p>Lo scopo di questi requisiti è principalmente quello di consentire alle tecnologie assistive
+                                come i
+                                lettori di schermo di invocare la pronuncia corretta.</p>
+                        <h2 id="lista">Liste utili</h2>
+                        <ul>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                </li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                globali</a></li>
+                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                </li>
+                        </ul>
+                        <div class="copyright-card">
+                                <p>© 2005–2021 MDN contributors.</p>
+                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
+                                <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang</a>
+                        </div>
+                </article>
+                <aside id="table-of-content">
+                        <p>Indice</p>
+                        <ul class="tableList">
+                        </ul>
+                </aside>
+        </main>
+
+        <footer>
+                <div class="logo">
+                        <a href="/index.html">Free Attitude</a>
+                </div>
+                <div class="copyright-fa">
+                        © Free Attitude
+                </div>
+        </footer>
+        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+</body>
+
+</html>
