@@ -21,6 +21,11 @@ body {
   padding-top: 100px;
 }
 
+a {
+  color: unset;
+  text-decoration: none;
+}
+
 /*
     REBOOT AND GENERAL SETTINGS END
 */
@@ -40,7 +45,8 @@ header {
   color: white;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.navbar-brand:hover {
   color: white;
 }
 
@@ -80,23 +86,37 @@ nav #lineThree {
 /*
     4. PREVIEW SECTION
 */
-#preview a {
-  width: fit-content;
+#preview {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 #preview img {
   border-radius: 10%;
 }
-#preview #preview-card {
+#preview #previewContainer {
+  row-gap: 30px;
+}
+#preview .preview-card {
   display: flex;
   flex-direction: column;
-  padding: 20px;
   align-items: center;
+  row-gap: 15px;
+}
+#preview .preview-img {
+  transition: all 0.3s ease-in;
+}
+#preview .preview-img:hover {
+  transform: scale(0.9);
 }
 #preview .tech-icon-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 5px;
+}
+#preview .view-all {
+  text-align: center;
 }
 
 /*
