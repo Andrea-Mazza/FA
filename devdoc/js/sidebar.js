@@ -52,16 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 mainUl.appendChild(mainLi);
             }
 
-            // for (let j = 0; j < htmlPath.length; j++) {
-            //     let mainLi = document.createElement('li');
-            //     const a = document.createElement('a');
-            //     a.href = `${htmlPath[j]}`;
-            //     a.innerHTML = `${title[j]}`;
-
-            //     mainLi.appendChild(a);
-            //     mainUl.appendChild(mainLi);
-            // }
-
         }
 
 
