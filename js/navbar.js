@@ -6,22 +6,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const lineThree = document.getElementById('lineThree');
 
     const lineOneAnimation = [
-        { width: '20px', top: '0', transform: 'rotate(0deg)' },
-        { width: '40px', top: '7px', transform: 'rotate(45deg)' }
+        { width: '30px', top: '18px', transform: 'rotate(0deg)' },
+        { width: '30px', top: '26px', transform: 'rotate(45deg)' }
     ];
 
     const lineTwoAnimation = [
-        { width: '30px' },
+        { width: '20px', top: '26px' },
         { width: '0' }
     ];
 
     const lineThreeAnimation = [
-        { top: '14px', transform: 'rotate(0deg)' },
-        { top: '7px', transform: 'rotate(-45deg)' }
+        { width: '10px', top: '34px', transform: 'rotate(0deg)' },
+        { width: '30px', top: '26px', transform: 'rotate(-45deg)' }
     ];
 
     const menuAnimationTiming = {
-        duration: 300,
+        duration: 200,
         iterations: 1,
         fill: 'both'
     };
@@ -33,9 +33,13 @@ document.addEventListener('DOMContentLoaded', function () {
             lineTwo.animate(lineTwoAnimation, menuAnimationTiming).reverse();
             lineThree.animate(lineThreeAnimation, menuAnimationTiming).reverse();
         } else {
-            lineOne.animate(lineOneAnimation, menuAnimationTiming);
+            setTimeout(function () {
+                lineOne.animate(lineOneAnimation, menuAnimationTiming);
+            }, 200);
             lineTwo.animate(lineTwoAnimation, menuAnimationTiming);
-            lineThree.animate(lineThreeAnimation, menuAnimationTiming);
+            setTimeout(function () {
+                lineThree.animate(lineThreeAnimation, menuAnimationTiming);
+            }, 200);
         }
 
         menuBtn.classList.toggle('opened');
