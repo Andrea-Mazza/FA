@@ -246,7 +246,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const h5Clone = h5.cloneNode(true);
 
-    sidebar.appendChild(h5);
+    try {
+        sidebar.appendChild(h5);
+    } catch (error) {
+        console.log(error);
+    }
     sidebarMd.appendChild(h5Clone);
 
     for (let i = 0; i < languages.length; i++) {
@@ -316,18 +320,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
         mainDetails.appendChild(mainUl);
 
-        sidebar.appendChild(mainDetails);
+        try {
+            sidebar.appendChild(mainDetails);
+        } catch (error) {
+            console.log(error);
+        }
 
         // Use cloneNode to move sidebar content in sidebars built for md screens
         const mainDetailsClone = mainDetails.cloneNode(true);
 
-        sidebarMd.appendChild(mainDetailsClone);
+        try {
+            sidebarMd.appendChild(mainDetailsClone);
+        } catch (error) {
+            console.error(error);
+        }
 
         const indexList = document.getElementById('indexList');
 
         const mainDetailsCloneIndex = mainDetailsClone.cloneNode(true);
 
-        indexList.appendChild(mainDetailsCloneIndex);
+        try {
+            indexList.appendChild(mainDetailsCloneIndex);
+        } catch (error) {
+            console.error(error);
+        }
     }
 
     // sidebarMd animation

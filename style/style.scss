@@ -47,6 +47,7 @@
 
 html {
     scroll-padding-top: 100px;
+    overflow-x: hidden;
 }
 
 body {
@@ -285,6 +286,14 @@ nav {
 
         .description {
             text-align: center;
+
+            h5 {
+                margin-top: 0;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
         }
 
     }
@@ -440,6 +449,7 @@ footer {
     background-color: var(--background-dark);
     border-top: 1px solid var(--code-background);
     padding: 30px;
+    margin-top: 20px;
 
     ul {
         list-style: none;

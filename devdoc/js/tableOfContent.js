@@ -18,8 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
         listContainer.appendChild(li);
     }
 
-    table.appendChild(h5);
-    table.appendChild(listContainer);
+    try {
+        table.appendChild(h5);
+        table.appendChild(listContainer);
+    } catch (error) {
+        console.log(error);
+    }
+
 
     const sidebarMd = document.getElementById('sidebarMdContent');
 

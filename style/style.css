@@ -42,6 +42,7 @@
 
 html {
   scroll-padding-top: 100px;
+  overflow-x: hidden;
 }
 
 body {
@@ -255,6 +256,12 @@ nav #lineThree {
 #resources .resource-card .description {
   text-align: center;
 }
+#resources .resource-card .description h5 {
+  margin-top: 0;
+}
+#resources .resource-card .description p {
+  margin-bottom: 0;
+}
 
 /*
     RESOURCE SECTION END
@@ -391,6 +398,7 @@ footer {
   background-color: var(--background-dark);
   border-top: 1px solid var(--code-background);
   padding: 30px;
+  margin-top: 20px;
 }
 footer ul {
   list-style: none;

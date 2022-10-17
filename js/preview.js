@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const img = document.createElement('img');
         img.src = `${imgSrc[i]}`;
-        img.classList.add('img-fluid');
+        // img.classList.add('img-fluid');
         img.classList.add('preview-img');
 
         a.appendChild(img);
