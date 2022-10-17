@@ -147,6 +147,7 @@ header {
   right: 0;
   left: 0;
   background-color: var(--background-dark);
+  z-index: 999;
 }
 
 .navbar-brand,

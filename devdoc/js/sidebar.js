@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function () {
         try {
             indexList.appendChild(mainDetailsCloneIndex);
         } catch (error) {
-            console.error(error);
+            console.log(error);
         }
     }
 
