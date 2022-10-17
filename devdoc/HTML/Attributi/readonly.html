@@ -5,174 +5,205 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Google icon -->
-        <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- BOOTSTRAP CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+                crossorigin="anonymous">
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
-        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/devdoc/css/responsive.css">
         <!-- JS -->
-        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
-        <title>readonly: attributo HTML</title>
+        <script src="/js/navbar.js"></script>
+        <script src="/devdoc/js/tableOfContent.js"></script>
+        <script src="/devdoc/js/sidebar.js"></script>
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+                rel="stylesheet">
+        <title>readonly: attributo HTML - FreeAttitude</title>
 </head>
 
 <body>
-        <header>
-                <div class="logo">
-                        <a href="/index.html">Free Attitude</a>
-                </div>
-                <nav>
-                        <ul>
-                                <li><a href="/index.html">Home</a></li>
-                        </ul>
-                </nav>
-        </header>
-        <main>
-                <div class="mobile-menu">
-                        <button class="icon-btn"
-                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
-                                        class="material-symbols-outlined">
-                                        sort
-                                </span></button>
-                </div>
-                <aside class="lf-aside-2 collapsed js-aside">
-                        <button class="icon-btn sidebar-btn"
-                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
-                                        class="material-symbols-outlined">
-                                        close
-                                </span></button>
-                        <aside id="table-of-content-3">
-                                <p>Indice</p>
-                                <ul class="tableList">
-                                </ul>
-                        </aside>
-
-                </aside>
-                <aside class="lf-aside js-aside">
-                        <aside id="table-of-content-2">
-                                <p>Indice</p>
-                                <ul class="tableList">
-                                </ul>
-                        </aside>
-
-                </aside>
-                <article>
-                        <h1>readonly: attributo HTML</h1>
-                        <p>L'attributo booleano <code>readonly</code>, quando presente, rende l'elemento non mutabile,
-                                il che
-                                significa che
-                                l'utente non può modificare il controllo.</p>
-                        <p>Se l'attributo <code>readonly</code> è specificato su un elemento di input, poiché l'utente
-                                non può
-                                modificare
-                                l'input, l'elemento non partecipa alla convalida del vincolo.</p>
-                        <p>L'attributo <code>readonly</code> è supportato dagli input <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_text.html"><code>&lt;input type="text"&gt;</code></a>,
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_search.html"><code>&lt;input type="search"&gt;</code></a>,
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_url.html"><code>&lt;input type="url"&gt;</code></a>,
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_tel.html"><code>&lt;input type="tel"&gt;</code></a>,
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_email.html"><code>&lt;input type="email"&gt;</code></a>,
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_password.html"><code>&lt;input type="password"&gt;</code></a>,
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_date.html"><code>&lt;input type="date"&gt;</code></a>,
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_month.html"><code>&lt;input type="month"&gt;</code></a>,
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_week.html"><code>&lt;input type="week"&gt;</code></a>,
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_time.html"><code>&lt;input type="time"&gt;</code></a>,
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_datetime-local.html"><code>&lt;input type="datetime-local"&gt;</code></a>
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_number.html"><code>&lt;input type="number"&gt;</code></a>
-                                e dagli elementi <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>.
-                                Se
-                                presente su uno
-                                qualsiasi di questi tipi ed elementi di input, la pseudo classe <code>::read-only</code>
-                                corrisponderà. Se l'attributo
-                                non è incluso, la pseudo classe <code>:read-write</code> corrisponderà.
-                        </p>
-                        <p>L'attributo non è supportato, non è rilevante per <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi/select.html"><code>&lt;select&gt;</code></a>
-                                o per i tipi di input
-                                che non sono già
-                                modificabili, come checkbox e radio o che non possono, per definizione, iniziare con un
-                                valore, come il tipo di input del file . range e color , poiché entrambi hanno valori
-                                predefiniti. Inoltre, non è supportato su nascosto in quanto non ci si può aspettare che
-                                un utente compili un modulo nascosto. Né è supportato su nessuno dei tipi di pulsanti,
-                                incluso <code>image</code>.</p>
-                        <p>Quando un input ha l'attributo <code>readonly</code>, la pseudo-classe
-                                <code>:read-only</code> si
-                                applica anche ad esso. Al
-                                contrario, gli input che supportano l' readonlyattributo ma non hanno l'attributo
-                                impostato
-                                corrispondono alla pseudo-classe <code>:read-write</code>.
-                        </p>
-                        <h2 id="interazioni">Interazioni di attributi</h2>
-                        <p>La differenza tra <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/disabled.html"><code>disabled</code></a>
-                                ed <code>readonly</code> è che i controlli di sola lettura
-                                possono ancora funzionare e
-                                sono ancora attivabili, mentre i controlli disabilitati non possono ricevere lo stato
-                                attivo e
-                                non vengono inviati con il modulo e generalmente non funzionano come controlli finché
-                                non
-                                vengono abilitati.</p>
-                        <p>Poiché un campo di sola lettura non può avere il suo valore modificato da un'interazione
-                                dell'utente,
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/required.html"><code>required</code></a>
-                                non
-                                ha alcun effetto sugli input con l'attributo <code>readonly</code>
-                                anche specificato.
-                        </p>
-                        <p>L'unico modo per modificare dinamicamente il valore dell'attributo <code>readonly</code> è
-                                tramite
-                                uno script.</p>
-                        <h2 id="convalida">Convalida dei vincoli</h2>
-                        <p>Se l'elemento è di sola lettura, il valore dell'elemento non può essere aggiornato
-                                dall'utente e non
-                                partecipa alla convalida del vincolo.</p>
-                        <h2 id="lista">Liste utili</h2>
-                        <ul>
-                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
-                                </li>
-                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
-                                                globali</a></li>
-                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
-                                </li>
-                        </ul>
-                        <div class="copyright-card">
-                                <p>© 2005–2021 MDN contributors.</p>
-                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
-                                <a
-                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly">https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly</a>
+        <!-- NAVBAR START -->
+        <header id="header" class="container-fluid">
+                <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                                <a href="/index.html" class="navbar-brand">FreeAttitude</a>
+                                <button id="menuBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#menuContent" aria-controls="menuContent" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        <span id="lineOne" class="line"></span>
+                                        <span id="lineTwo" class="line"></span>
+                                        <span id="lineThree" class="line"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="menuContent">
+                                        <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                        <a href="/index.html" class="nav-link"
+                                                                aria-current="page">Home</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a href="/portfolio.html" class="nav-link"
+                                                                aria-current="page">Portfolio</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a href="/devdoc/index.html" class="nav-link"
+                                                                aria-current="page">DevDoc</a>
+                                                </li>
+                                        </ul>
+                                </div>
                         </div>
-                </article>
-                <aside id="table-of-content">
-                        <p>Indice</p>
-                        <ul class="tableList">
-                        </ul>
+                </nav>
+                <aside id="sidebarMd" class="col-12">
+                        <div class="container-fluid icon-container">
+                                <svg id="mdBtn" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
+                                        class="bi bi-list-ul" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg>
+                        </div>
+                        <div id="sidebarMdContent">
+                                <!-- Filled through sidebar.js and tableOfContent.js -->
+                        </div>
                 </aside>
-        </main>
-
-        <footer>
-                <div class="logo">
-                        <a href="/index.html">Free Attitude</a>
+        </header>
+        <!-- NAVBASR END -->
+        <main class="container-fluid">
+                <div class="row">
+                        <aside id="sidebarLg" class="col-12 col-lg-2">
+                                <!-- Filled through sidebar.js -->
+                        </aside>
+                        <article class="col-12 col-lg-8">
+                                <h1>readonly: attributo HTML</h1>
+                                <p>L'attributo booleano <code>readonly</code>, quando presente, rende l'elemento non
+                                        mutabile,
+                                        il che
+                                        significa che
+                                        l'utente non può modificare il controllo.</p>
+                                <p>Se l'attributo <code>readonly</code> è specificato su un elemento di input, poiché
+                                        l'utente
+                                        non può
+                                        modificare
+                                        l'input, l'elemento non partecipa alla convalida del vincolo.</p>
+                                <p>L'attributo <code>readonly</code> è supportato dagli input <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_text.html"><code>&lt;input type="text"&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_search.html"><code>&lt;input type="search"&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_url.html"><code>&lt;input type="url"&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_tel.html"><code>&lt;input type="tel"&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_email.html"><code>&lt;input type="email"&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_password.html"><code>&lt;input type="password"&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_date.html"><code>&lt;input type="date"&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_month.html"><code>&lt;input type="month"&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_week.html"><code>&lt;input type="week"&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_time.html"><code>&lt;input type="time"&gt;</code></a>,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_datetime-local.html"><code>&lt;input type="datetime-local"&gt;</code></a>
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi_input/input_type_number.html"><code>&lt;input type="number"&gt;</code></a>
+                                        e dagli elementi <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/textarea.html"><code>&lt;textarea&gt;</code></a>.
+                                        Se
+                                        presente su uno
+                                        qualsiasi di questi tipi ed elementi di input, la pseudo classe
+                                        <code>::read-only</code>
+                                        corrisponderà. Se l'attributo
+                                        non è incluso, la pseudo classe <code>:read-write</code> corrisponderà.
+                                </p>
+                                <p>L'attributo non è supportato, non è rilevante per <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/select.html"><code>&lt;select&gt;</code></a>
+                                        o per i tipi di input
+                                        che non sono già
+                                        modificabili, come checkbox e radio o che non possono, per definizione, iniziare
+                                        con un
+                                        valore, come il tipo di input del file . range e color , poiché entrambi hanno
+                                        valori
+                                        predefiniti. Inoltre, non è supportato su nascosto in quanto non ci si può
+                                        aspettare che
+                                        un utente compili un modulo nascosto. Né è supportato su nessuno dei tipi di
+                                        pulsanti,
+                                        incluso <code>image</code>.</p>
+                                <p>Quando un input ha l'attributo <code>readonly</code>, la pseudo-classe
+                                        <code>:read-only</code> si
+                                        applica anche ad esso. Al
+                                        contrario, gli input che supportano l' readonlyattributo ma non hanno
+                                        l'attributo
+                                        impostato
+                                        corrispondono alla pseudo-classe <code>:read-write</code>.
+                                </p>
+                                <h2 id="interazioni">Interazioni di attributi</h2>
+                                <p>La differenza tra <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/disabled.html"><code>disabled</code></a>
+                                        ed <code>readonly</code> è che i controlli di sola lettura
+                                        possono ancora funzionare e
+                                        sono ancora attivabili, mentre i controlli disabilitati non possono ricevere lo
+                                        stato
+                                        attivo e
+                                        non vengono inviati con il modulo e generalmente non funzionano come controlli
+                                        finché
+                                        non
+                                        vengono abilitati.</p>
+                                <p>Poiché un campo di sola lettura non può avere il suo valore modificato da
+                                        un'interazione
+                                        dell'utente,
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/required.html"><code>required</code></a>
+                                        non
+                                        ha alcun effetto sugli input con l'attributo <code>readonly</code>
+                                        anche specificato.
+                                </p>
+                                <p>L'unico modo per modificare dinamicamente il valore dell'attributo
+                                        <code>readonly</code> è
+                                        tramite
+                                        uno script.</p>
+                                <h2 id="convalida">Convalida dei vincoli</h2>
+                                <p>Se l'elemento è di sola lettura, il valore dell'elemento non può essere aggiornato
+                                        dall'utente e non
+                                        partecipa alla convalida del vincolo.</p>
+                                <div class="copyright-card">
+                                        <p>© 2005–2021 MDN contributors.</p>
+                                        <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or
+                                                later.</p>
+                                        <a
+                                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly">https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly</a>
+                                </div>
+                        </article>
+                        <aside id="tableOfContent" class="col-12 col-lg-2">
+                                <!-- Filled through tableOfContent.js -->
+                        </aside>
                 </div>
-                <div class="copyright-fa">
-                        © Free Attitude
+        </main>
+        <footer class="container-fluid">
+                <div class="row g-2">
+                        <div class="col-lg-6 col-md-6 col-12">
+                                <p>© FreeAttitude</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                                <p>Link veloci</p>
+                                <ul>
+                                        <li><img src="/assets/icons/caret-right.svg" alt=""><a
+                                                        href="/index.html">Home</a></li>
+                                        <li><img src="/assets/icons/caret-right.svg" alt=""><a
+                                                        href="/portfolio.html">Portfolio</a></li>
+                                        <li><img src="/assets/icons/caret-right.svg" alt=""><a
+                                                        href="/devdoc/index.html">DevDoc</a></li>
+                                </ul>
+                        </div>
                 </div>
         </footer>
-        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+        <!-- BOOTSTRAP JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+                crossorigin="anonymous"></script>
 </body>
 
 </html>
