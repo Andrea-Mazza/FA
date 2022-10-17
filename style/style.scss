@@ -79,17 +79,6 @@ body {
     border: 3px solid var(--code-background);
 }
 
-// ::-webkit-scrollbar {
-//     display: block;
-//     background-color: var(--code-background);
-//     width: 10px;
-//     border-radius: 50px;
-// }
-
-// ::-webkit-scrollbar-button {
-//     color: var(--code-punctuation);
-// }
-
 a {
     color: unset;
     text-decoration: none;
@@ -164,7 +153,6 @@ header {
     right: 0;
     left: 0;
     background-color: var(--background-dark);
-    border-bottom: 1px solid var(--code-background);
 }
 
 .navbar-brand,
@@ -179,6 +167,7 @@ header {
 
 nav {
     position: relative;
+    border-bottom: 1px solid var(--code-background);
 
     ul {
         width: 100%;
@@ -375,6 +364,19 @@ nav {
             li {
                 padding: 5px 0;
             }
+        }
+    }
+}
+
+#indexList {
+    min-height: 68vh;
+
+    ul {
+        list-style: none;
+        padding: 0 1.5rem;
+
+        li {
+            padding: 5px 0;
         }
     }
 }

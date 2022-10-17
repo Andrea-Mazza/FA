@@ -146,7 +146,6 @@ header {
   right: 0;
   left: 0;
   background-color: var(--background-dark);
-  border-bottom: 1px solid var(--code-background);
 }
 
 .navbar-brand,
@@ -161,6 +160,7 @@ header {
 
 nav {
   position: relative;
+  border-bottom: 1px solid var(--code-background);
 }
 nav ul {
   width: 100%;
@@ -320,6 +320,17 @@ nav #lineThree {
   padding: 0;
 }
 #sidebarMd #sidebarMdContent ul li {
+  padding: 5px 0;
+}
+
+#indexList {
+  min-height: 68vh;
+}
+#indexList ul {
+  list-style: none;
+  padding: 0 1.5rem;
+}
+#indexList ul li {
   padding: 5px 0;
 }
 

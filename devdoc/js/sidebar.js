@@ -322,6 +322,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const mainDetailsClone = mainDetails.cloneNode(true);
 
         sidebarMd.appendChild(mainDetailsClone);
+
+        const indexList = document.getElementById('indexList');
+
+        const mainDetailsCloneIndex = mainDetailsClone.cloneNode(true);
+
+        indexList.appendChild(mainDetailsCloneIndex);
     }
 
     // sidebarMd animation
