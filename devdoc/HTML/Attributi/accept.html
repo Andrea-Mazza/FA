@@ -14,8 +14,8 @@
         <link rel="stylesheet" href="/devdoc/css/responsive.css">
         <!-- JS -->
         <script src="/js/navbar.js"></script>
+        <script src="/devdoc/js/tableOfContent.js"></script>
         <script src="/devdoc/js/sidebar.js"></script>
-        <script src="/devdoc/js/tabelOfContent.js"></script>
         <!-- GOOGLE FONT -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,22 +51,27 @@
                                 </div>
                         </div>
                 </nav>
+                <aside id="sidebarMd" class="col-12">
+                        <div class="container-fluid icon-container">
+                                <svg id="mdBtn" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
+                                        class="bi bi-list-ul" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg>
+                        </div>
+                        <div id="sidebarMdContent">
+                                <!-- Filled through sidebar.js and tableOfContent.js -->
+                        </div>
+                </aside>
         </header>
         <!-- NAVBASR END -->
+
         <main class="container-fluid">
                 <div class="row">
                         <aside id="sidebarLg" class="col-12 col-lg-2">
                                 <!-- Filled through sidebar.js -->
                         </aside>
-                        <aside id="sidebarMd" class="col-12">
-                                <div class="container-fluid icon-container">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
-                                                class="bi bi-list-ul" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd"
-                                                        d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                                        </svg>
-                                </div>
-                        </aside>
+
                         <article class="col-12 col-lg-8">
                                 <h1>accept: attributo HTML</h1>
                                 <p>L'attributo <code>accept</code> prende come valore un elenco separato da virgole di
@@ -199,7 +204,7 @@
                                 </div>
                         </article>
                         <aside id="tableOfContent" class="col-12 col-lg-2">
-                                <p>Indice:</p>
+                                <!-- Filled through tableOfContent.js -->
                         </aside>
                 </div>
         </main>

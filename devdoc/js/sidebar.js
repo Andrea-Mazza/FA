@@ -1,20 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // this will change sidebarMb top position to don't overflow header
-    const sidebarMb = document.getElementById('sidebarMd');
-    const header = document.getElementById('header');
-    const menuBtn = document.getElementById('menuBtn');
 
 
-
-
-
-    menuBtn.addEventListener('click', function () {
-
-        sidebarMb.setAttribute('top', header.offsetHeight);
-    });
 
     const sidebar = document.getElementById('sidebarLg');
+    const sidebarMd = document.getElementById('sidebarMdContent');
 
     // 1. Insert new topics here
     const languages = [`HTML`];
@@ -250,6 +240,15 @@ document.addEventListener('DOMContentLoaded', function () {
     pathGenerator(elementiTitle, htmlElPath, htmlElementiPath);
     pathGenerator(inputTitle, htmlInpPath, htmlInputPath);
 
+
+    const h5 = document.createElement('h5');
+    h5.innerHTML = 'Specifiche:';
+
+    const h5Clone = h5.cloneNode(true);
+
+    sidebar.appendChild(h5);
+    sidebarMd.appendChild(h5Clone);
+
     for (let i = 0; i < languages.length; i++) {
         const mainDetails = document.createElement('details');
         const mainSummary = document.createElement('summary');
@@ -319,6 +318,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
         sidebar.appendChild(mainDetails);
 
+        // Use cloneNode to move sidebar content in sidebars built for md screens
+        const mainDetailsClone = mainDetails.cloneNode(true);
 
+        sidebarMd.appendChild(mainDetailsClone);
     }
+
+    // sidebarMd animation
+    const mdBtn = document.getElementById('mdBtn');
+
+    const sidebarMdAnimation = [
+        { left: '-500px' },
+        { left: '-10px' }
+    ];
+
+    const sidebarMdAnimationTiming = {
+        duration: 300,
+        iterations: 1,
+        fill: 'both'
+    };
+
+    mdBtn.addEventListener('click', function () {
+
+        if (mdBtn.classList.contains('active')) {
+            sidebarMd.animate(sidebarMdAnimation, sidebarMdAnimationTiming).reverse();
+        } else {
+            sidebarMd.animate(sidebarMdAnimation, sidebarMdAnimationTiming);
+        }
+
+        mdBtn.classList.toggle('active');
+
+    });
+
+
 });

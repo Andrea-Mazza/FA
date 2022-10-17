@@ -297,13 +297,28 @@ nav #lineThree {
 #sidebarMd {
   display: none;
   width: 100vw;
-  position: sticky;
-  left: 0;
-  top: 56px;
   background-color: var(--background-dark);
+  position: relative;
 }
 #sidebarMd .icon-container {
   border-left: 1px solid var(--code-punctuation);
+}
+#sidebarMd #sidebarMdContent {
+  position: absolute;
+  left: -500px;
+  background-color: var(--background-dark);
+  overflow-y: auto;
+  height: 80vh;
+  padding: 0 1.5rem;
+  margin: 0;
+  border-bottom-right-radius: 0.25rem;
+}
+#sidebarMd #sidebarMdContent ul {
+  list-style: none;
+  padding: 0;
+}
+#sidebarMd #sidebarMdContent ul li {
+  padding: 5px 0;
 }
 
 /*
@@ -329,6 +344,10 @@ code {
 .example-code-card code,
 .copyright-card code {
   padding: 0;
+}
+.example-code-card pre,
+.copyright-card pre {
+  white-space: pre-wrap;
 }
 
 .copyright-card {
