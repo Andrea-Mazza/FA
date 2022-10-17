@@ -7,6 +7,7 @@
     5. RESOURCE SECTION
     6. SIDEBAR
     7. CODE SYNTAXT
+    8. FOOTER
 */
 
 /*
@@ -163,6 +164,7 @@ header {
     right: 0;
     left: 0;
     background-color: var(--background-dark);
+    border-bottom: 1px solid var(--code-background);
 }
 
 .navbar-brand,
@@ -427,4 +429,33 @@ code {
 
 /*
     CODE SYNTAXT END
+*/
+
+/*
+    8. FOOTER
+*/
+footer {
+    background-color: var(--background-dark);
+    border-top: 1px solid var(--code-background);
+    padding: 30px;
+
+    ul {
+        list-style: none;
+
+        li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 10px;
+        }
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/*
+    FOOTER END
 */
