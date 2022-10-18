@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     const title = ['first portfolio', 'leadership event', 'digimedia', 'arsha'];
-    const imgSrc = [`${templateImgPath}firstPortfolio.svg`, `${templateImgPath}leadershipEvent.svg`, `${templateImgPath}digimedia.svg`, `${templateImgPath}arsha.svg`];
+    const imgSrc = [`${templateImgPath}firstPortfolio.svg`, `${templateImgPath}leadershipEvent.svg`, `${templateImgPath}digimedia.svg`, `${templateImgPath}arsha.png`];
     const href = [`${previewPath}firstPortfolio.html`, `${previewPath}leadershipEvent.html`, `${previewPath}digimedia.html`, `${previewPath}arsha.html`];
 
     //IMPORTANT: Once you've added new templates into these arrays, you must increase by 1 the variable 'i'
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const img = document.createElement('img');
         img.src = `${imgSrc[i]}`;
-        // img.classList.add('img-fluid');
+        img.classList.add('img-fluid');
         img.classList.add('preview-img');
 
         a.appendChild(img);

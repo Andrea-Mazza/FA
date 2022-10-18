@@ -1,3 +1,4 @@
 # TO DO:
 
-1. Capisci come ridimensionare le immagini dei templates perché con arsha non ce la stai facendo
+1. finire devdoc
+2. nella home, rendi preview section un carosello

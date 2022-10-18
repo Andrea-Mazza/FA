@@ -8,6 +8,7 @@
     6. SIDEBAR
     7. CODE SYNTAXT
     8. FOOTER
+    9. MAIN
 */
 
 /*
@@ -236,6 +237,11 @@ nav {
         flex-direction: column;
         align-items: center;
         row-gap: 15px;
+        min-height: 313px;
+
+        p {
+            margin-bottom: 0;
+        }
     }
 
     .preview-img {
@@ -243,14 +249,16 @@ nav {
     }
 
     .preview-img:hover {
-        transform: scale(0.9);
+        transform: scale(1.1);
     }
 
     .tech-icon-container {
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
         flex-wrap: wrap;
         column-gap: 5px;
+        min-height: 96px;
     }
 
     .view-all {
@@ -467,4 +475,15 @@ footer {
 
 /*
     FOOTER END
+*/
+
+/*
+    9. MAIN
+*/
+main {
+    margin-top: 50px;
+}
+
+/*
+    MAIN END
 */
