@@ -30,6 +30,8 @@
     --code-punctuation: #b3b3b3;
     --code-attribute-value: #00d061;
     --code-attribute-name: #ff97a0;
+    --warningcard-bg: rgba(211, 0, 56, .1);
+    --card-border: 1px solid #696969;
 }
 
 /*
@@ -140,6 +142,10 @@ p {
 
 main.container-fluid {
     padding: 0 20px;
+}
+
+.bold {
+    font-weight: 800;
 }
 
 /*
@@ -423,6 +429,13 @@ code {
     pre {
         white-space: pre-wrap;
     }
+}
+
+.warningcard {
+    background-color: var(--warningcard-bg);
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: 0.25rem;
+    border: var(--card-border);
 }
 
 .copyright-card {
