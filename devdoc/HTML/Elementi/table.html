@@ -5,364 +5,443 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Google icon -->
-        <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- BOOTSTRAP CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+                crossorigin="anonymous">
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
-        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/devdoc/css/responsive.css">
         <!-- JS -->
-        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
-        <title>&lt;table&gt;: l'elemento "tabella" (HTML)</title>
+        <script src="/js/navbar.js"></script>
+        <script src="/devdoc/js/tableOfContent.js"></script>
+        <script src="/devdoc/js/sidebar.js"></script>
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+                rel="stylesheet">
+        <title>&lt;table&gt;: l'elemento "tabella" (HTML) - FreeAttitude</title>
 </head>
 
 <body>
-        <header>
-                <div class="logo">
-                        <a href="/index.html">Free Attitude</a>
-                </div>
-                <nav>
-                        <ul>
-                                <li><a href="/index.html">Home</a></li>
-                        </ul>
-                </nav>
-        </header>
-        <main>
-                <div class="mobile-menu">
-                        <button class="icon-btn"
-                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
-                                        class="material-symbols-outlined">
-                                        sort
-                                </span></button>
-                </div>
-                <aside class="lf-aside-2 collapsed js-aside">
-                        <button class="icon-btn sidebar-btn"
-                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
-                                        class="material-symbols-outlined">
-                                        close
-                                </span></button>
-                        <aside id="table-of-content-3">
-                                <p>Indice</p>
-                                <ul class="tableList">
-                                </ul>
-                        </aside>
-
-                </aside>
-                <aside class="lf-aside js-aside">
-                        <aside id="table-of-content-2">
-                                <p>Indice</p>
-                                <ul class="tableList">
-                                </ul>
-                        </aside>
-
-                </aside>
-                <article>
-                        <h1>&lt;table&gt;: l'elemento "tabella"</h1>
-                        <p>L' elemento HTML <code>&lt;table&gt;</code> rappresenta i dati tabulari, ovvero le
-                                informazioni
-                                presentate in una tabella bidimensionale composta da righe e colonne di celle contenenti
-                                dati.
-                        </p>
-                        <h2 id="attributi">Attributi</h2>
-                        <p>Gli attributi di questo elemento includono gli <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
-                                        globali</a>.</p>
-                        <h3>Attributi deprecati</h3>
-                        <dl>
-                                <dt><code>align</code></dt>
-                                <dd>
-                                        <p>Questo attributo enumerato indica come la tabella deve essere allineata
-                                                all'interno
-                                                del documento contenitore. Può avere i seguenti valori:</p>
-                                        <ul>
-                                                <li><code>left</code>: la tabella viene visualizzata sul lato sinistro
-                                                        del
-                                                        documento;</li>
-                                                <li><code>center</code>: la tabella viene visualizzata al centro del
-                                                        documento;
+        <!-- NAVBAR START -->
+        <header id="header" class="container-fluid">
+                <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                                <a href="/index.html" class="navbar-brand">FreeAttitude</a>
+                                <button id="menuBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#menuContent" aria-controls="menuContent" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        <span id="lineOne" class="line"></span>
+                                        <span id="lineTwo" class="line"></span>
+                                        <span id="lineThree" class="line"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="menuContent">
+                                        <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                        <a href="/index.html" class="nav-link"
+                                                                aria-current="page">Home</a>
                                                 </li>
-                                                <li><code>right</code>: la tabella viene visualizzata sul lato destro
-                                                        del
-                                                        documento.</li>
+                                                <li class="nav-item">
+                                                        <a href="/portfolio.html" class="nav-link"
+                                                                aria-current="page">Portfolio</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a href="/devdoc/index.html" class="nav-link"
+                                                                aria-current="page">DevDoc</a>
+                                                </li>
                                         </ul>
-                                        <p>Impostare <code>margin-left</code> e <code>margin-right</code> su
-                                                <code>auto</code> o
-                                                <code>margin</code> su <code>0 auto</code> per ottenere un effetto
-                                                simile
-                                                all'attributo align.
-                                        </p>
-                                </dd>
-                                <dt><code>bgcolor</code></dt>
-                                <dd>
-                                        <p>Il colore di sfondo del tavolo. È un codice RGB esadecimale a 6 cifre ,
-                                                preceduto da
-                                                un '#'.</p>
-                                        <p>Per ottenere un effetto simile, usa la proprietà CSS
-                                                <code>background-color</code>.
-                                        </p>
-                                </dd>
-                                <dt><code>border</code></dt>
-                                <dd>
-                                        <p>Questo attributo intero definisce, in pixel, la dimensione della cornice che
-                                                circonda
-                                                la tabella. Se impostato su 0, l'attributo <code>frame</code> viene
-                                                impostato su
-                                                <code>void</code>.
-                                        </p>
-                                        <p>Per ottenere un effetto simile, usa la proprietà abbreviata CSS
-                                                <code>border</code>.
-                                        </p>
-                                </dd>
-                                <dt><code>cellpadding</code></dt>
-                                <dd>
-                                        <p>Questo attributo definisce lo spazio tra il contenuto di una cella e il suo
-                                                bordo,
-                                                visualizzato o meno. Se la lunghezza del cellpadding è definita in
-                                                pixel, questo
-                                                spazio di dimensioni pixel verrà applicato a tutti e quattro i lati del
-                                                contenuto della cella. Se la lunghezza è definita utilizzando un valore
-                                                percentuale, il contenuto sarà centrato e lo spazio verticale totale (in
-                                                alto e
-                                                in basso) rappresenterà questo valore. Lo stesso vale per lo spazio
-                                                orizzontale
-                                                totale (sinistra e destra).</p>
-                                        <p>Per ottenere un effetto simile, applica la proprietà
-                                                <code>border-collapse</code>
-                                                all'elemento <code>&lt;table&gt;</code>, con il suo valore impostato su
-                                                compresso, e la proprietà <code>padding</code> agli elementi <a
-                                                        href="/Documenti_per_sviluppatori/html/Elementi/td.html"><code>&lt;td&gt;</code></a>.
-                                        </p>
-                                </dd>
-                                <dt><code>cellspacing</code></dt>
-                                <dd>
-                                        <p>Questo attributo definisce la dimensione dello spazio tra due celle in un
-                                                valore
-                                                percentuale o in pixel. L'attributo viene applicato sia orizzontalmente
-                                                che
-                                                verticalmente, allo spazio tra la parte superiore della tabella e le
-                                                celle della
-                                                prima riga, la sinistra della tabella e la prima colonna, la destra
-                                                della
-                                                tabella e l'ultima colonna e il fondo della tabella e l'ultima riga.</p>
-                                        <p>Per ottenere un effetto simile, applica la proprietà
-                                                <code>border-spacing</code>
-                                                all'elemento <code>&lt;table&gt;</code>. <code>border-spacing</code> non
-                                                ha
-                                                alcun effetto se <code>border-collapse</code> è impostato su comprimere.
-                                        </p>
-                                </dd>
-                                <dt><code>frame</code></dt>
-                                <dd>
-                                        <p>Questo attributo enumerato definisce quale lato della cornice che circonda la
-                                                tabella
-                                                deve essere visualizzato.</p>
-                                        <p>Per ottenere un effetto simile, utilizzare le proprietà
-                                                <code>border-style</code> e
-                                                <code>border-width</code>.
-                                        </p>
-                                </dd>
-                                <dt><code>rules</code></dt>
-                                <dd>
-                                        <p>Questo attributo enumerato definisce dove le regole, cioè le righe, devono
-                                                apparire
-                                                in una tabella. Può avere i seguenti valori:</p>
-                                        <ul>
-                                                <li><code>none</code>: che indica che non verranno visualizzate regole;
-                                                        è il
-                                                        valore predefinito;</li>
-                                                <li><code>groups</code>: che farà sì che le regole vengano visualizzate
-                                                        solo tra
-                                                        i gruppi di righe (definiti dagli elementi <a
+                                </div>
+                        </div>
+                </nav>
+                <aside id="sidebarMd" class="col-12">
+                        <div class="container-fluid icon-container">
+                                <svg id="mdBtn" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
+                                        class="bi bi-list-ul" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg>
+                        </div>
+                        <div id="sidebarMdContent">
+                                <!-- Filled through sidebar.js and tableOfContent.js -->
+                        </div>
+                </aside>
+        </header>
+        <!-- NAVBASR END -->
+        <main class="container-fluid">
+                <div class="row">
+                        <aside id="sidebarLg" class="col-12 col-lg-2">
+                                <!-- Filled through sidebar.js -->
+                        </aside>
+                        <article class="col-12 col-lg-8">
+                                <h1>&lt;table&gt;: l'elemento "tabella"</h1>
+                                <p>L' elemento HTML <code>&lt;table&gt;</code> rappresenta i dati tabulari, ovvero le
+                                        informazioni
+                                        presentate in una tabella bidimensionale composta da righe e colonne di celle
+                                        contenenti
+                                        dati.
+                                </p>
+                                <h2 id="attributi">Attributi</h2>
+                                <p>Gli attributi di questo elemento includono gli <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                                globali</a>.</p>
+                                <h3>Attributi deprecati</h3>
+                                <dl>
+                                        <dt><code>align</code></dt>
+                                        <dd>
+                                                <p>Questo attributo enumerato indica come la tabella deve essere
+                                                        allineata
+                                                        all'interno
+                                                        del documento contenitore. Può avere i seguenti valori:</p>
+                                                <ul>
+                                                        <li><code>left</code>: la tabella viene visualizzata sul lato
+                                                                sinistro
+                                                                del
+                                                                documento;</li>
+                                                        <li><code>center</code>: la tabella viene visualizzata al centro
+                                                                del
+                                                                documento;
+                                                        </li>
+                                                        <li><code>right</code>: la tabella viene visualizzata sul lato
+                                                                destro
+                                                                del
+                                                                documento.</li>
+                                                </ul>
+                                                <p>Impostare <code>margin-left</code> e <code>margin-right</code> su
+                                                        <code>auto</code> o
+                                                        <code>margin</code> su <code>0 auto</code> per ottenere un
+                                                        effetto
+                                                        simile
+                                                        all'attributo align.
+                                                </p>
+                                        </dd>
+                                        <dt><code>bgcolor</code></dt>
+                                        <dd>
+                                                <p>Il colore di sfondo del tavolo. È un codice RGB esadecimale a 6 cifre
+                                                        ,
+                                                        preceduto da
+                                                        un '#'.</p>
+                                                <p>Per ottenere un effetto simile, usa la proprietà CSS
+                                                        <code>background-color</code>.
+                                                </p>
+                                        </dd>
+                                        <dt><code>border</code></dt>
+                                        <dd>
+                                                <p>Questo attributo intero definisce, in pixel, la dimensione della
+                                                        cornice che
+                                                        circonda
+                                                        la tabella. Se impostato su 0, l'attributo <code>frame</code>
+                                                        viene
+                                                        impostato su
+                                                        <code>void</code>.
+                                                </p>
+                                                <p>Per ottenere un effetto simile, usa la proprietà abbreviata CSS
+                                                        <code>border</code>.
+                                                </p>
+                                        </dd>
+                                        <dt><code>cellpadding</code></dt>
+                                        <dd>
+                                                <p>Questo attributo definisce lo spazio tra il contenuto di una cella e
+                                                        il suo
+                                                        bordo,
+                                                        visualizzato o meno. Se la lunghezza del cellpadding è definita
+                                                        in
+                                                        pixel, questo
+                                                        spazio di dimensioni pixel verrà applicato a tutti e quattro i
+                                                        lati del
+                                                        contenuto della cella. Se la lunghezza è definita utilizzando un
+                                                        valore
+                                                        percentuale, il contenuto sarà centrato e lo spazio verticale
+                                                        totale (in
+                                                        alto e
+                                                        in basso) rappresenterà questo valore. Lo stesso vale per lo
+                                                        spazio
+                                                        orizzontale
+                                                        totale (sinistra e destra).</p>
+                                                <p>Per ottenere un effetto simile, applica la proprietà
+                                                        <code>border-collapse</code>
+                                                        all'elemento <code>&lt;table&gt;</code>, con il suo valore
+                                                        impostato su
+                                                        compresso, e la proprietà <code>padding</code> agli elementi <a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/td.html"><code>&lt;td&gt;</code></a>.
+                                                </p>
+                                        </dd>
+                                        <dt><code>cellspacing</code></dt>
+                                        <dd>
+                                                <p>Questo attributo definisce la dimensione dello spazio tra due celle
+                                                        in un
+                                                        valore
+                                                        percentuale o in pixel. L'attributo viene applicato sia
+                                                        orizzontalmente
+                                                        che
+                                                        verticalmente, allo spazio tra la parte superiore della tabella
+                                                        e le
+                                                        celle della
+                                                        prima riga, la sinistra della tabella e la prima colonna, la
+                                                        destra
+                                                        della
+                                                        tabella e l'ultima colonna e il fondo della tabella e l'ultima
+                                                        riga.</p>
+                                                <p>Per ottenere un effetto simile, applica la proprietà
+                                                        <code>border-spacing</code>
+                                                        all'elemento <code>&lt;table&gt;</code>.
+                                                        <code>border-spacing</code> non
+                                                        ha
+                                                        alcun effetto se <code>border-collapse</code> è impostato su
+                                                        comprimere.
+                                                </p>
+                                        </dd>
+                                        <dt><code>frame</code></dt>
+                                        <dd>
+                                                <p>Questo attributo enumerato definisce quale lato della cornice che
+                                                        circonda la
+                                                        tabella
+                                                        deve essere visualizzato.</p>
+                                                <p>Per ottenere un effetto simile, utilizzare le proprietà
+                                                        <code>border-style</code> e
+                                                        <code>border-width</code>.
+                                                </p>
+                                        </dd>
+                                        <dt><code>rules</code></dt>
+                                        <dd>
+                                                <p>Questo attributo enumerato definisce dove le regole, cioè le righe,
+                                                        devono
+                                                        apparire
+                                                        in una tabella. Può avere i seguenti valori:</p>
+                                                <ul>
+                                                        <li><code>none</code>: che indica che non verranno visualizzate
+                                                                regole;
+                                                                è il
+                                                                valore predefinito;</li>
+                                                        <li><code>groups</code>: che farà sì che le regole vengano
+                                                                visualizzate
+                                                                solo tra
+                                                                i gruppi di righe (definiti dagli elementi <a
+                                                                        href="/Documenti_per_sviluppatori/html/Elementi/thead.html"><code>&lt;thead&gt;</code></a>,
+                                                                <a
+                                                                        href="/Documenti_per_sviluppatori/html/Elementi/tbody.html"><code>&lt;tbody&gt;</code></a>
+                                                                e <a
+                                                                        href="/Documenti_per_sviluppatori/html/Elementi/tfoot.html"><code>&lt;tfoot&gt;</code></a>)
+                                                                e tra i gruppi di colonne (definiti dagli elementi <a
+                                                                        href="/Documenti_per_sviluppatori/html/Elementi/col.html"><code>&lt;col&gt;</code></a>
+                                                                e <a
+                                                                        href="/Documenti_per_sviluppatori/html/Elementi/colgroup.html"><code>&lt;colgroup&gt;</code></a>);
+                                                        </li>
+                                                        <li><code>rows</code>: che farà sì che le regole vengano
+                                                                visualizzate
+                                                                tra le
+                                                                righe;</li>
+                                                        <li><code>columns</code>: che farà sì che le regole vengano
+                                                                visualizzate
+                                                                tra le
+                                                                colonne;</li>
+                                                        <li><code>all</code>: che farà sì che le regole vengano
+                                                                visualizzate tra
+                                                                righe e
+                                                                colonne.</li>
+                                                </ul>
+                                                <p>Per ottenere un effetto simile, applicare la proprietà
+                                                        <code>border</code>
+                                                        agli
+                                                        elementi <a
                                                                 href="/Documenti_per_sviluppatori/html/Elementi/thead.html"><code>&lt;thead&gt;</code></a>,
                                                         <a
-                                                                href="/Documenti_per_sviluppatori/html/Elementi/tbody.html"><code>&lt;tbody&gt;</code></a>
-                                                        e <a
-                                                                href="/Documenti_per_sviluppatori/html/Elementi/tfoot.html"><code>&lt;tfoot&gt;</code></a>)
-                                                        e tra i gruppi di colonne (definiti dagli elementi <a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/tbody.html"><code>&lt;tbody&gt;</code></a>,
+                                                        <a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/tfoot.html"><code>&lt;tfoot&gt;</code></a>,
+                                                        <a
                                                                 href="/Documenti_per_sviluppatori/html/Elementi/col.html"><code>&lt;col&gt;</code></a>
-                                                        e <a
-                                                                href="/Documenti_per_sviluppatori/html/Elementi/colgroup.html"><code>&lt;colgroup&gt;</code></a>);
-                                                </li>
-                                                <li><code>rows</code>: che farà sì che le regole vengano visualizzate
-                                                        tra le
-                                                        righe;</li>
-                                                <li><code>columns</code>: che farà sì che le regole vengano visualizzate
-                                                        tra le
-                                                        colonne;</li>
-                                                <li><code>all</code>: che farà sì che le regole vengano visualizzate tra
-                                                        righe e
-                                                        colonne.</li>
-                                        </ul>
-                                        <p>Per ottenere un effetto simile, applicare la proprietà <code>border</code>
-                                                agli
-                                                elementi <a
-                                                        href="/Documenti_per_sviluppatori/html/Elementi/thead.html"><code>&lt;thead&gt;</code></a>,
-                                                <a
-                                                        href="/Documenti_per_sviluppatori/html/Elementi/tbody.html"><code>&lt;tbody&gt;</code></a>,
-                                                <a
-                                                        href="/Documenti_per_sviluppatori/html/Elementi/tfoot.html"><code>&lt;tfoot&gt;</code></a>,
-                                                <a
-                                                        href="/Documenti_per_sviluppatori/html/Elementi/col.html"><code>&lt;col&gt;</code></a>
-                                                o appropriati <a
-                                                        href="/Documenti_per_sviluppatori/html/Elementi/colgroup.html"><code>&lt;colgroup&gt;</code></a>.
-                                        </p>
-                                </dd>
-                                <dt><a id="attr-summary"
-                                                href="/Documenti_per_sviluppatori/html/Elementi/table.html#attr-summary"><code>summary</code></a>
-                                </dt>
-                                <dd>
-                                        <p>Questo attributo definisce un testo alternativo che riassume il contenuto
-                                                della
-                                                tabella. Usa invece l'elemento <a
-                                                        href="/Documenti_per_sviluppatori/html/Elementi/caption.html"><code>&lt;caption&gt;</code></a>.
-                                        </p>
-                                </dd>
-                                <dt><code>width</code></dt>
-                                <dd>
-                                        <p>Questo attributo definisce la larghezza della tabella. Utilizzare invece la
-                                                proprietà
-                                                CSS <code>width</code>.</p>
-                                </dd>
-                        </dl>
-                        <h2 id="esempi">Esempi</h2>
-                        <h3>Tavola semplice</h3>
-                        <div class="example-code-card">
-                                <pre><code><span class="punctuation">&lt;<span class="tag">table</span>&gt;</span>
-<span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>John<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Doe<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-<span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
-<span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Jane<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Doe<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-<span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
-<span class="punctuation">&lt;/<span class="tag">table</span>&gt;</span></code></pre>
-                        </div>
-                        <h3>Altri semplici esempi</h3>
-                        <div class="example-code-card">
-                                <pre><code><span class="punctuation">&lt;<span class="tag">table</span>&gt;</span>
-<span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">th</span>&gt;</span>Nome<span class="punctuation">&lt;/<span class="tag">th</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">th</span>&gt;</span>Cognome<span class="punctuation">&lt;/<span class="tag">th</span>&gt;</span>
-<span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
-<span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Jane<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Doe<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-<span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
-<span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>John<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Doe<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-<span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
-<span class="punctuation">&lt;/<span class="tag">table</span>&gt;</span>
-
-<span class="punctuation">&lt;<span class="tag">p</span>&gt;</span>Tabella con thead, tfoot e tbody<span class="punctuation">&lt;/<span class="tag">p</span>&gt;</span>
-<span class="punctuation">&lt;<span class="tag">table</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">thead</span>&gt;</span>
-    <span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
-      <span class="punctuation">&lt;<span class="tag">th</span>&gt;</span>Intestazione 1<span class="punctuation">&lt;/<span class="tag">th</span>&gt;</span>
-      <span class="punctuation">&lt;<span class="tag">th</span>&gt;</span>Intestazione 2<span class="punctuation">&lt;/<span class="tag">th</span>&gt;</span>
-    <span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
-  <span class="punctuation">&lt;/<span class="tag">thead</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">tbody</span>&gt;</span>
-    <span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
-      <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Corpo 1<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-      <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Corpo 2<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-    <span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
-  <span class="punctuation">&lt;/<span class="tag">tbody</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">tfoot</span>&gt;</span>
-    <span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
-      <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>John<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-      <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Doe<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
-    <span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
-  <span class="punctuation">&lt;/<span class="tag">tfoot</span>&gt;</span>
-<span class="punctuation">&lt;/<span class="tag">table</span>&gt;</span></code></pre>
-                        </div>
-                        <h2 id="accessibilità">Problemi di accessibilità</h2>
-                        <h3>Didascalie</h3>
-                        <p>Fornendo un elemento <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi/caption.html"><code>&lt;caption&gt;</code></a>
-                                il cui valore descriva in modo chiaro e conciso lo scopo della tabella,
-                                aiuta le persone a decidere se devono leggere il resto del contenuto della tabella o
-                                saltarlo.</p>
-                        <p>Questo aiuta le persone a navigare con l'ausilio di tecnologie assistive come un lettore di
-                                schermo,
-                                persone con problemi di vista e persone con problemi cognitivi.</p>
-                        <h3>Righe e colonne di ambito</h3>
-                        <p>L'attributo <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi/th.html#attr-scope"><code>scope</code></a>
-                                sugli elementi di intestazione è ridondante in contesti semplici,
-                                poiché l'ambito è dedotto. Tuttavia, alcune tecnologie assistive potrebbero non riuscire
-                                a
-                                trarre inferenze corrette, quindi specificare l'ambito dell'intestazione può migliorare
-                                l'esperienza dell'utente. Nelle tabelle complesse, l'ambito può essere specificato in
-                                modo da
-                                fornire le informazioni necessarie sulle celle relative a un'intestazione.</p>
-                        <p>Fornire una dichiarazione di <code>scope="col"</code> su un elemento <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi/th.html"><code>&lt;th&gt;</code></a>
-                                aiuterà
-                                a descrivere che la cella si trova in cima a una colonna. Fornire una dichiarazione di
-                                <code>scope="row"</code> su un elemento <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi/th.html"><code>&lt;th&gt;</code></a>
-                                aiuterà a descrivere che la
-                                cella è la prima di una riga.
-                        </p>
-                        <h3>Tabelle complicate</h3>
-                        <p>Le tecnologie assistive come le utilità per la lettura dello schermo possono avere difficoltà
-                                nell'analisi di tabelle così complesse che le celle di intestazione non possono essere
-                                associate
-                                in modo rigorosamente orizzontale o verticale. Questo è in genere indicato dalla
-                                presenza degli
-                                attributi <code>colspan</code> e <code>rowspan</code>.</p>
-                        <p>Idealmente, prendere in considerazione modi alternativi per presentare il contenuto della
-                                tabella,
-                                inclusa la suddivisione in una raccolta di tabelle correlate più piccole che non devono
-                                fare
-                                affidamento sull'uso degli attributi colspane . rowspanOltre ad aiutare le persone che
-                                utilizzano tecnologie assistive a comprendere il contenuto della tabella, ciò può anche
-                                essere
-                                di beneficio alle persone con problemi cognitivi che potrebbero avere difficoltà a
-                                comprendere
-                                le associazioni descritte dal layout della tabella.</p>
-                        <p>Se non è possibile suddividere la tabella, utilizzare una combinazione degli attributi
-                                <a href="/Documenti_per_sviluppatori/html/Attributi/id.html"><code>id</code></a> e
-                                <code>headers</code> per
-                                associare a livello di codice ogni cella della tabella con le intestazioni a cui è
-                                associata la
-                                cella.
-                        </p>
-                        <h2 id="lista">Liste utili</h2>
-                        <ul>
-                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
-                                </li>
-                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
-                                                globali</a></li>
-                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
-                                </li>
-                        </ul>
-                        <div class="copyright-card">
-                                <p>© 2005–2021 MDN contributors.</p>
-                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
-                                <a
-                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table</a>
-                        </div>
-                </article>
-                <aside id="table-of-content">
-                        <p>Indice</p>
-                        <ul class="tableList">
-                        </ul>
-                </aside>
-        </main>
-        <footer>
-                <div class="logo">
-                        <a href="/index.html">Free Attitude</a>
+                                                        o appropriati <a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/colgroup.html"><code>&lt;colgroup&gt;</code></a>.
+                                                </p>
+                                        </dd>
+                                        <dt><a id="attr-summary"
+                                                        href="/Documenti_per_sviluppatori/html/Elementi/table.html#attr-summary"><code>summary</code></a>
+                                        </dt>
+                                        <dd>
+                                                <p>Questo attributo definisce un testo alternativo che riassume il
+                                                        contenuto
+                                                        della
+                                                        tabella. Usa invece l'elemento <a
+                                                                href="/Documenti_per_sviluppatori/html/Elementi/caption.html"><code>&lt;caption&gt;</code></a>.
+                                                </p>
+                                        </dd>
+                                        <dt><code>width</code></dt>
+                                        <dd>
+                                                <p>Questo attributo definisce la larghezza della tabella. Utilizzare
+                                                        invece la
+                                                        proprietà
+                                                        CSS <code>width</code>.</p>
+                                        </dd>
+                                </dl>
+                                <h2 id="esempi">Esempi</h2>
+                                <h3>Tavola semplice</h3>
+                                <div class="example-code-card">
+                                        <pre><code><span class="punctuation">&lt;<span class="tag">table</span>&gt;</span>
+        <span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>John<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Doe<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+        <span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
+        <span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Jane<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Doe<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+        <span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
+        <span class="punctuation">&lt;/<span class="tag">table</span>&gt;</span></code></pre>
+                                </div>
+                                <h3>Altri semplici esempi</h3>
+                                <div class="example-code-card">
+                                        <pre><code><span class="punctuation">&lt;<span class="tag">table</span>&gt;</span>
+        <span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">th</span>&gt;</span>Nome<span class="punctuation">&lt;/<span class="tag">th</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">th</span>&gt;</span>Cognome<span class="punctuation">&lt;/<span class="tag">th</span>&gt;</span>
+        <span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
+        <span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Jane<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Doe<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+        <span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
+        <span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>John<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Doe<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+        <span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
+        <span class="punctuation">&lt;/<span class="tag">table</span>&gt;</span>
+        
+        <span class="punctuation">&lt;<span class="tag">p</span>&gt;</span>Tabella con thead, tfoot e tbody<span class="punctuation">&lt;/<span class="tag">p</span>&gt;</span>
+        <span class="punctuation">&lt;<span class="tag">table</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">thead</span>&gt;</span>
+            <span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
+              <span class="punctuation">&lt;<span class="tag">th</span>&gt;</span>Intestazione 1<span class="punctuation">&lt;/<span class="tag">th</span>&gt;</span>
+              <span class="punctuation">&lt;<span class="tag">th</span>&gt;</span>Intestazione 2<span class="punctuation">&lt;/<span class="tag">th</span>&gt;</span>
+            <span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
+          <span class="punctuation">&lt;/<span class="tag">thead</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">tbody</span>&gt;</span>
+            <span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
+              <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Corpo 1<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+              <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Corpo 2<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+            <span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
+          <span class="punctuation">&lt;/<span class="tag">tbody</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">tfoot</span>&gt;</span>
+            <span class="punctuation">&lt;<span class="tag">tr</span>&gt;</span>
+              <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>John<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+              <span class="punctuation">&lt;<span class="tag">td</span>&gt;</span>Doe<span class="punctuation">&lt;/<span class="tag">td</span>&gt;</span>
+            <span class="punctuation">&lt;/<span class="tag">tr</span>&gt;</span>
+          <span class="punctuation">&lt;/<span class="tag">tfoot</span>&gt;</span>
+        <span class="punctuation">&lt;/<span class="tag">table</span>&gt;</span></code></pre>
+                                </div>
+                                <h2 id="accessibilità">Problemi di accessibilità</h2>
+                                <h3>Didascalie</h3>
+                                <p>Fornendo un elemento <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/caption.html"><code>&lt;caption&gt;</code></a>
+                                        il cui valore descriva in modo chiaro e conciso lo scopo della tabella,
+                                        aiuta le persone a decidere se devono leggere il resto del contenuto della
+                                        tabella o
+                                        saltarlo.</p>
+                                <p>Questo aiuta le persone a navigare con l'ausilio di tecnologie assistive come un
+                                        lettore di
+                                        schermo,
+                                        persone con problemi di vista e persone con problemi cognitivi.</p>
+                                <h3>Righe e colonne di ambito</h3>
+                                <p>L'attributo <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/th.html#attr-scope"><code>scope</code></a>
+                                        sugli elementi di intestazione è ridondante in contesti semplici,
+                                        poiché l'ambito è dedotto. Tuttavia, alcune tecnologie assistive potrebbero non
+                                        riuscire
+                                        a
+                                        trarre inferenze corrette, quindi specificare l'ambito dell'intestazione può
+                                        migliorare
+                                        l'esperienza dell'utente. Nelle tabelle complesse, l'ambito può essere
+                                        specificato in
+                                        modo da
+                                        fornire le informazioni necessarie sulle celle relative a un'intestazione.</p>
+                                <p>Fornire una dichiarazione di <code>scope="col"</code> su un elemento <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/th.html"><code>&lt;th&gt;</code></a>
+                                        aiuterà
+                                        a descrivere che la cella si trova in cima a una colonna. Fornire una
+                                        dichiarazione di
+                                        <code>scope="row"</code> su un elemento <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/th.html"><code>&lt;th&gt;</code></a>
+                                        aiuterà a descrivere che la
+                                        cella è la prima di una riga.
+                                </p>
+                                <h3>Tabelle complicate</h3>
+                                <p>Le tecnologie assistive come le utilità per la lettura dello schermo possono avere
+                                        difficoltà
+                                        nell'analisi di tabelle così complesse che le celle di intestazione non possono
+                                        essere
+                                        associate
+                                        in modo rigorosamente orizzontale o verticale. Questo è in genere indicato dalla
+                                        presenza degli
+                                        attributi <code>colspan</code> e <code>rowspan</code>.</p>
+                                <p>Idealmente, prendere in considerazione modi alternativi per presentare il contenuto
+                                        della
+                                        tabella,
+                                        inclusa la suddivisione in una raccolta di tabelle correlate più piccole che non
+                                        devono
+                                        fare
+                                        affidamento sull'uso degli attributi colspane . rowspanOltre ad aiutare le
+                                        persone che
+                                        utilizzano tecnologie assistive a comprendere il contenuto della tabella, ciò
+                                        può anche
+                                        essere
+                                        di beneficio alle persone con problemi cognitivi che potrebbero avere difficoltà
+                                        a
+                                        comprendere
+                                        le associazioni descritte dal layout della tabella.</p>
+                                <p>Se non è possibile suddividere la tabella, utilizzare una combinazione degli
+                                        attributi
+                                        <a href="/Documenti_per_sviluppatori/html/Attributi/id.html"><code>id</code></a>
+                                        e
+                                        <code>headers</code> per
+                                        associare a livello di codice ogni cella della tabella con le intestazioni a cui
+                                        è
+                                        associata la
+                                        cella.
+                                </p>
+                                <h2 id="lista">Liste utili</h2>
+                                <ul>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                        </li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                        globali</a></li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                        </li>
+                                </ul>
+                                <div class="copyright-card">
+                                        <p>© 2005–2021 MDN contributors.</p>
+                                        <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or
+                                                later.</p>
+                                        <a
+                                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table</a>
+                                </div>
+                        </article>
+                        <aside id="tableOfContent" class="col-12 col-lg-2">
+                                <!-- Filled through tableOfContent.js -->
+                        </aside>
                 </div>
-                <div class="copyright-fa">
-                        © Free Attitude
+
+        </main>
+        <footer class="container-fluid">
+                <div class="row g-2">
+                        <div class="col-lg-6 col-md-6 col-12">
+                                <p>© FreeAttitude</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                                <p>Link veloci</p>
+                                <ul>
+                                        <li><img src="/assets/icons/caret-right.svg" alt=""><a
+                                                        href="/index.html">Home</a></li>
+                                        <li><img src="/assets/icons/caret-right.svg" alt=""><a
+                                                        href="/portfolio.html">Portfolio</a></li>
+                                        <li><img src="/assets/icons/caret-right.svg" alt=""><a
+                                                        href="/devdoc/index.html">DevDoc</a></li>
+                                </ul>
+                        </div>
                 </div>
         </footer>
-        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+        <!-- BOOTSTRAP JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+                crossorigin="anonymous"></script>
 </body>
 
 </html>

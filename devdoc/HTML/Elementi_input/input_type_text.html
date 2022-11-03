@@ -5,349 +5,423 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Google icon -->
-        <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <!-- BOOTSTRAP CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+                crossorigin="anonymous">
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="/Documenti_per_sviluppatori/styles/style.css">
-        <link rel="stylesheet" href="/Documenti_per_sviluppatori/styles/responsive.css">
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/devdoc/css/responsive.css">
         <!-- JS -->
-        <script src="/Documenti_per_sviluppatori/menuTemplate.js"></script>
-        <title>&lt;input type="text"&gt; (HTML)</title>
+        <script src="/js/navbar.js"></script>
+        <script src="/devdoc/js/tableOfContent.js"></script>
+        <script src="/devdoc/js/sidebar.js"></script>
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+                rel="stylesheet">
+        <title>&lt;input type="text"&gt; (HTML) - FreeAttitude</title>
 </head>
 
 <body>
-        <header>
-                <div class="logo">
-                        <a href="/index.html">Free Attitude</a>
-                </div>
-                <nav>
-                        <ul>
-                                <li><a href="/index.html">Home</a></li>
-                        </ul>
+        <!-- NAVBAR START -->
+        <header id="header" class="container-fluid">
+                <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                                <a href="/index.html" class="navbar-brand">FreeAttitude</a>
+                                <button id="menuBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#menuContent" aria-controls="menuContent" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        <span id="lineOne" class="line"></span>
+                                        <span id="lineTwo" class="line"></span>
+                                        <span id="lineThree" class="line"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="menuContent">
+                                        <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                        <a href="/index.html" class="nav-link"
+                                                                aria-current="page">Home</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a href="/portfolio.html" class="nav-link"
+                                                                aria-current="page">Portfolio</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a href="/devdoc/index.html" class="nav-link"
+                                                                aria-current="page">DevDoc</a>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </div>
                 </nav>
+                <aside id="sidebarMd" class="col-12">
+                        <div class="container-fluid icon-container">
+                                <svg id="mdBtn" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
+                                        class="bi bi-list-ul" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg>
+                        </div>
+                        <div id="sidebarMdContent">
+                                <!-- Filled through sidebar.js and tableOfContent.js -->
+                        </div>
+                </aside>
         </header>
-        <main>
-                <div class="mobile-menu">
-                        <button class="icon-btn"
-                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
-                                        class="material-symbols-outlined">
-                                        sort
-                                </span></button>
+        <!-- NAVBASR END -->
+        <main class="container-fluid">
+                <div class="row">
+                        <aside id="sidebarLg" class="col-12 col-lg-2">
+                                <!-- Filled through sidebar.js -->
+                        </aside>
+                        <article class="col-12 col-lg-8">
+                                <h1>&lt;input type="text"&gt;</h1>
+                                <p>Gli elementi <code>&lt;input type="text"&gt;</code> creano campi di testo di base a
+                                        riga
+                                        singola.</p>
+                                <h2 id="valore">Valore</h2>
+                                <p>L'attributo <code>value</code> è una stringa che contiene il valore corrente del
+                                        testo
+                                        immesso nel
+                                        campo di testo.
+                                        Puoi recuperarlo usando la proprietà in JavaScript
+                                        <code>HTMLInputElement value</code>.
+                                </p>
+                                <div class="example-code-card">
+                                        <pre><code><span class="varKeyword">let</span> theText = myTextInput.value;</code></pre>
+                                </div>
+                                <p>Se non sono presenti vincoli di convalida per l'input , il valore potrebbe essere una
+                                        stringa
+                                        vuota
+                                        ("").</p>
+                                <h2 id="attributi-aggiuntivi">Attributi aggiuntivi</h2>
+                                <p>Oltre agli attributi <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
+                                                globali</a> che operano su tutti gli elementi <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
+                                        indipendentemente
+                                        dal loro tipo, gli
+                                        input di testo supportano i seguenti attributi.</p>
+                                <h3>list</h3>
+                                <p>I valori dell'attributo list sono quelli id di un elemento <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/datalist.html"><code>&lt;datalist&gt;</code></a>
+                                        che si trova
+                                        nello stesso
+                                        documento. <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/datalist.html"><code>&lt;datalist&gt;</code></a>
+                                        fornisce un elenco di valori predefiniti da suggerire
+                                        all'utente
+                                        per questo input. Eventuali valori nell'elenco che non sono compatibili con
+                                        typenon sono inclusi nelle opzioni suggerite. I valori forniti sono
+                                        suggerimenti, non requisiti: gli utenti possono selezionare da questo elenco
+                                        predefinito o fornire un valore diverso.</p>
+                                <h3>maxlength</h3>
+                                <p>Il numero massimo di caratteri (come unità di codice UTF-16) che l'utente può
+                                        inserire nel
+                                        campo di
+                                        ricerca. Deve essere un valore intero 0 o superiore. Se non viene specificato
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/maxlength.html"><code>maxlength</code></a>
+                                        o
+                                        viene
+                                        specificato un valore non valido, il campo di ricerca non ha una lunghezza
+                                        massima.
+                                        Questo
+                                        valore deve anche essere maggiore o uguale al valore di <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/minlength.html"><code>minlength</code></a>.
+                                </p>
+                                <h3>minlegth</h3>
+                                <p>Il numero minimo di caratteri (come unità di codice UTF-16) che l'utente può inserire
+                                        nel
+                                        campo di
+                                        ricerca. Deve essere un valore intero non negativo minore o uguale al valore
+                                        specificato
+                                        da
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/maxlength.html"><code>maxlength</code></a>.
+                                        Se viene specificato no minlengtho viene specificato un valore non
+                                        valido, l'input di
+                                        ricerca non ha una lunghezza minima.
+                                </p>
+                                <h3>pattern</h3>
+                                <p>L'attributo <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/pattern.html"><code>pattern</code></a>,
+                                        quando specificato, è un'espressione regolare a cui il valore
+                                        dell'input deve corrispondere
+                                        affinché il valore superi la convalida del vincolo. Deve essere un'espressione
+                                        regolare
+                                        JavaScript
+                                        valida, come utilizzata dal tipo RegExp e come documentato nella nostra guida
+                                        sulle
+                                        espressioni
+                                        regolari
+                                        ; il flag 'u' viene specificato durante la compilazione dell'espressione
+                                        regolare, in
+                                        modo che
+                                        il modello
+                                        venga trattato come una sequenza di punti di codice Unicode, anziché come ASCII.
+                                        Nessuna
+                                        barra
+                                        in avanti
+                                        deve essere specificata attorno al testo del modello.</p>
+                                <p>Se il modello specificato non è specificato o non è valido, non viene applicata
+                                        alcuna
+                                        espressione
+                                        regolare e questo attributo viene completamente ignorato.</p>
+                                <h3>placeholder</h3>
+                                <p>L'attributo <code>placeholder</code> è una stringa che fornisce un breve suggerimento
+                                        all'utente sul
+                                        tipo di
+                                        informazioni previste nel campo. Dovrebbe essere una parola o una breve frase
+                                        che
+                                        dimostri il
+                                        tipo di dati previsto, piuttosto che un messaggio esplicativo. Il testo non deve
+                                        includere
+                                        ritorni a capo o avanzamenti di riga.</p>
+                                <p>Se il contenuto del controllo ha una direzionalità ( LTR o RTL ) ma deve presentare
+                                        il
+                                        segnaposto
+                                        nella direzionalità opposta, puoi utilizzare i caratteri di formattazione
+                                        dell'algoritmo
+                                        bidirezionale Unicode per sovrascrivere la direzionalità all'interno del
+                                        segnaposto.</p>
+                                <h3>readonly</h3>
+                                <p>Un attributo booleano che, se presente, significa che questo campo non può essere
+                                        modificato
+                                        dall'utente. Tuttavia, <code>value</code> può ancora essere modificato dal
+                                        codice
+                                        JavaScript
+                                        impostando
+                                        direttamente la proprietà <code>HTMLInputElement value</code>.</p>
+                                <h3>size</h3>
+                                <p>L'attributo <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/size.html"><code>size</code></a>
+                                        è un
+                                        valore numerico che indica quanti caratteri deve essere largo il
+                                        campo di
+                                        input. Il valore deve essere un numero maggiore di zero e il valore predefinito
+                                        è 20.
+                                        Poiché le
+                                        larghezze dei caratteri variano, questo può essere esatto o meno e non dovrebbe
+                                        essere
+                                        considerato tale; l'input risultante potrebbe essere più stretto o più largo del
+                                        numero
+                                        di
+                                        caratteri specificato, a seconda dei caratteri e del font.</p>
+                                <p>Questo non pone un limite al numero di caratteri che l'utente può inserire nel campo.
+                                        Specifica solo
+                                        approssimativamente quanti possono essere visti alla volta. Per impostare un
+                                        limite
+                                        superiore
+                                        alla lunghezza dei dati di input, utilizzare l'attributo <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/maxlength.html"><code>maxlength</code></a>.
+                                </p>
+                                <h3>spellcheck</h3>
+                                <p><a href="/Documenti_per_sviluppatori/html/Attributi/spellcheck.html"><code>spellcheck</code></a>
+                                        è un
+                                        attributo globale che viene utilizzato per indicare se abilitare o meno
+                                        il controllo
+                                        ortografico per un elemento. Può essere utilizzato su qualsiasi contenuto
+                                        modificabile,
+                                        ma qui
+                                        consideriamo le specifiche relative all'uso di <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/spellcheck.html"><code>spellcheck</code></a>
+                                        su elementi
+                                        <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>.
+                                        I
+                                        valori ammessi
+                                        per <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/spellcheck.html"><code>spellcheck</code></a>
+                                        sono:
+                                </p>
+                                <dl>
+                                        <dt><code>false</code></dt>
+                                        <dd>
+                                                <p>Disabilita il controllo ortografico per questo elemento.</p>
+                                        </dd>
+                                        <dt><code>true</code></dt>
+                                        <dd>
+                                                <p>Disabilita il controllo ortografico per questo elemento.</p>
+                                        </dd>
+                                        <dt><code>""</code> (stringa vuota) o nessun valore</dt>
+                                        <dd>
+                                                <p>Segui il comportamento predefinito dell'elemento per il controllo
+                                                        ortografico. Questo
+                                                        può essere basato sull'impostazione di un genitore <a
+                                                                href="/Documenti_per_sviluppatori/html/Attributi/spellcheck.html"><code>spellcheck</code></a>
+                                                        o su
+                                                        altri fattori.
+                                                </p>
+                                        </dd>
+                                </dl>
+                                <p>Un campo di input può avere il controllo ortografico abilitato se non ha l' attributo
+                                        di sola
+                                        lettura
+                                        impostato e non è disabilitato.</p>
+                                <p>Il valore di <a
+                                                href="/Documenti_per_sviluppatori/html/Attributi/spellcheck.html"><code>spellcheck</code></a>
+                                        restituito dalla lettura potrebbe non riflettere lo stato
+                                        effettivo del controllo
+                                        ortografico all'interno di un controllo, se le preferenze dell'interprete
+                                        prevalgono
+                                        sull'impostazione.</p>
+                                <h2 id="attributi-non-standard">Attributi non standard</h2>
+                                <p>I seguenti attributi non standard sono disponibili per i campi di immissione del
+                                        numero di
+                                        telefono.
+                                        Come regola generale, dovresti evitare di usarli a meno che non possa essere
+                                        aiutato.
+                                </p>
+                                <h3>autocorrect</h3>
+                                <p>Estensione di Safari, l'attributo <code>autocorrect</code> è una stringa che indica
+                                        se
+                                        attivare o
+                                        meno la
+                                        correzione automatica mentre l'utente sta modificando questo campo. I valori
+                                        ammessi
+                                        sono:</p>
+                                <dl>
+                                        <dt><code>on</code></dt>
+                                        <dd>
+                                                <p>Abilita la correzione automatica degli errori di battitura e
+                                                        l'elaborazione
+                                                        delle
+                                                        sostituzioni di testo, se configurate.</p>
+                                        </dd>
+                                        <dt><code>off</code></dt>
+                                        <dd>
+                                                <p>Disabilita la correzione automatica e le sostituzioni del testo.</p>
+                                        </dd>
+                                </dl>
+                                <h2 id="utilizzo">Utilizzo di &lt;input type="text"&gt;</h2>
+                                <p>Gli elementi <code>&lt;input type="text"&gt;</code> creano input di base a riga
+                                        singola.
+                                        Dovresti
+                                        usarli ovunque tu
+                                        voglia che l'utente inserisca un valore a riga singola e non sia disponibile un
+                                        tipo di
+                                        input
+                                        più specifico per raccogliere quel valore.</p>
+                                <h3>Esempio di base</h3>
+                                <div class="example-code-card">
+                                        <pre><code><span class="punctuation">&lt;<span class="tag">form</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
+            <span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">userName</span>"&gt;</span>Scegli un esername:<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
+            <span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">id</span>="<span class="attr-value">userName</span>" <span class="attr-name">type</span>="<span class="attr-value">text</span>" <span class="attr-name">name</span>="<span class="attr-value">userName</span>"&gt;</span>
+          <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
+            <span class="punctuation">&lt;<span class="tag">button</span>&gt;</span>Invia<span class="punctuation">&lt;/<span class="tag">button</span>&gt;</span>
+          <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
+        <span class="punctuation">&lt;<span class="tag">form</span>&gt;</span></code></pre>
+                                </div>
+                                <p>Una volta inviata, la coppia nome/valore dati inviata al server sarà
+                                        <code>name=Chris</code>
+                                        (se
+                                        "Chris" è stato
+                                        inserito come valore di input prima dell'invio). È necessario ricordare di
+                                        includere
+                                        l'attributo <code>name</code> sull'elemento <a
+                                                href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,
+                                        altrimenti il ​​valore
+                                        del campo di testo non verrà
+                                        incluso nei dati inviati.</p>
+                                <h3>Impostazione di un placeholder</h3>
+                                <p>Puoi fornire un utile segnaposto all'interno del tuo input di testo che può fornire
+                                        un
+                                        suggerimento
+                                        su cosa inserire includendo l'uso dell'attributo <code>placeholder</code>.
+                                        Guarda il
+                                        seguente
+                                        esempio:</p>
+                                <div class="example-code-card">
+                                        <pre><code><span class="punctuation">&lt;<span class="tag">form</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
+            <span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">userName</span>"&gt;</span>Scegli un esername:<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
+            <span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">id</span>="<span class="attr-value">userName</span>" <span class="attr-name">type</span>="<span class="attr-value">text</span>" <span class="attr-name">name</span>="<span class="attr-value">userName</span>"
+            <span class="attr-name">placeholder</span>="<span class="attr-value">Minuscolo, una parola</span>"&gt;</span>
+          <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
+          <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
+            <span class="punctuation">&lt;<span class="tag">button</span>&gt;</span>Invia<span class="punctuation">&lt;/<span class="tag">button</span>&gt;</span>
+          <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
+        <span class="punctuation">&lt;<span class="tag">form</span>&gt;</span></code></pre>
+                                </div>
+                                <h2 id="convalida">Convalida</h2>
+                                <p>Agli elementi <code>&lt;input type="text"&gt;</code> non è applicata alcuna convalida
+                                        automatica
+                                        (poiché un input di
+                                        testo di base deve essere in grado di accettare qualsiasi stringa arbitraria),
+                                        ma sono
+                                        disponibili alcune opzioni di convalida lato client, di cui parleremo di
+                                        seguito.</p>
+                                <div class="notecard">
+                                        <p><span class="bold">Nota</span>: la convalida del modulo HTML non sostituisce
+                                                gli
+                                                script del
+                                                server che
+                                                assicurano che i dati inseriti siano nel formato corretto. È fin troppo
+                                                facile
+                                                per
+                                                qualcuno apportare modifiche all'HTML che consentano loro di ignorare la
+                                                convalida o
+                                                rimuoverlo completamente. È anche possibile che qualcuno ignori
+                                                completamente il
+                                                tuo
+                                                HTML e invii i dati direttamente al tuo server. Se il codice lato server
+                                                non
+                                                riesce a
+                                                convalidare i dati che riceve, potrebbe verificarsi un disastro quando
+                                                nel
+                                                database
+                                                vengono immessi dati formattati in modo errato (o dati troppo grandi, di
+                                                tipo
+                                                errato e
+                                                così via).</p>
+                                </div>
+                                <h2 id="lista">Liste utili</h2>
+                                <ul>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
+                                        </li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
+                                                        globali</a></li>
+                                        <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
+                                        </li>
+                                </ul>
+                                <div class="copyright-card">
+                                        <p>© 2005–2021 MDN contributors.</p>
+                                        <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or
+                                                later.</p>
+                                        <a
+                                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text</a>
+                                </div>
+                        </article>
+                        <aside id="tableOfContent" class="col-12 col-lg-2">
+                                <!-- Filled through tableOfContent.js -->
+                        </aside>
                 </div>
-                <aside class="lf-aside-2 collapsed js-aside">
-                        <button class="icon-btn sidebar-btn"
-                                onclick="document.getElementsByClassName('lf-aside-2')[0].classList.toggle('collapsed')"><span
-                                        class="material-symbols-outlined">
-                                        close
-                                </span></button>
-                        <aside id="table-of-content-3">
-                                <p>Indice</p>
-                                <ul class="tableList">
-                                </ul>
-                        </aside>
-
-                </aside>
-                <aside class="lf-aside js-aside">
-                        <aside id="table-of-content-2">
-                                <p>Indice</p>
-                                <ul class="tableList">
-                                </ul>
-                        </aside>
-
-                </aside>
-                <article>
-                        <h1>&lt;input type="text"&gt;</h1>
-                        <p>Gli elementi <code>&lt;input type="text"&gt;</code> creano campi di testo di base a riga
-                                singola.</p>
-                        <h2 id="valore">Valore</h2>
-                        <p>L'attributo <code>value</code> è una stringa che contiene il valore corrente del testo
-                                immesso nel
-                                campo di testo.
-                                Puoi recuperarlo usando la proprietà in JavaScript <code>HTMLInputElement value</code>.
-                        </p>
-                        <div class="example-code-card">
-                                <pre><code><span class="varKeyword">let</span> theText = myTextInput.value;</code></pre>
-                        </div>
-                        <p>Se non sono presenti vincoli di convalida per l'input , il valore potrebbe essere una stringa
-                                vuota
-                                ("").</p>
-                        <h2 id="attributi-aggiuntivi">Attributi aggiuntivi</h2>
-                        <p>Oltre agli attributi <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">attributi
-                                        globali</a> che operano su tutti gli elementi <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>
-                                indipendentemente
-                                dal loro tipo, gli
-                                input di testo supportano i seguenti attributi.</p>
-                        <h3>list</h3>
-                        <p>I valori dell'attributo list sono quelli id di un elemento <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi/datalist.html"><code>&lt;datalist&gt;</code></a>
-                                che si trova
-                                nello stesso
-                                documento. <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi/datalist.html"><code>&lt;datalist&gt;</code></a>
-                                fornisce un elenco di valori predefiniti da suggerire
-                                all'utente
-                                per questo input. Eventuali valori nell'elenco che non sono compatibili con
-                                typenon sono inclusi nelle opzioni suggerite. I valori forniti sono
-                                suggerimenti, non requisiti: gli utenti possono selezionare da questo elenco
-                                predefinito o fornire un valore diverso.</p>
-                        <h3>maxlength</h3>
-                        <p>Il numero massimo di caratteri (come unità di codice UTF-16) che l'utente può inserire nel
-                                campo di
-                                ricerca. Deve essere un valore intero 0 o superiore. Se non viene specificato
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/maxlength.html"><code>maxlength</code></a>
-                                o
-                                viene
-                                specificato un valore non valido, il campo di ricerca non ha una lunghezza massima.
-                                Questo
-                                valore deve anche essere maggiore o uguale al valore di <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/minlength.html"><code>minlength</code></a>.
-                        </p>
-                        <h3>minlegth</h3>
-                        <p>Il numero minimo di caratteri (come unità di codice UTF-16) che l'utente può inserire nel
-                                campo di
-                                ricerca. Deve essere un valore intero non negativo minore o uguale al valore specificato
-                                da
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/maxlength.html"><code>maxlength</code></a>.
-                                Se viene specificato no minlengtho viene specificato un valore non
-                                valido, l'input di
-                                ricerca non ha una lunghezza minima.
-                        </p>
-                        <h3>pattern</h3>
-                        <p>L'attributo <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/pattern.html"><code>pattern</code></a>,
-                                quando specificato, è un'espressione regolare a cui il valore
-                                dell'input deve corrispondere
-                                affinché il valore superi la convalida del vincolo. Deve essere un'espressione regolare
-                                JavaScript
-                                valida, come utilizzata dal tipo RegExp e come documentato nella nostra guida sulle
-                                espressioni
-                                regolari
-                                ; il flag 'u' viene specificato durante la compilazione dell'espressione regolare, in
-                                modo che
-                                il modello
-                                venga trattato come una sequenza di punti di codice Unicode, anziché come ASCII. Nessuna
-                                barra
-                                in avanti
-                                deve essere specificata attorno al testo del modello.</p>
-                        <p>Se il modello specificato non è specificato o non è valido, non viene applicata alcuna
-                                espressione
-                                regolare e questo attributo viene completamente ignorato.</p>
-                        <h3>placeholder</h3>
-                        <p>L'attributo <code>placeholder</code> è una stringa che fornisce un breve suggerimento
-                                all'utente sul
-                                tipo di
-                                informazioni previste nel campo. Dovrebbe essere una parola o una breve frase che
-                                dimostri il
-                                tipo di dati previsto, piuttosto che un messaggio esplicativo. Il testo non deve
-                                includere
-                                ritorni a capo o avanzamenti di riga.</p>
-                        <p>Se il contenuto del controllo ha una direzionalità ( LTR o RTL ) ma deve presentare il
-                                segnaposto
-                                nella direzionalità opposta, puoi utilizzare i caratteri di formattazione dell'algoritmo
-                                bidirezionale Unicode per sovrascrivere la direzionalità all'interno del segnaposto.</p>
-                        <h3>readonly</h3>
-                        <p>Un attributo booleano che, se presente, significa che questo campo non può essere modificato
-                                dall'utente. Tuttavia, <code>value</code> può ancora essere modificato dal codice
-                                JavaScript
-                                impostando
-                                direttamente la proprietà <code>HTMLInputElement value</code>.</p>
-                        <h3>size</h3>
-                        <p>L'attributo <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/size.html"><code>size</code></a>
-                                è un
-                                valore numerico che indica quanti caratteri deve essere largo il
-                                campo di
-                                input. Il valore deve essere un numero maggiore di zero e il valore predefinito è 20.
-                                Poiché le
-                                larghezze dei caratteri variano, questo può essere esatto o meno e non dovrebbe essere
-                                considerato tale; l'input risultante potrebbe essere più stretto o più largo del numero
-                                di
-                                caratteri specificato, a seconda dei caratteri e del font.</p>
-                        <p>Questo non pone un limite al numero di caratteri che l'utente può inserire nel campo.
-                                Specifica solo
-                                approssimativamente quanti possono essere visti alla volta. Per impostare un limite
-                                superiore
-                                alla lunghezza dei dati di input, utilizzare l'attributo <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/maxlength.html"><code>maxlength</code></a>.
-                        </p>
-                        <h3>spellcheck</h3>
-                        <p><a href="/Documenti_per_sviluppatori/html/Attributi/spellcheck.html"><code>spellcheck</code></a>
-                                è un
-                                attributo globale che viene utilizzato per indicare se abilitare o meno
-                                il controllo
-                                ortografico per un elemento. Può essere utilizzato su qualsiasi contenuto modificabile,
-                                ma qui
-                                consideriamo le specifiche relative all'uso di <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/spellcheck.html"><code>spellcheck</code></a>
-                                su elementi
-                                <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>.
-                                I
-                                valori ammessi
-                                per <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/spellcheck.html"><code>spellcheck</code></a>
-                                sono:
-                        </p>
-                        <dl>
-                                <dt><code>false</code></dt>
-                                <dd>
-                                        <p>Disabilita il controllo ortografico per questo elemento.</p>
-                                </dd>
-                                <dt><code>true</code></dt>
-                                <dd>
-                                        <p>Disabilita il controllo ortografico per questo elemento.</p>
-                                </dd>
-                                <dt><code>""</code> (stringa vuota) o nessun valore</dt>
-                                <dd>
-                                        <p>Segui il comportamento predefinito dell'elemento per il controllo
-                                                ortografico. Questo
-                                                può essere basato sull'impostazione di un genitore <a
-                                                        href="/Documenti_per_sviluppatori/html/Attributi/spellcheck.html"><code>spellcheck</code></a>
-                                                o su
-                                                altri fattori.
-                                        </p>
-                                </dd>
-                        </dl>
-                        <p>Un campo di input può avere il controllo ortografico abilitato se non ha l' attributo di sola
-                                lettura
-                                impostato e non è disabilitato.</p>
-                        <p>Il valore di <a
-                                        href="/Documenti_per_sviluppatori/html/Attributi/spellcheck.html"><code>spellcheck</code></a>
-                                restituito dalla lettura potrebbe non riflettere lo stato
-                                effettivo del controllo
-                                ortografico all'interno di un controllo, se le preferenze dell'interprete prevalgono
-                                sull'impostazione.</p>
-                        <h2 id="attributi-non-standard">Attributi non standard</h2>
-                        <p>I seguenti attributi non standard sono disponibili per i campi di immissione del numero di
-                                telefono.
-                                Come regola generale, dovresti evitare di usarli a meno che non possa essere aiutato.
-                        </p>
-                        <h3>autocorrect</h3>
-                        <p>Estensione di Safari, l'attributo <code>autocorrect</code> è una stringa che indica se
-                                attivare o
-                                meno la
-                                correzione automatica mentre l'utente sta modificando questo campo. I valori ammessi
-                                sono:</p>
-                        <dl>
-                                <dt><code>on</code></dt>
-                                <dd>
-                                        <p>Abilita la correzione automatica degli errori di battitura e l'elaborazione
-                                                delle
-                                                sostituzioni di testo, se configurate.</p>
-                                </dd>
-                                <dt><code>off</code></dt>
-                                <dd>
-                                        <p>Disabilita la correzione automatica e le sostituzioni del testo.</p>
-                                </dd>
-                        </dl>
-                        <h2 id="utilizzo">Utilizzo di &lt;input type="text"&gt;</h2>
-                        <p>Gli elementi <code>&lt;input type="text"&gt;</code> creano input di base a riga singola.
-                                Dovresti
-                                usarli ovunque tu
-                                voglia che l'utente inserisca un valore a riga singola e non sia disponibile un tipo di
-                                input
-                                più specifico per raccogliere quel valore.</p>
-                        <h3>Esempio di base</h3>
-                        <div class="example-code-card">
-                                <pre><code><span class="punctuation">&lt;<span class="tag">form</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
-    <span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">userName</span>"&gt;</span>Scegli un esername:<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
-    <span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">id</span>="<span class="attr-value">userName</span>" <span class="attr-name">type</span>="<span class="attr-value">text</span>" <span class="attr-name">name</span>="<span class="attr-value">userName</span>"&gt;</span>
-  <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
-    <span class="punctuation">&lt;<span class="tag">button</span>&gt;</span>Invia<span class="punctuation">&lt;/<span class="tag">button</span>&gt;</span>
-  <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
-<span class="punctuation">&lt;<span class="tag">form</span>&gt;</span></code></pre>
-                        </div>
-                        <p>Una volta inviata, la coppia nome/valore dati inviata al server sarà <code>name=Chris</code>
-                                (se
-                                "Chris" è stato
-                                inserito come valore di input prima dell'invio). È necessario ricordare di includere
-                                l'attributo <code>name</code> sull'elemento <a
-                                        href="/Documenti_per_sviluppatori/html/Elementi/input.html"><code>&lt;input&gt;</code></a>,
-                                altrimenti il ​​valore
-                                del campo di testo non verrà
-                                incluso nei dati inviati.</p>
-                        <h3>Impostazione di un placeholder</h3>
-                        <p>Puoi fornire un utile segnaposto all'interno del tuo input di testo che può fornire un
-                                suggerimento
-                                su cosa inserire includendo l'uso dell'attributo <code>placeholder</code>. Guarda il
-                                seguente
-                                esempio:</p>
-                        <div class="example-code-card">
-                                <pre><code><span class="punctuation">&lt;<span class="tag">form</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
-    <span class="punctuation">&lt;<span class="tag">label</span> <span class="attr-name">for</span>="<span class="attr-value">userName</span>"&gt;</span>Scegli un esername:<span class="punctuation">&lt;/<span class="tag">label</span>&gt;</span>
-    <span class="punctuation">&lt;<span class="tag">input</span> <span class="attr-name">id</span>="<span class="attr-value">userName</span>" <span class="attr-name">type</span>="<span class="attr-value">text</span>" <span class="attr-name">name</span>="<span class="attr-value">userName</span>"
-    <span class="attr-name">placeholder</span>="<span class="attr-value">Minuscolo, una parola</span>"&gt;</span>
-  <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
-  <span class="punctuation">&lt;<span class="tag">div</span>&gt;</span>
-    <span class="punctuation">&lt;<span class="tag">button</span>&gt;</span>Invia<span class="punctuation">&lt;/<span class="tag">button</span>&gt;</span>
-  <span class="punctuation">&lt;/<span class="tag">div</span>&gt;</span>
-<span class="punctuation">&lt;<span class="tag">form</span>&gt;</span></code></pre>
-                        </div>
-                        <h2 id="convalida">Convalida</h2>
-                        <p>Agli elementi <code>&lt;input type="text"&gt;</code> non è applicata alcuna convalida
-                                automatica
-                                (poiché un input di
-                                testo di base deve essere in grado di accettare qualsiasi stringa arbitraria), ma sono
-                                disponibili alcune opzioni di convalida lato client, di cui parleremo di seguito.</p>
-                        <div class="notecard">
-                                <p><span class="bold">Nota</span>: la convalida del modulo HTML non sostituisce gli
-                                        script del
-                                        server che
-                                        assicurano che i dati inseriti siano nel formato corretto. È fin troppo facile
-                                        per
-                                        qualcuno apportare modifiche all'HTML che consentano loro di ignorare la
-                                        convalida o
-                                        rimuoverlo completamente. È anche possibile che qualcuno ignori completamente il
-                                        tuo
-                                        HTML e invii i dati direttamente al tuo server. Se il codice lato server non
-                                        riesce a
-                                        convalidare i dati che riceve, potrebbe verificarsi un disastro quando nel
-                                        database
-                                        vengono immessi dati formattati in modo errato (o dati troppo grandi, di tipo
-                                        errato e
-                                        così via).</p>
-                        </div>
-                        <h2 id="lista">Liste utili</h2>
-                        <ul>
-                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi.html">Attributi</a>
-                                </li>
-                                <li><a href="/Documenti_per_sviluppatori/html/Attributi/attributi_globali.html">Attributi
-                                                globali</a></li>
-                                <li><a href="/Documenti_per_sviluppatori/html/Elementi/elementi_html.html">Elementi</a>
-                                </li>
-                        </ul>
-                        <div class="copyright-card">
-                                <p>© 2005–2021 MDN contributors.</p>
-                                <p>Licensed under the Creative Commons Attribution-ShareAlike License v2.5 or later.</p>
-                                <a
-                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text</a>
-                        </div>
-                </article>
-                <aside id="table-of-content">
-                        <p>Indice</p>
-                        <ul class="tableList">
-                        </ul>
-                </aside>
         </main>
-        <footer>
-                <div class="logo">
-                        <a href="/index.html">Free Attitude</a>
-                </div>
-                <div class="copyright-fa">
-                        © Free Attitude
+        <footer class="container-fluid">
+                <div class="row g-2">
+                        <div class="col-lg-6 col-md-6 col-12">
+                                <p>© FreeAttitude</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                                <p>Link veloci</p>
+                                <ul>
+                                        <li><img src="/assets/icons/caret-right.svg" alt=""><a
+                                                        href="/index.html">Home</a></li>
+                                        <li><img src="/assets/icons/caret-right.svg" alt=""><a
+                                                        href="/portfolio.html">Portfolio</a></li>
+                                        <li><img src="/assets/icons/caret-right.svg" alt=""><a
+                                                        href="/devdoc/index.html">DevDoc</a></li>
+                                </ul>
+                        </div>
                 </div>
         </footer>
-        <script src="/Documenti_per_sviluppatori/doc_dev.js"></script>
+        <!-- BOOTSTRAP JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+                crossorigin="anonymous"></script>
 </body>
 
 </html>
