@@ -1,0 +1,24 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{siteTitle}} - Free Attitude Template</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- JS -->
+    <script src="{% static 'js/templatesList.js' %}"></script>
+</head>
+
+<body>
+    {% include '_header.html' %}
+    <iframe src="{{siteTitle.gitUrl}}" frameborder="0"></iframe>
+</body>
+
+</html>

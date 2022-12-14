@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelli per siti web</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    {% include '_header.html' %}
+    <div class="container-fluid body-padding">
+        <div class="row">
+            <div class="col-lg-2 col-md-12">
+                <button class="btn btn-primary d-lg-none" id="offcanvasBtn" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">« Categorie</button>
+
+                <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive"
+                    aria-labelledby="offcanvasResponsiveLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Categorie di siti web</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <a href="{% url 'websiteEcomm:home' %}">
+                                    Tutti
+                                    ({{allTemplates|length}})
+                                </a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <a href="{% url 'websiteEcomm:landing-page' %}">
+                                    Landing Page
+                                    ({{landingPage|length}})
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-12">
+                <main class="row">
+                    {% block content %}
+                    {% endblock %}
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

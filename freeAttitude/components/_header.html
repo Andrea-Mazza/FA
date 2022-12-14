@@ -1,0 +1,23 @@
+{% load static %}
+
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a href="{% url 'home:home' %}" class="navbar-brand">FreeAttitude</a>
+            <button aria-controls="basic-navbar-nav" id="menuBtn" type="button" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#basic-navbar-nav" aria-expanded="false">
+                <span id="lineOne" class="line"></span>
+                <span id="lineTwo" class="line"></span>
+                <span id="lineThree" class="line"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="basic-navbar-nav">
+                <div class="menu-items navbar-nav">
+                    <a class="nav-item" href="{% url 'home:home' %}">Home</a>
+                    <a class="nav-item" href="{% url 'websiteEcomm:home' %}">Modelli</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script src="{% static 'js/headerBtn.js' %}"></script>

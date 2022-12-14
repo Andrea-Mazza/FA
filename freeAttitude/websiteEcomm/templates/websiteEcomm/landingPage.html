@@ -1,0 +1,25 @@
+{% extends 'websiteEcomm/base.html' %}
+{% load static %}
+{% block content %}
+{% for item in landingPage %}
+<div class="col-lg-4 col-md-6 template-container">
+    <div class="item-container">
+        <img class="thumbnail img-fluid" src="{{item.imageURL}}" alt="...">
+        <p>Modello n° {{item.templateNumber}}</p>
+        <div class="row">
+            <div class="col-6">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Dettagli
+                </button>
+            </div>
+            <div class="col-6">
+                <a class="btn btn-outline-dark" href="{% url 'websiteEcomm:preview' item.templateTitle %}">
+                    Demo
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

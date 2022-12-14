@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Attitude</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- JS -->
+    <script src="{% static 'js/templatesList.js' %}"></script>
+</head>
+
+<body>
+    {% include '_header.html' %}
+    <main class='home-main'>
+        <div class="container">
+            <section class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h2>Ciao, mi chiamo Andrea Mazza e sono uno sviluppatore web Full-Stack</h2>
+                </div>
+            </section>
+        </div>
+        <section>
+            <div class="container home-section-heading">
+                <h2>Modelli per siti web</h2>
+                <a href="{% url 'websiteEcomm:home' %}"><span id="total-templates"></span> disponibili</a>
+            </div>
+            <div id="categoriesContainer" class="category-scrollable">
+                {%for template in allTemplates%}
+                <div class="category-card"
+                    style="background-image: url({{template.imageURL}}); background-size: cover; background-position: top;">
+                    <div class="description">
+                        <small>CATEGORIA</small>
+                        <small>{{template.getCategory}}</small>
+                    </div>
+                    <div class="label">
+                        <small>NEW</small>
+                    </div>
+                    <div class="box-shadow">
+                    </div>
+                    <!-- HTML !-->
+                    <a href="#" class="primary-btn" role="button">Demo</a>
+                </div>
+                {%endfor%}
+            </div>
+            <!-- FOR LG SCREEN  -->
+            <!-- <div class="col-md-6 text-container d-md-block d-none">
+                <h2>Modelli per siti web</h2>
+                <h6>Dai un'occhiata ad alcuni modelli già pronti, protresti trovare qualcosa di tuo interesse.</h6>
+                <a href="{% url 'websiteEcomm:home' %}">Vedi tutti e <span id="total-templates-lg"></span> i
+                    modelli
+                    disponibili</a>
+            </div>
+            <div class="col-md-6 d-md-block d-none">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"
+                    data-bs-interval="2000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'preview-img/arsha.png' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'preview-img/digimedia.png' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'preview-img/leadership-event.png' %}" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'preview-img/firstPortfolio.png' %}" class="d-block w-100"
+                                alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- FOR SM SCREEN  -->
+            <!-- <div class="col-sm-12 text-container text-center d-md-none">
+                <h2>Modelli per siti web</h2>
+                <h6>Dai un'occhiata ad alcuni modelli già pronti, protresti trovare qualcosa di tuo interesse.</h6>
+            </div>
+            <div class="col-sm-12 d-md-none">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"
+                    data-bs-interval="2000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'preview-img/arsha.png' %}" class="d-block img-fluid" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'preview-img/digimedia.png' %}" class="d-block img-fluid" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'preview-img/leadership-event.png' %}" class="d-block img-fluid"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'preview-img/firstPortfolio.png' %}" class="d-block img-fluid"
+                                alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 text-container text-center d-md-none">
+                <a href="{% url 'websiteEcomm:home' %}">Vedi tutti e <span id="total-templates-sm"></span> i
+                    modelli
+                    disponibili</a>
+            </div> -->
+
+        </section>
+    </main>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
